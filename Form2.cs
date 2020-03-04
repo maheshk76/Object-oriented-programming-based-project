@@ -33,6 +33,7 @@ namespace Hospital
 
         private void button8_Click(object sender, EventArgs e)
         {
+            //Logout
             Uid_sess = 0;
             this.Hide();
             Form1 f1 = new Form1(Uid_sess);
