@@ -43,5 +43,13 @@ namespace Hospital
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            //New Patient
+            Patient_Management pm = new Patient_Management();
+            pm.RegisterNewPatient();
+        }
     }
 }
