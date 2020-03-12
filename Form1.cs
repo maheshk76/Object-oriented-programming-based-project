@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital
 {
-    
+
     public partial class Form1 : Form
     {
         int Uid_sess = 0;
@@ -33,13 +26,13 @@ namespace Hospital
         {
             Users u = new Users();
             string uname = textBox1.Text;
-            string pass= textBox2.Text;
-            string role="";
-            int user_id=u.Login(uname, pass,out role);
+            string pass = textBox2.Text;
+            string role = "";
+            int user_id = u.Login(uname, pass, out role);
             Uid_sess = user_id;
-                
+
             Console.WriteLine(user_id);
-            if (user_id>0)
+            if (user_id > 0)
             {
 
                 this.Hide();

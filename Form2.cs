@@ -47,10 +47,13 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string pname, gname, paddress, pgender,pemail,pdetails;
+            int page, pcontact;
+            DateTime adddate;
 
             //New Patient
             Patient_Management pm = new Patient_Management();
-            pm.RegisterNewPatient();
+            pm.RegisterNewPatient(pname, gname, paddress, page, pemail, pcontact, pgender,pdetails adddate);
         }
     }
 }
