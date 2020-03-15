@@ -10,6 +10,6 @@ namespace Hospital
     {
         public static string cn = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=MyProject;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public SqlConnection con = new SqlConnection(cn);
-        public SqlCommand cmd = new SqlCommand();
+        public static SqlCommand cmd = new SqlCommand();
     }
 }

@@ -10,14 +10,37 @@ namespace Hospital
 {
     class Users:MakeConnection
     {
-        public void Attendance(string uname,string role,int Uid)
+        
+        public void Attendance(string user_name,string role,int Uid)
         {
             cmd.Connection = con;
-            DateTime dt = DateTime.Now;
-            cmd.CommandText = "insert into Attendance_Manager(Uid,UName,Role,Date,Present) Values(@Uid,@uname,@role,@dt,'true')";
+            DateTime dt = DateTime.Now.Date;
+            Console.WriteLine(dt);
+            bool flg =true;
+            cmd.CommandText = "Select * from Attendance_Manager where Uid=@Uid and Date=@dt";
             con.Open();
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@Uid", Uid);
+            cmd.Parameters.AddWithValue("@dt",dt);
+
+            SqlDataReader r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                Console.WriteLine(Convert.ToDateTime(r["Date"]));
+                if (Convert.ToInt32(r["Uid"]) == Uid && Convert.ToDateTime(r["Date"])==dt)
+                {
+                    flg =false;
+                }
+            }
             con.Close();
+            if (flg)
+            {
+                cmd.CommandText = "insert into Attendance_Manager(Uid,UName,Role,Date,Present) Values(@Uid,@user_name,@role,@dt,'true')";
+                con.Open();
+                cmd.Parameters.AddWithValue("@user_name", user_name);
+                cmd.Parameters.AddWithValue("@role", role);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
 
         }
         public int Login(string uname, string pass,out string role)
@@ -29,8 +52,9 @@ namespace Hospital
                 p.Value = uname;
                 cmd.Parameters.Add(p);
                 con.Open();
-                SqlDataReader r = cmd.ExecuteReader();
-                while (r.Read())
+            SqlDataReader r = cmd.ExecuteReader();
+
+            while (r.Read())
                 {
                     string x = r["Name"].ToString();
                     string y = r["Password"].ToString();
@@ -44,6 +68,7 @@ namespace Hospital
                 }
                 else
                 {
+                    con.Close();
                     Attendance(uname, rol, Uid);
                     role = rol;
                     return Uid;
@@ -51,6 +76,10 @@ namespace Hospital
             }
                 role = "";
             return -99;
+        }
+        public void Logout()
+        {
+            cmd.Parameters.Clear();
         }
     }
 }

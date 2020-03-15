@@ -4,10 +4,10 @@ using System.Windows.Forms;
 namespace Hospital
 {
 
-    public partial class Form1 : Form
+    public partial class Login_Form : Form
     {
         int Uid_sess = 0;
-        public Form1(int id)
+        public Login_Form(int id)
         {
             InitializeComponent();
             Uid_sess = id;
@@ -34,16 +34,28 @@ namespace Hospital
             Console.WriteLine(user_id);
             if (user_id > 0)
             {
-
                 this.Hide();
-                if (role.Equals("Admin"))
+                switch (role)
                 {
-                    //Open Admin Form
-                }
-                else
-                {
-                    Form2 f2 = new Form2(Uid_sess, uname);
-                    f2.ShowDialog();
+                    case "Doctor":
+                        Doctor f2 = new Doctor(Uid_sess, uname);
+                        f2.ShowDialog();
+                        break;
+                    case "Laboratorian":
+                        //Open Labo. form
+                        break;
+                    case "Chemist":
+                        break;
+                    case "Receptionist":
+                        Receptionist rc = new Receptionist(Uid_sess, uname);
+                        rc.ShowDialog();
+                        break;
+                    case "Manager":
+                        break;
+                    case "Nurse":
+                        break;
+                    case "Ward_Manager":
+                        break;
                 }
             }
             else

@@ -46,40 +46,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
+    <Compile Include="DoctorFunctions.cs" />
+    <Compile Include="DAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DAppointment.designer.cs">
+      <DependentUpon>DAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="Doctor.designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DPrescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DPrescription.designer.cs">
+      <DependentUpon>DPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DReport.designer.cs">
+      <DependentUpon>DReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dtest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dtest.designer.cs">
+      <DependentUpon>Dtest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Duserdetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Duserdetails.designer.cs">
+      <DependentUpon>Duserdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="MakeConnection.cs" />
     <Compile Include="Patient_Management.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist.designer.cs">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="RPayment.designer.cs">
+      <DependentUpon>RPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RRegister.designer.cs">
+      <DependentUpon>RRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DAppointment.resx">
+      <DependentUpon>DAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPrescription.resx">
+      <DependentUpon>DPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DReport.resx">
+      <DependentUpon>DReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dtest.resx">
+      <DependentUpon>Dtest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duserdetails.resx">
+      <DependentUpon>Duserdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,8 +142,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Receptionist.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPayment.resx">
+      <DependentUpon>RPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RRegister.resx">
+      <DependentUpon>RRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
