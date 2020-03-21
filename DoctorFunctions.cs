@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
-
 namespace Hospital
 {
     class DoctorFunctions:MakeConnection
@@ -26,19 +24,35 @@ namespace Hospital
         }
         public DataTable GetPatient(string searchString,bool PData)
         {
-            DataTable dt = new DataTable();
-            cmd.Connection = con;
-            if(PData)
-                cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
-            else
-                cmd.CommandText = "select * from Patient_Presc where PId=@searchString";
-            con.Open();
-            cmd.Parameters.AddWithValue("@searchString",searchString);
-            SqlDataReader r =cmd.ExecuteReader();
-            dt.Load(r);
-            con.Close();
-            cmd.Parameters.RemoveAt("@searchString");
-            return dt;
+           try
+            {
+                DataTable dt = new DataTable();
+                cmd.Connection = con;
+                if (PData)
+                    cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
+                else
+                    cmd.CommandText = "select * from Patient_Presc where PId=@searchString";
+                con.Open();
+                cmd.Parameters.AddWithValue("@searchString", searchString);
+                SqlDataReader r = cmd.ExecuteReader();
+                dt.Load(r);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No Data Found", "Info");
+                    return null;
+                }
+                return dt;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong,Please try again","Error");
+                return null;
+            }
+            finally
+            {
+                con.Close();
+                cmd.Parameters.RemoveAt("@searchString");
+            }
         }
         public void MakePrescription(int p_id,string medicine)
         {

@@ -11,19 +11,6 @@ namespace Hospital
 {
     class Patient_Management:MakeConnection
     {
-        public DataTable GetPrescription(int id)
-        {
-            DataTable g = new DataTable();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from Patient_Presc where PId=@id";
-            con.Open();
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataReader r = cmd.ExecuteReader();
-            g.Load(r);
-            if (g.Rows.Count == 0)
-                MessageBox.Show("No Data Found");   
-            return g;
-        }
         public List<string> GetDoctorList()
         {
             //For assigning a doctor

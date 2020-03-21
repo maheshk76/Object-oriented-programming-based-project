@@ -12,7 +12,7 @@ namespace Hospital
 {
     public partial class CPrescription : UserControl
     {
-        Patient_Management pm = new Patient_Management();
+        DoctorFunctions pm = new DoctorFunctions();
         public CPrescription()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             //Search Patient Prescription By PId
-            dataGridView1.DataSource = pm.GetPrescription(Convert.ToInt32(PId.Text));
+            dataGridView1.DataSource = pm.GetPatient(PId.Text,false);
         }
     }
 }
