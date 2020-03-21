@@ -12,22 +12,6 @@ namespace Hospital
 {
     class DoctorFunctions:MakeConnection
     {
-        public DataTable SearchPatient(string searchString)
-        {
-            DataTable g = new DataTable();
-            cmd.Connection = con;
-           cmd.CommandText = "select * from Patient_Record WHERE PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
-            
-            cmd.Parameters.AddWithValue("@searchString", searchString);
-            con.Open();
-            SqlDataReader r = cmd.ExecuteReader();
-            g.Load(r);
-            if (g.Rows.Count == 0)
-                MessageBox.Show("No data found");
-            con.Close();
-            cmd.Parameters.RemoveAt("@searchString");
-            return g;
-        }
         public DataTable GetAllAppointments()
         {
             DataTable dt = new DataTable();
@@ -40,44 +24,41 @@ namespace Hospital
             con.Close();
             return dt;
         }
-        public DataTable GetPatient(int P_id,bool PData)
+        public DataTable GetPatient(string searchString,bool PData)
         {
             DataTable dt = new DataTable();
             cmd.Connection = con;
             if(PData)
-                cmd.CommandText = "select * from Patient_Record where Id=@P_id";
+                cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
             else
-                cmd.CommandText = "select * from Patient_Presc where PId=@P_id";
+                cmd.CommandText = "select * from Patient_Presc where PId=@searchString";
             con.Open();
-            cmd.Parameters.AddWithValue("@P_id", P_id);
+            cmd.Parameters.AddWithValue("@searchString",searchString);
             SqlDataReader r =cmd.ExecuteReader();
             dt.Load(r);
             con.Close();
-            cmd.Parameters.RemoveAt("@P_id");
+            cmd.Parameters.RemoveAt("@searchString");
             return dt;
         }
         public void MakePrescription(int p_id,string medicine)
         {
             cmd.Connection = con;
-           // try
-            //{
-                DataTable x = GetPatient(p_id,true);
+            try
+            {
+                DataTable x = GetPatient(p_id.ToString(),true);
                 string pa_name = (from DataRow dr in x.Rows
                                   where (int)dr["Id"] == p_id
                                   select (string)dr["PName"]).FirstOrDefault();
                 Console.WriteLine(pa_name);
-            Console.WriteLine();
-            int Uid = SessionClass.SessionId;
-           
-            cmd.CommandText = "select * from Users where Id=@Uid";
-            con.Open();
-            SqlDataReader r = cmd.ExecuteReader();
-            while (r.Read())
-            {
-                string uname = r["Name"].ToString();
-            }
-            con.Close();
-                                  //x.Rows[0]["PName"].ToString();
+                Console.WriteLine();
+                int Uid = SessionClass.SessionId;
+                cmd.CommandText = "select * from Users where Id=@Uid";
+                con.Open();
+                SqlDataReader r = cmd.ExecuteReader();
+                string uname = "";
+                while (r.Read())
+                     uname = r["Name"].ToString();
+                con.Close();
                 cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname) Values(@p_id,@pa_name,@medicine,@Uid,@uname)";
                 con.Open();
                 cmd.Parameters.AddWithValue("@p_id", p_id);
@@ -86,11 +67,11 @@ namespace Hospital
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Success", "Done");
-           /* }
+            }
             catch (Exception e)
             {
-                MessageBox.Show("Patient data is not available", "Error");
-            }*/
+                MessageBox.Show("Patient data is not available", "Info");
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Hospital
             //Search by Id;
 
             dataGridView1.DataSource =
-            df.GetPatient(Convert.ToInt32(textBox1.Text),true);
+            df.GetPatient(textBox1.Text,true);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

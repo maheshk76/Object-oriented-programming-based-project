@@ -29,8 +29,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             //See Presc
-            int patient_id = Convert.ToInt32(PID.Text);
-            dataGridView1.DataSource = am.GetPatient(patient_id,false);
+            dataGridView1.DataSource = am.GetPatient(PID.Text,false);
 
         }
     }
