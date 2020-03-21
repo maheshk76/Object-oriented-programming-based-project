@@ -28,66 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchResultGridView = new System.Windows.Forms.DataGridView();
+            this.searchTextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchResultGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // SearchResultGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 112);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(846, 422);
-            this.dataGridView1.TabIndex = 0;
+            this.SearchResultGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchResultGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SearchResultGridView.Location = new System.Drawing.Point(0, 138);
+            this.SearchResultGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchResultGridView.Name = "SearchResultGridView";
+            this.SearchResultGridView.RowHeadersWidth = 51;
+            this.SearchResultGridView.Size = new System.Drawing.Size(1128, 519);
+            this.SearchResultGridView.TabIndex = 0;
             // 
-            // textBox1
+            // searchTextbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(39, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(614, 32);
-            this.textBox1.TabIndex = 3;
+            this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextbox.Location = new System.Drawing.Point(52, 73);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Size = new System.Drawing.Size(817, 38);
+            this.searchTextbox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(47, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Patient ID";
+            this.label2.Text = "Search Patient";
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(684, 60);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(912, 74);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 32);
+            this.button1.Size = new System.Drawing.Size(136, 39);
             this.button1.TabIndex = 7;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.searchTextbox);
+            this.Controls.Add(this.SearchResultGridView);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(846, 534);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(1128, 657);
+            ((System.ComponentModel.ISupportInitialize)(this.SearchResultGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,8 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView SearchResultGridView;
+        private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
     }

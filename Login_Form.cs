@@ -3,14 +3,13 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-
     public partial class Login_Form : Form
     {
-        int Uid_sess = 0;
         public Login_Form(int id)
         {
             InitializeComponent();
-            Uid_sess = id;
+
+            SessionClass.SessionId =id;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -19,7 +18,9 @@ namespace Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Exit the Application
             this.Close();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,8 +30,7 @@ namespace Hospital
             string pass = textBox2.Text;
             string role = "";
             int user_id = u.Login(uname, pass, out role);
-            Uid_sess = user_id;
-
+            SessionClass.SessionId = user_id;
             Console.WriteLine(user_id);
             if (user_id > 0)
             {
@@ -38,23 +38,32 @@ namespace Hospital
                 switch (role)
                 {
                     case "Doctor":
-                        Doctor f2 = new Doctor(Uid_sess, uname);
+                        Doctor f2 = new Doctor(uname);
                         f2.ShowDialog();
                         break;
                     case "Laboratorian":
-                        //Open Labo. form
+                        Laboratorian lr = new Laboratorian(uname);
+                        lr.ShowDialog();
                         break;
                     case "Chemist":
+                        Chemist ch = new Chemist( uname);
+                        ch.ShowDialog();
                         break;
                     case "Receptionist":
-                        Receptionist rc = new Receptionist(Uid_sess, uname);
+                        Receptionist rc = new Receptionist( uname);
                         rc.ShowDialog();
                         break;
                     case "Manager":
+                       // Receptionist rc = new Receptionist(Uid_sess, uname);
+                        //rc.ShowDialog();
                         break;
                     case "Nurse":
+                        //Receptionist rc = new Receptionist(Uid_sess, uname);
+                        //rc.ShowDialog();
                         break;
                     case "Ward_Manager":
+                        //Receptionist rc = new Receptionist(Uid_sess, uname);
+                        //rc.ShowDialog();
                         break;
                 }
             }

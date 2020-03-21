@@ -12,15 +12,18 @@ namespace Hospital
 {
     public partial class Doctor : Form
     {
-        int Uid_sess = 0;
         Users u = new Users();
-        public Doctor(int id, string uname)
+        public Doctor(string uname)
         {
             InitializeComponent();
             SidePanel.Height = button7.Height;
             dAppointment.BringToFront();
+            if (SessionClass.SessionId == 0)
+            {
+                Login_Form f1 = new Login_Form(0);
+                f1.ShowDialog();
+            }
             label1.Text = uname;
-            Uid_sess = id;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,11 +57,12 @@ namespace Hospital
 
         private void button8_Click(object sender, EventArgs e)
         {
+            //Resetting the Global variable
+            //Logout
             this.Hide();
-            //LogOUT BUTTON
-            Uid_sess = 0;
+            SessionClass.SessionId = 0;
             u.Logout();
-            Login_Form f1 = new Login_Form(Uid_sess);
+            Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
         }
 

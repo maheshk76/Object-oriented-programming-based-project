@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class Receptionist : Form
+    public partial class Chemist : Form
     {
-        int Uid_sess = 0;
         Users u = new Users();
-        Patient_Management pm = new Patient_Management();
-        public Receptionist(string uname)
+        public Chemist(string uname)
         {
             InitializeComponent();
             SidePanel.Height = button7.Height;
-            rRegister1.BringToFront();
-            if (SessionClass.SessionId == 0)
+            cPrescription1.BringToFront();
+            if (SessionClass.SessionId== 0)
             {
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
@@ -32,32 +30,33 @@ namespace Hospital
         {
             SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
-            rRegister1.BringToFront();
+            cPrescription1.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            userControl11.BringToFront();
+            userControl12.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
-            rPayment1.BringToFront();
+            cMedicine1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
+            //Logout
             SessionClass.SessionId = 0;
             u.Logout();
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
-            //Chemist f4 = new Chemist();
-            //f4.ShowDialog();
+            //Laboratorian f5 = new Laboratorian();
+            //f5.ShowDialog();
         }
     }
 }

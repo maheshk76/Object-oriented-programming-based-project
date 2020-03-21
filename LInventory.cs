@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class UserControl1 : UserControl
+    public partial class LInventory : UserControl
     {
-        DoctorFunctions df = new DoctorFunctions();
-        public UserControl1()
+        public LInventory()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SearchResultGridView.DataSource = df.SearchPatient(searchTextbox.Text); ;
         }
     }
 }

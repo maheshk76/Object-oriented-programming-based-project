@@ -64,6 +64,7 @@ namespace Hospital
                 if (y != pass || x == null)
                 {
                     role = "";
+                    cmd.Parameters.Clear();
                     return -99;
                 }
                 else
@@ -74,11 +75,13 @@ namespace Hospital
                     return Uid;
                 }
             }
-                role = "";
+            role = "";
+            cmd.Parameters.Clear();
             return -99;
         }
         public void Logout()
         {
+            //Clearing the Parametres
             cmd.Parameters.Clear();
         }
     }

@@ -12,6 +12,7 @@ namespace Hospital
 {
     public partial class DPrescription : UserControl
     {
+        DoctorFunctions am = new DoctorFunctions();
         public DPrescription()
         {
             InitializeComponent();
@@ -22,8 +23,15 @@ namespace Hospital
             //ADD Prescription By Doctor
             int patient_id = Convert.ToInt32(PID.Text);
             string med = medicine.Text;
-            DoctorFunctions am = new DoctorFunctions();
             am.MakePrescription(patient_id, med);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //See Presc
+            int patient_id = Convert.ToInt32(PID.Text);
+            dataGridView1.DataSource = am.GetPatient(patient_id,false);
+
         }
     }
 }

@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chemist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chemist.designer.cs">
+      <DependentUpon>Chemist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CMedicine.designer.cs">
+      <DependentUpon>CMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPrescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPrescription.designer.cs">
+      <DependentUpon>CPrescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorFunctions.cs" />
     <Compile Include="DAppointment.cs">
       <SubType>UserControl</SubType>
@@ -83,11 +101,29 @@
     <Compile Include="Duserdetails.designer.cs">
       <DependentUpon>Duserdetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laboratorian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laboratorian.designer.cs">
+      <DependentUpon>Laboratorian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LInventory.designer.cs">
+      <DependentUpon>LInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LReport.Designer.cs">
+      <DependentUpon>LReport.cs</DependentUpon>
     </Compile>
     <Compile Include="MakeConnection.cs" />
     <Compile Include="Patient_Management.cs" />
@@ -111,7 +147,17 @@
     <Compile Include="RRegister.designer.cs">
       <DependentUpon>RRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionClass.cs" />
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="Chemist.resx">
+      <DependentUpon>Chemist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMedicine.resx">
+      <DependentUpon>CMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPrescription.resx">
+      <DependentUpon>CPrescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DAppointment.resx">
       <DependentUpon>DAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,8 +176,17 @@
     <EmbeddedResource Include="Duserdetails.resx">
       <DependentUpon>Duserdetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laboratorian.resx">
+      <DependentUpon>Laboratorian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LInventory.resx">
+      <DependentUpon>LInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LReport.resx">
+      <DependentUpon>LReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
