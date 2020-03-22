@@ -12,7 +12,7 @@ namespace Hospital
 {
     public partial class DPrescription : UserControl
     {
-        DoctorFunctions am = new DoctorFunctions();
+        DoctorFunctions df = new DoctorFunctions();
         public DPrescription()
         {
             InitializeComponent();
@@ -23,14 +23,22 @@ namespace Hospital
             //ADD Prescription By Doctor
             int patient_id = Convert.ToInt32(PID.Text);
             string med = medicine.Text;
-            am.MakePrescription(patient_id, med);
+            df.MakePrescription(patient_id, med);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //See Presc
-            dataGridView1.DataSource = am.GetPatient(PID.Text,false);
-
+            DataTable dt= df.GetPatient(PID.Text, false);
+            if (dt != null)
+            {
+                dt.Columns.Remove("Id");
+                dt.Columns.Remove("DId");
+                dt.Columns.Remove("Dname");
+            }
+            dataGridView1.DataSource = dt;
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

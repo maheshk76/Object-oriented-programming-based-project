@@ -1,4 +1,6 @@
-﻿namespace Hospital
+﻿using System.Drawing;
+
+namespace Hospital
 {
     partial class DPrescription
     {
@@ -79,6 +81,12 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1088, 422);
             this.dataGridView1.TabIndex = 9;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 12);
+
+            dataGridView1.ReadOnly = true;
             // 
             // label1
             // 

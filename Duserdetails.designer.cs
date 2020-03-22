@@ -1,4 +1,6 @@
-﻿namespace Hospital
+﻿using System.Drawing;
+
+namespace Hospital
 {
     partial class UserControl1
     {
@@ -45,6 +47,12 @@
             this.SearchResultGridView.RowHeadersWidth = 51;
             this.SearchResultGridView.Size = new System.Drawing.Size(1128, 519);
             this.SearchResultGridView.TabIndex = 0;
+            SearchResultGridView.EnableHeadersVisualStyles = false;
+            SearchResultGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            SearchResultGridView.RowHeadersVisible = false;
+            SearchResultGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
+
+            SearchResultGridView.ReadOnly = true;
             // 
             // searchTextbox
             // 

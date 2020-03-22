@@ -7,8 +7,7 @@ namespace Hospital
     {
         public Login_Form(int id)
         {
-            InitializeComponent();
-
+            InitializeComponent(); 
             SessionClass.SessionId =id;
         }
         private void button3_Click(object sender, EventArgs e)
@@ -46,24 +45,28 @@ namespace Hospital
                         lr.ShowDialog();
                         break;
                     case "Chemist":
-                        Chemist ch = new Chemist( uname);
+                        Chemist ch = new Chemist(uname);
                         ch.ShowDialog();
                         break;
                     case "Receptionist":
-                        Receptionist rc = new Receptionist( uname);
+                        Receptionist rc = new Receptionist(uname);
                         rc.ShowDialog();
                         break;
                     case "Manager":
-                       // Receptionist rc = new Receptionist(Uid_sess, uname);
-                        //rc.ShowDialog();
+                       // Manager m = new Manager(uname);
+                        //m.ShowDialog();
                         break;
                     case "Nurse":
-                        //Receptionist rc = new Receptionist(Uid_sess, uname);
-                        //rc.ShowDialog();
+                        //Nurse nu= new Nurse(uname);
+                        //nu.ShowDialog();
                         break;
                     case "Ward_Manager":
-                        //Receptionist rc = new Receptionist(Uid_sess, uname);
-                        //rc.ShowDialog();
+                        //Ward_Manager wm = new Ward_Manager(uname);
+                        //wm.ShowDialog();
+                        break;
+                    case "Admin":
+                        //Admin a=new Admin(uname);
+                        // a.ShowDialog();
                         break;
                 }
             }

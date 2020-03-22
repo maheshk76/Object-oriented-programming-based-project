@@ -20,7 +20,8 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SearchResultGridView.DataSource = df.GetPatient(searchTextbox.Text,true); ;
+            SearchResultGridView.DataSource = df.GetPatient(searchTextbox.Text,true);
+            
         }
     }
 }

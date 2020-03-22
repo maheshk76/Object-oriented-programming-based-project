@@ -103,6 +103,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(431, 38);
             this.textBox2.TabIndex = 4;
+            this.textBox2.PasswordChar = '#';
             // 
             // button1
             // 
@@ -134,7 +135,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1185, 511);
+            this.button3.Location = new System.Drawing.Point(1185, 502);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 31);
             this.button3.TabIndex = 8;
@@ -204,7 +205,7 @@
             this.label8.Size = new System.Drawing.Size(0, 17);
             this.label8.TabIndex = 14;
             // 
-            // Form1
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -225,7 +226,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

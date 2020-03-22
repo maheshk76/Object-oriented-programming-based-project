@@ -1,4 +1,7 @@
-﻿namespace Hospital
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Hospital
 {
     partial class Dreport
     {
@@ -79,6 +82,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1128, 519);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightBlue;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 12);
+
+            dataGridView1.ReadOnly = true;
             // 
             // label1
             // 

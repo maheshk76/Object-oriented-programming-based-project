@@ -10,23 +10,39 @@ namespace Hospital
 {
     class DoctorFunctions:MakeConnection
     {
+        DataTable dt;
         public DataTable GetAllAppointments()
         {
-            DataTable dt = new DataTable();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
-            con.Open();
-            cmd.Parameters.AddWithValue("@Approved_or_not",false);
-            SqlDataReader r = cmd.ExecuteReader();
-            dt.Load(r);
-            con.Close();
-            return dt;
+            try
+            {
+                dt = new DataTable();
+                cmd.Connection = con;
+                cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
+                con.Open();
+                cmd.Parameters.AddWithValue("@Approved_or_not", false);
+                SqlDataReader r = cmd.ExecuteReader();
+                dt.Load(r);
+                dt.Columns.Remove("Id");
+                dt.Columns.Remove("DoctorId");
+                return dt;
+            } 
+            catch(Exception e)
+            {
+                MessageBox.Show("Error in getting details", "Error");
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
+        //Search Algorithm
         public DataTable GetPatient(string searchString,bool PData)
         {
+            //if PData=true=>select from Patient_record,else select from Patient_Presc
            try
             {
-                DataTable dt = new DataTable();
+                dt = new DataTable();
                 cmd.Connection = con;
                 if (PData)
                     cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
@@ -43,7 +59,7 @@ namespace Hospital
                 }
                 return dt;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Something went wrong,Please try again","Error");
                 return null;

@@ -10,7 +10,6 @@ namespace Hospital
 {
     class Users:MakeConnection
     {
-        
         public void Attendance(string user_name,string role,int Uid)
         {
             cmd.Connection = con;
@@ -21,15 +20,11 @@ namespace Hospital
             con.Open();
             cmd.Parameters.AddWithValue("@Uid", Uid);
             cmd.Parameters.AddWithValue("@dt",dt);
-
             SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
-                Console.WriteLine(Convert.ToDateTime(r["Date"]));
                 if (Convert.ToInt32(r["Uid"]) == Uid && Convert.ToDateTime(r["Date"])==dt)
-                {
                     flg =false;
-                }
             }
             con.Close();
             if (flg)
@@ -41,26 +36,20 @@ namespace Hospital
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
         }
         public int Login(string uname, string pass,out string role)
         {
             cmd.Connection = con;
             cmd.CommandText = "Select * from Users where Name=@uname";
-                SqlParameter p = new SqlParameter();
-                p.ParameterName = "@uname";
-                p.Value = uname;
-                cmd.Parameters.Add(p);
-                con.Open();
+            cmd.Parameters.AddWithValue("@uname",uname);
+            con.Open();
             SqlDataReader r = cmd.ExecuteReader();
-
             while (r.Read())
-                {
-                    string x = r["Name"].ToString();
-                    string y = r["Password"].ToString();
-                    string rol = r["Role"].ToString();
-                    int Uid = Convert.ToInt32(r["Id"]);
-                    Console.WriteLine(x, y);
+            {
+                string x = r["Name"].ToString();
+                string y = r["Password"].ToString();
+                string rol = r["Role"].ToString();
+                int Uid = Convert.ToInt32(r["Id"]);
                 if (y != pass || x == null)
                 {
                     role = "";
@@ -81,7 +70,8 @@ namespace Hospital
         }
         public void Logout()
         {
-            //Clearing the Parametres
+            //Clearing the Parameters
+            SessionClass.SessionId = 0;
             cmd.Parameters.Clear();
         }
     }

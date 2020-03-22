@@ -12,7 +12,6 @@ namespace Hospital
 {
     public partial class Receptionist : Form
     {
-        int Uid_sess = 0;
         Users u = new Users();
         Patient_Management pm = new Patient_Management();
         public Receptionist(string uname)
@@ -56,8 +55,6 @@ namespace Hospital
             u.Logout();
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
-            //Chemist f4 = new Chemist();
-            //f4.ShowDialog();
         }
     }
 }

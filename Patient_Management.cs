@@ -39,7 +39,7 @@ namespace Hospital
         }
         public void AddtoAppointments(int pid,string pname,string dname,DateTime appointdate)
         {
-            int did = getDoctorId(dname);
+            int did = GetDoctorId(dname);
             
            try
             {
@@ -52,14 +52,14 @@ namespace Hospital
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 MessageBox.Show("Please try again", "Error");
             }
 
 
         }
-        public int getDoctorId(string dname)
+        public int GetDoctorId(string dname)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace Hospital
                 con.Close();
                 return id;
            }
-            catch(Exception e)
+            catch(Exception)
             {
                 MessageBox.Show("Please try again", "Error");
                 return -99;
@@ -115,7 +115,7 @@ namespace Hospital
                 AddtoAppointments(Patient_Id, pname, doctor_assinged,adddate);
                 return Patient_Id;
             }
-            catch (Exception e)
+            catch (Exception)
             { 
                 return -99;
             }

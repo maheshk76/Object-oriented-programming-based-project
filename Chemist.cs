@@ -55,8 +55,6 @@ namespace Hospital
             u.Logout();
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
-            //Laboratorian f5 = new Laboratorian();
-            //f5.ShowDialog();
         }
     }
 }

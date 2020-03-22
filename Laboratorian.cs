@@ -17,6 +17,8 @@ namespace Hospital
         public Laboratorian(string uname)
         {
             InitializeComponent();
+            
+
             SidePanel.Height = button7.Height;
             lReport1.BringToFront();
             if (SessionClass.SessionId== 0)
