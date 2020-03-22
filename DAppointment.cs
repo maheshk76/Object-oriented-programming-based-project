@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Hospital
 {
     public partial class DAppointment : UserControl
@@ -16,22 +15,19 @@ namespace Hospital
         public DAppointment()
         {
             InitializeComponent();
-            DataTable dt = df.GetAllAppointments();
-            
+            //loading all appointments
+            DataTable dt = df.GetAllAppointments("");
             dataGridView1.DataSource = dt;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void TextBox_Changed(object sender, EventArgs e)
         {
-            MessageBox.Show("Provide Patient Id number to approve", "Info");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            //Search Appointment
+            DataTable dt = df.GetAllAppointments(searchTextbox.Text);
+            dataGridView1.DataSource = dt;
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

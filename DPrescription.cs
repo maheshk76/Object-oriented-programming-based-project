@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Hospital
 {
     public partial class DPrescription : UserControl
@@ -17,7 +16,6 @@ namespace Hospital
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //ADD Prescription By Doctor
@@ -25,7 +23,6 @@ namespace Hospital
             string med = medicine.Text;
             df.MakePrescription(patient_id, med);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //See Presc

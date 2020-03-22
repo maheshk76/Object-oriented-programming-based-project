@@ -11,28 +11,35 @@ namespace Hospital
     class DoctorFunctions:MakeConnection
     {
         DataTable dt;
-        public DataTable GetAllAppointments()
+        public DataTable GetAllAppointments(string ser)
         {
             try
             {
                 dt = new DataTable();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
+                //if 0 then show all appoints
+                if(ser.Length.Equals(0))
+                    cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
+                else
+                    cmd.CommandText = "select * from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
                 con.Open();
                 cmd.Parameters.AddWithValue("@Approved_or_not", false);
+                cmd.Parameters.AddWithValue("@ser",ser);
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
                 dt.Columns.Remove("Id");
                 dt.Columns.Remove("DoctorId");
                 return dt;
-            } 
-            catch(Exception e)
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Error in getting details", "Error");
                 return null;
             }
             finally
             {
+                cmd.Parameters.RemoveAt("@Approved_or_not");
+                cmd.Parameters.RemoveAt("@ser");
                 con.Close();
             }
         }
