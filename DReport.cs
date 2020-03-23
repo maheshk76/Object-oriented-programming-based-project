@@ -26,16 +26,20 @@ namespace Hospital
                 dt.Columns.Remove("GuardianName");
                 dt.Columns.Remove("PEmail");
                 dt.Columns.Remove("BirthDate");
-                dt.Columns.Remove("PAddress");
-                dt.Columns.Remove("AddDate");
-                dt.Columns.Remove("DisDate");
-                dt.Columns.Remove("PAge");
+                dt.Columns.Remove("Residential Address");
+                dt.Columns.Remove("Addmission Date");
+                dt.Columns.Remove("Discharge Date");
+                dt.Columns.Remove("Age");
                 dt.Columns.Remove("PGender");
                 dt.Columns.Remove("PContact");
             }
             dataGridView1.DataSource = dt;
+           
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[1].Width = 200;
+
         }
     }
 }

@@ -82,9 +82,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(778, 289);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Username";
+            this.label2.Text = "UserId";
             // 
             // label3
             // 
@@ -101,9 +101,9 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(783, 406);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '#';
             this.textBox2.Size = new System.Drawing.Size(431, 38);
             this.textBox2.TabIndex = 4;
-            this.textBox2.PasswordChar ='#';
             // 
             // button1
             // 

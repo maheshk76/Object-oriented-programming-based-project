@@ -37,36 +37,36 @@ namespace Hospital
                 con.Close();
             }
         }
-        public int Login(string uname, string pass,out string role)
+        public string Login(int user_id, string pass,out string role)
         {
             cmd.Connection = con;
-            cmd.CommandText = "Select * from Users where Name=@uname";
-            cmd.Parameters.AddWithValue("@uname",uname);
+            cmd.CommandText = "Select * from Users where Id=@user_id";
+            cmd.Parameters.AddWithValue("@user_id",user_id);
             con.Open();
             SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
-                string x = r["Name"].ToString();
+                int x = Convert.ToInt32(r["Id"]);//UserId
                 string y = r["Password"].ToString();
                 string rol = r["Role"].ToString();
-                int Uid = Convert.ToInt32(r["Id"]);
-                if (y != pass || x == null)
+                string  UserName =r["Name"].ToString();//username
+                if (y != pass || x == 0)
                 {
                     role = "";
                     cmd.Parameters.Clear();
-                    return -99;
+                    return "";
                 }
                 else
                 {
                     con.Close();
-                    Attendance(uname, rol, Uid);
+                    Attendance(UserName, rol,user_id);
                     role = rol;
-                    return Uid;
+                    return UserName;
                 }
             }
             role = "";
             cmd.Parameters.Clear();
-            return -99;
+            return "";
         }
         public void Logout()
         {
