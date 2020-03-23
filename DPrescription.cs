@@ -32,10 +32,11 @@ namespace Hospital
                 dt.Columns.Remove("Id");
                 dt.Columns.Remove("DId");
                 dt.Columns.Remove("Dname");
+
+                dataGridView1.DataSource = dt;
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-            dataGridView1.DataSource = dt;
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 namespace Hospital
 {
-    class DoctorFunctions:MakeConnection
+    class DoctorFunctions : MakeConnection
     {
         DataTable dt;
         public DataTable GetAllAppointments(string ser)
@@ -18,13 +18,13 @@ namespace Hospital
                 dt = new DataTable();
                 cmd.Connection = con;
                 //if 0 then show all appoints
-                if(ser.Length.Equals(0))
+                if (ser.Length.Equals(0))
                     cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
                 else
                     cmd.CommandText = "select * from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
                 con.Open();
                 cmd.Parameters.AddWithValue("@Approved_or_not", false);
-                cmd.Parameters.AddWithValue("@ser",ser);
+                cmd.Parameters.AddWithValue("@ser", ser);
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
                 dt.Columns.Remove("Id");
@@ -33,10 +33,12 @@ namespace Hospital
                 dt.Columns[1].ColumnName = "Patient Name";
                 dt.Columns[2].ColumnName = "Consultant";
                 dt.Columns[3].ColumnName = "Date of Appointment";
+                con.Close();
                 return dt;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message.ToString());
                 MessageBox.Show("Error in getting details", "Error");
                 return null;
             }
@@ -48,10 +50,10 @@ namespace Hospital
             }
         }
         //Search Algorithm
-        public DataTable GetPatient(string searchString,bool PData)
+        public DataTable GetPatient(string searchString, bool PData)
         {
             //if PData=true=>select from Patient_record,else select from Patient_Presc
-           try
+            try
             {
                 dt = new DataTable();
                 cmd.Connection = con;
@@ -68,18 +70,23 @@ namespace Hospital
                     MessageBox.Show("No Data Found", "Info");
                     return null;
                 }
-                dt.Columns[0].ColumnName = "PatientId";
-                dt.Columns[1].ColumnName = "Patient Name";
-                dt.Columns[3].ColumnName = "Residential Address";
-                dt.Columns[4].ColumnName = "Age";
-                dt.Columns[8].ColumnName = "Details";
-                dt.Columns[9].ColumnName = "Addmission Date";
-                dt.Columns[10].ColumnName = "Discharge Date";
+                if (PData)
+                {
+                    dt.Columns[0].ColumnName = "PatientId";
+                    dt.Columns[1].ColumnName = "Patient Name";
+                    dt.Columns[3].ColumnName = "Residential Address";
+                    dt.Columns[4].ColumnName = "Age";
+                    dt.Columns[8].ColumnName = "Details";
+                    dt.Columns[9].ColumnName = "Addmission Date";
+                    dt.Columns[10].ColumnName = "Discharge Date";
+                   
+                }
                 return dt;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Something went wrong,Please try again","Error");
+                Console.WriteLine(e.Message.ToString());
+                MessageBox.Show("Something went wrong,Please try again", "Error");
                 return null;
             }
             finally
@@ -88,29 +95,30 @@ namespace Hospital
                 cmd.Parameters.RemoveAt("@searchString");
             }
         }
-        public void MakePrescription(int p_id,string medicine)
+        public void MakePrescription(int p_id, string medicine)
         {
             cmd.Connection = con;
             try
             {
-                DataTable x = GetPatient(p_id.ToString(),true);
+                DataTable x = GetPatient(p_id.ToString(), true);
                 string pa_name = (from DataRow dr in x.Rows
-                                  where (int)dr["Id"] == p_id
-                                  select (string)dr["PName"]).FirstOrDefault();
+                                  where (int)dr["PatientId"] == p_id
+                                  select (string)dr["Patient Name"]).FirstOrDefault();
                 Console.WriteLine(pa_name);
                 Console.WriteLine();
-                int Uid = SessionClass.SessionId;
-                cmd.CommandText = "select * from Users where Id=@Uid";
+                int user_id = SessionClass.SessionId;
+                cmd.CommandText = "select * from Users where Id=@user_id";
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
-                string uname = "";
+                string user_name = "";
                 while (r.Read())
-                     uname = r["Name"].ToString();
+                    user_name = r["Name"].ToString();
                 con.Close();
-                cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname) Values(@p_id,@pa_name,@medicine,@Uid,@uname)";
+                cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname) Values(@p_id,@pa_name,@medicine,@user_id,@user_name)";
                 con.Open();
                 cmd.Parameters.AddWithValue("@p_id", p_id);
                 cmd.Parameters.AddWithValue("@pa_name", pa_name);
+                cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@medicine", medicine);
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -118,8 +126,17 @@ namespace Hospital
             }
             catch (Exception e)
             {
-                MessageBox.Show("Patient data is not available", "Info");
+                Console.WriteLine(e.Message.ToString());
+                MessageBox.Show("Please try after some time", "Error");
             }
+            finally
+            {
+                cmd.Parameters.RemoveAt("@p_id");
+                cmd.Parameters.RemoveAt("@pa_name");
+                cmd.Parameters.RemoveAt("@user_name");
+                cmd.Parameters.RemoveAt("@medicine");
+            }
+
         }
     }
 }

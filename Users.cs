@@ -11,20 +11,19 @@ namespace Hospital
 {
     class Users:MakeConnection
     {
-        public void Attendance(string user_name,string role,int Uid)
+        public void Attendance(string user_name,string role,int user_id)
         {
             cmd.Connection = con;
             DateTime dt = DateTime.Now.Date;
             Console.WriteLine(dt);
             bool flg =true;
-            cmd.CommandText = "Select * from Attendance_Manager where Uid=@Uid and Date=@dt";
+            cmd.CommandText = "Select * from Attendance_Manager where Uid=@user_id and Date=@dt";
             con.Open();
-            cmd.Parameters.AddWithValue("@Uid", Uid);
             cmd.Parameters.AddWithValue("@dt",dt);
             SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
-                if (Convert.ToInt32(r["Uid"]) == Uid && Convert.ToDateTime(r["Date"])==dt)
+                if (Convert.ToInt32(r["Uid"]) == user_id && Convert.ToDateTime(r["Date"])==dt)
                     flg =false;
             }
             con.Close();
@@ -70,8 +69,9 @@ namespace Hospital
                 }
                 return "";
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message.ToString());
                 MessageBox.Show("Please try after some time", "Error");
                 return "";
             }

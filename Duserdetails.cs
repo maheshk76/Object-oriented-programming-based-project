@@ -20,9 +20,13 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SearchResultGridView.DataSource = df.GetPatient(searchTextbox.Text,true);
-            SearchResultGridView.Columns[8].Width = 200;
-            SearchResultGridView.Columns[8].DisplayIndex = 0;
+            DataTable dt = df.GetPatient(searchTextbox.Text, true);
+            SearchResultGridView.DataSource = dt;
+            if (dt != null)
+            {
+                SearchResultGridView.Columns[8].Width = 200;
+                SearchResultGridView.Columns[8].DisplayIndex = 0;
+            }
         }
     }
 }
