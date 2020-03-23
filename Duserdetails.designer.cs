@@ -41,6 +41,9 @@ namespace Hospital
             // 
             // SearchResultGridView
             // 
+            this.SearchResultGridView.AllowUserToAddRows = false;
+            this.SearchResultGridView.AllowUserToDeleteRows = false;
+            this.SearchResultGridView.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -49,7 +52,7 @@ namespace Hospital
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SearchResultGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SearchResultGridView.ColumnHeadersHeight = 38;
+            this.SearchResultGridView.ColumnHeadersHeight = 42;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -66,7 +69,11 @@ namespace Hospital
             this.SearchResultGridView.ReadOnly = true;
             this.SearchResultGridView.RowHeadersVisible = false;
             this.SearchResultGridView.RowHeadersWidth = 51;
+
+            this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1069, 519);
+
+            this.SearchResultGridView.Font = new System.Drawing.Font("Tahoma", 12F);
             this.SearchResultGridView.TabIndex = 0;
             // 
             // searchTextbox
@@ -87,7 +94,6 @@ namespace Hospital
             this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Search Patient";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 

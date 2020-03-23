@@ -102,7 +102,6 @@ namespace Hospital
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 519);
             this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -113,7 +112,6 @@ namespace Hospital
             this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Report";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Dreport
             // 

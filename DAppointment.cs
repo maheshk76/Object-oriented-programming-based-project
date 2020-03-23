@@ -17,6 +17,10 @@ namespace Hospital
             InitializeComponent();
             //loading all appointments
             DataTable dt = df.GetAllAppointments("");
+            ToolTip toolTip1 =new ToolTip();
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(label1,"Showing appointments which are not approved");
+            
             dataGridView1.DataSource = dt;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

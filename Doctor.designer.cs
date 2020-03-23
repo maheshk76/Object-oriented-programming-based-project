@@ -206,7 +206,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 61);
             this.button1.TabIndex = 3;
-            this.button1.Text = "  All Patient";
+            this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;

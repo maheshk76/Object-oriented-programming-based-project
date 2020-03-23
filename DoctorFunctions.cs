@@ -29,6 +29,10 @@ namespace Hospital
                 dt.Load(r);
                 dt.Columns.Remove("Id");
                 dt.Columns.Remove("DoctorId");
+                dt.Columns.Remove("Approved_or_not");
+                dt.Columns[1].ColumnName = "Patient Name";
+                dt.Columns[2].ColumnName = "Consultant";
+                dt.Columns[3].ColumnName = "Date of Appointment";
                 return dt;
             }
             catch (Exception)
@@ -64,6 +68,13 @@ namespace Hospital
                     MessageBox.Show("No Data Found", "Info");
                     return null;
                 }
+                dt.Columns[0].ColumnName = "PatientId";
+                dt.Columns[1].ColumnName = "Patient Name";
+                dt.Columns[3].ColumnName = "Residential Address";
+                dt.Columns[4].ColumnName = "Age";
+                dt.Columns[8].ColumnName = "Details";
+                dt.Columns[9].ColumnName = "Addmission Date";
+                dt.Columns[10].ColumnName = "Discharge Date";
                 return dt;
             }
             catch (Exception)
