@@ -32,7 +32,9 @@ namespace Hospital
                 dt.Columns.Remove("Id");
                 dt.Columns.Remove("DId");
                 dt.Columns.Remove("Dname");
-
+                dt.Columns[0].ColumnName = "Patient Id";
+                dt.Columns[1].ColumnName = "Patient Name";
+                dt.Columns[2].ColumnName = "Test Details";
                 dataGridView1.DataSource = dt;
                 for (int i = 0; i < dataGridView1.Columns.Count; i++)
                     dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

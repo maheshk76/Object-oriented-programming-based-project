@@ -23,6 +23,8 @@ namespace Hospital
             dataGridView1.DataSource = dt;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[2].Width = 180;
         }
         private void TextBox_Changed(object sender, EventArgs e)
         {

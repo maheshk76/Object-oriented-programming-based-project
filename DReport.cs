@@ -11,16 +11,15 @@ namespace Hospital
 {
     public partial class Dreport : UserControl
     {
-        DoctorFunctions df = new DoctorFunctions();
-        DataTable dt = new DataTable();
+        readonly DoctorFunctions df = new DoctorFunctions();
         public Dreport()
         {
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            //Search by Id;
-            DataTable dt = df.GetPatient(textBox1.Text, true);
+            //Get-Report by Id
+            DataTable dt = df.GetPatient(textBox1.Text,true);
             if (dt != null)
             {
                 dt.Columns.Remove("GuardianName");
@@ -32,10 +31,13 @@ namespace Hospital
                 dt.Columns.Remove("Age");
                 dt.Columns.Remove("PGender");
                 dt.Columns.Remove("PContact");
-                dataGridView1.DataSource = dt;
-
-                for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                    dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+               
+            }
+            dataGridView1.DataSource = dt;
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            if (dt != null)
+            {
                 dataGridView1.Columns[0].Width = 100;
                 dataGridView1.Columns[1].Width = 200;
             }

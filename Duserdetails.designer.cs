@@ -44,36 +44,28 @@ namespace Hospital
             this.SearchResultGridView.AllowUserToAddRows = false;
             this.SearchResultGridView.AllowUserToDeleteRows = false;
             this.SearchResultGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SearchResultGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SearchResultGridView.ColumnHeadersHeight = 42;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SearchResultGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.SearchResultGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.SearchResultGridView.EnableHeadersVisualStyles = false;
+            this.SearchResultGridView.Font = new System.Drawing.Font("Tahoma", 12F);
             this.SearchResultGridView.Location = new System.Drawing.Point(0, 131);
             this.SearchResultGridView.Margin = new System.Windows.Forms.Padding(4);
             this.SearchResultGridView.Name = "SearchResultGridView";
             this.SearchResultGridView.ReadOnly = true;
             this.SearchResultGridView.RowHeadersVisible = false;
             this.SearchResultGridView.RowHeadersWidth = 51;
-
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1069, 519);
-
-            this.SearchResultGridView.Font = new System.Drawing.Font("Tahoma", 12F);
             this.SearchResultGridView.TabIndex = 0;
             // 
             // searchTextbox

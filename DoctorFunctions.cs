@@ -19,20 +19,16 @@ namespace Hospital
                 cmd.Connection = con;
                 //if 0 then show all appoints
                 if (ser.Length.Equals(0))
-                    cmd.CommandText = "select * from Appointsments where Approved_or_not='false'";
+                    cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where Approved_or_not='false'";
                 else
-                    cmd.CommandText = "select * from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
+                    cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
                 con.Open();
                 cmd.Parameters.AddWithValue("@Approved_or_not", false);
                 cmd.Parameters.AddWithValue("@ser", ser);
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
-                dt.Columns.Remove("Id");
-                dt.Columns.Remove("DoctorId");
-                dt.Columns.Remove("Approved_or_not");
                 dt.Columns[1].ColumnName = "Patient Name";
-                dt.Columns[2].ColumnName = "Consultant";
-                dt.Columns[3].ColumnName = "Date of Appointment";
+                dt.Columns[2].ColumnName = "Date of Appointment";
                 con.Close();
                 return dt;
             }
@@ -100,6 +96,11 @@ namespace Hospital
             cmd.Connection = con;
             try
             {
+                cmd.CommandText = "update Appointsments set Approved_or_not='true' where PatientId=@p_id";
+                con.Open();
+                cmd.Parameters.AddWithValue("@p_id", p_id);
+                cmd.ExecuteNonQuery();
+                con.Close();
                 DataTable x = GetPatient(p_id.ToString(), true);
                 string pa_name = (from DataRow dr in x.Rows
                                   where (int)dr["PatientId"] == p_id
@@ -116,7 +117,6 @@ namespace Hospital
                 con.Close();
                 cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname) Values(@p_id,@pa_name,@medicine,@user_id,@user_name)";
                 con.Open();
-                cmd.Parameters.AddWithValue("@p_id", p_id);
                 cmd.Parameters.AddWithValue("@pa_name", pa_name);
                 cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@medicine", medicine);
