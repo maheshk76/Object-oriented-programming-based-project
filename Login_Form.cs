@@ -73,6 +73,7 @@ namespace Hospital
             }
             catch (Exception)
             {
+                MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa");
                 label8.Text = "NOT FOUND";
             }
         }

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hospital
 {
@@ -39,34 +40,42 @@ namespace Hospital
         }
         public string Login(int user_id, string pass,out string role)
         {
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Users where Id=@user_id";
-            cmd.Parameters.AddWithValue("@user_id",user_id);
-            con.Open();
-            SqlDataReader r = cmd.ExecuteReader();
-            while (r.Read())
-            {
-                int x = Convert.ToInt32(r["Id"]);//UserId
-                string y = r["Password"].ToString();
-                string rol = r["Role"].ToString();
-                string  UserName =r["Name"].ToString();//username
-                if (y != pass || x == 0)
-                {
-                    role = "";
-                    cmd.Parameters.Clear();
-                    return "";
-                }
-                else
-                {
-                    con.Close();
-                    Attendance(UserName, rol,user_id);
-                    role = rol;
-                    return UserName;
-                }
-            }
+
             role = "";
-            cmd.Parameters.Clear();
-            return "";
+            try
+            {
+                cmd.Connection = con;
+                cmd.CommandText = "Select * from Users where Id=@user_id";
+                cmd.Parameters.AddWithValue("@user_id", user_id);
+                con.Open();
+                SqlDataReader r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    int x = Convert.ToInt32(r["Id"]);//UserId
+                    string y = r["Password"].ToString();
+                    string rol = r["Role"].ToString();
+                    string UserName = r["Name"].ToString();//username
+                    if (y != pass || x == 0)
+                    {
+                        cmd.Parameters.Clear();
+                        return "";
+                    }
+                    else
+                    {
+                        con.Close();
+                        Attendance(UserName, rol, user_id);
+                        role = rol;
+                        return UserName;
+                    }
+                }
+                return "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please try after some time", "Error");
+                return "";
+            }
+
         }
         public void Logout()
         {
