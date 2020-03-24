@@ -11,6 +11,68 @@ namespace Hospital
     class DoctorFunctions : MakeConnection
     {
         DataTable dt;
+       
+        public DataTable ReverseRowsInDataTable(DataTable inputTable)
+        {
+            DataTable outputTable = inputTable.Clone();
+            for (int i = inputTable.Rows.Count - 1; i >= 0; i--)
+                outputTable.ImportRow(inputTable.Rows[i]);
+            return outputTable;
+        }
+        public void AddTestDetails(int PID,string Tests)
+        {
+            try { 
+            cmd.Connection = con;
+            cmd.CommandText = "insert into PatientDiagnosis(PatientId,PendingTests) Values(@PID,@Tests)";
+            con.Open();
+            cmd.Parameters.AddWithValue("@PID", PID);
+            cmd.Parameters.AddWithValue("@Tests", Tests);
+            cmd.ExecuteNonQuery();
+                MessageBox.Show("Success", "Info");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                MessageBox.Show("Please try again later", "Error");
+            }
+            finally
+            {
+                con.Close();
+                cmd.Parameters.RemoveAt("@PID");
+                cmd.Parameters.RemoveAt("@Tests");
+            }
+        }
+        public DataTable GetPatientReport(int query)
+        {
+            try
+            {
+                dt = new DataTable();
+                cmd.Connection = con;
+                cmd.CommandText = "select * from PatientDiagnosis where PatientId=@query";
+                con.Open();
+                cmd.Parameters.AddWithValue("@query", query);
+                SqlDataReader r = cmd.ExecuteReader();
+                dt.Load(r);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found", "Info");
+                    return null;
+                }
+                dt.Columns.Remove("Id");
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                MessageBox.Show("Please try again later", "Error");
+                return null;
+            }
+            finally
+            {
+                con.Close();
+                cmd.Parameters.RemoveAt("@query");
+            }
+        }
         public DataTable GetAllAppointments(string ser)
         {
             try
@@ -27,9 +89,11 @@ namespace Hospital
                 cmd.Parameters.AddWithValue("@ser", ser);
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
+                
                 dt.Columns[1].ColumnName = "Patient Name";
                 dt.Columns[2].ColumnName = "Date of Appointment";
                 con.Close();
+                dt = ReverseRowsInDataTable(dt);
                 return dt;
             }
             catch (Exception e)
@@ -121,7 +185,6 @@ namespace Hospital
                 cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@medicine", medicine);
                 cmd.ExecuteNonQuery();
-                con.Close();
                 MessageBox.Show("Success", "Done");
             }
             catch (Exception e)
@@ -131,6 +194,7 @@ namespace Hospital
             }
             finally
             {
+                con.Close();
                 cmd.Parameters.RemoveAt("@p_id");
                 cmd.Parameters.RemoveAt("@pa_name");
                 cmd.Parameters.RemoveAt("@user_name");

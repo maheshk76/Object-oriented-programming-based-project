@@ -47,7 +47,7 @@ namespace Hospital
         public void AddtoAppointments(int pid,string pname,string dname,DateTime appointdate)
         {
             int did = Convert.ToInt32(GetDoctorList(dname)[0]);
-            Console.WriteLine(did);
+            
            try
             {
                 cmd.Connection = con;
@@ -93,9 +93,7 @@ namespace Hospital
                 SqlDataReader r = cmd.ExecuteReader();
                 int Patient_Id = -1;
                 while (r.Read())
-                {
                     Patient_Id = Convert.ToInt32(r["Id"]);
-                }
                 con.Close();
             //Add to aapointment table
                 AddtoAppointments(Patient_Id, pname, doctor_assinged,adddate);
@@ -117,7 +115,6 @@ namespace Hospital
             cmd.ExecuteNonQuery();
             con.Close();
             return 1;
-        }
-        
+        }       
     }
 }

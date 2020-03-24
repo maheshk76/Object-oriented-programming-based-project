@@ -19,27 +19,16 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             //Get-Report by Id
-            DataTable dt = df.GetPatient(textBox1.Text,true);
-            if (dt != null)
-            {
-                dt.Columns.Remove("GuardianName");
-                dt.Columns.Remove("PEmail");
-                dt.Columns.Remove("BirthDate");
-                dt.Columns.Remove("Residential Address");
-                dt.Columns.Remove("Addmission Date");
-                dt.Columns.Remove("Discharge Date");
-                dt.Columns.Remove("Age");
-                dt.Columns.Remove("PGender");
-                dt.Columns.Remove("PContact");
-               
-            }
+            DataTable dt = df.GetPatientReport(Convert.ToInt32(textBox1.Text));
+           
             dataGridView1.DataSource = dt;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             if (dt != null)
             {
-                dataGridView1.Columns[0].Width = 100;
-                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[0].Width = 80;
+                dataGridView1.Columns[1].Width = 80;
+                dataGridView1.Columns[5].Width = 200;
             }
 
         }
