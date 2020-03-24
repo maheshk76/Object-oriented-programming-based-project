@@ -17,7 +17,7 @@ namespace Hospital
         public RRegister()
         {
             InitializeComponent();
-            listBox1.DataSource= pm.GetDoctorList();
+            listBox1.DataSource= pm.GetDoctorList("");
         }
 
         private void button1_Click(object sender, EventArgs e)

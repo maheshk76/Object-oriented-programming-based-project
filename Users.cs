@@ -29,7 +29,7 @@ namespace Hospital
             con.Close();
             if (flg)
             {
-                cmd.CommandText = "insert into Attendance_Manager(Uid,UName,Role,Date,Present) Values(@Uid,@user_name,@role,@dt,'true')";
+                cmd.CommandText = "insert into Attendance_Manager(Uid,UName,Role,Date,Present) Values(@user_id,@user_name,@role,@dt,'true')";
                 con.Open();
                 cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@role", role);

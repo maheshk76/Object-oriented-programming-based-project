@@ -11,7 +11,7 @@ namespace Hospital
 {
     class Patient_Management:MakeConnection
     {
-        public List<string> GetDoctorList()
+        public List<string> GetDoctorList(string DoctorName)
         {
             //For assigning a doctor
             List<string> l = new List<string>();
@@ -23,14 +23,21 @@ namespace Hospital
                 SqlDataReader r = cmd.ExecuteReader();
                 while (r.Read())
                 {
-                    l.Add(r["Name"].ToString());
+                    //return all doctor
+                    if (DoctorName.Length.Equals(0))
+                        l.Add(r["Name"].ToString());
+                    //return selected doctor
+                    else
+                    {
+                        if (r["Name"].ToString().Equals(DoctorName))
+                            l.Add(r["Id"].ToString());
+                    }
                 }
                 return l;
             }
-            catch(Exception e)
+            catch(Exception)
             {
-                MessageBox.Show("Error in Getting Details", "Error");
-                
+                MessageBox.Show("Please try again", "Error");
                 return l;
             }
             finally{
@@ -39,8 +46,8 @@ namespace Hospital
         }
         public void AddtoAppointments(int pid,string pname,string dname,DateTime appointdate)
         {
-            int did = GetDoctorId(dname);
-            
+            int did = Convert.ToInt32(GetDoctorList(dname)[0]);
+            Console.WriteLine(did);
            try
             {
                 cmd.Connection = con;
@@ -48,37 +55,16 @@ namespace Hospital
                 con.Open();
                 cmd.Parameters.AddWithValue("@pid", pid);
                 cmd.Parameters.AddWithValue("@did", did);
-            cmd.Parameters.AddWithValue("@appointdate", appointdate);
+                cmd.Parameters.AddWithValue("@dname", dname);
+
+                cmd.Parameters.AddWithValue("@appointdate", appointdate);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("Please try again", "Error");
-            }
-
-
-        }
-        public int GetDoctorId(string dname)
-        {
-            try
-            {
-                int id = -1;
-                cmd.Connection = con;
-                cmd.CommandText = "Select * from Users where Name=@dname and Role='Doctor'";
-                con.Open();
-                cmd.Parameters.AddWithValue("@dname", dname);
-
-                SqlDataReader r = cmd.ExecuteReader();
-                while (r.Read())
-                    id = Convert.ToInt32(r["Id"]);
-                con.Close();
-                return id;
-           }
-            catch(Exception)
-            {
-                MessageBox.Show("Please try again", "Error");
-                return -99;
+                Console.WriteLine(ex.Message.ToString());
+                
             }
         }
         public int RegisterNewPatient(string pname,string gname,string paddress,int page,string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
@@ -116,7 +102,7 @@ namespace Hospital
                 return Patient_Id;
             }
             catch (Exception)
-            { 
+            {
                 return -99;
             }
 
@@ -127,7 +113,6 @@ namespace Hospital
             cmd.Connection = con;
             cmd.CommandText = "insert into Patient_Record(DisDate) Values(@disdate) where Id=@Pid and PName=@pname ";
             con.Open();
-
             cmd.Parameters.AddWithValue("@disdate",disdate);
             cmd.ExecuteNonQuery();
             con.Close();
