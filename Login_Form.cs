@@ -25,8 +25,8 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             Users u = new Users();
-            try
-            {
+          //  try
+            //{
                 int user_id = Convert.ToInt32(textBox1.Text);
                 string pass = textBox2.Text;
                 string role = "";//returned value will be stored
@@ -70,13 +70,13 @@ namespace Hospital
                             // a.ShowDialog();
                             break;
                     }
-            }
+           /* }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa");
+                    MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa");
                 label8.Text = "NOT FOUND";
-            }
+            }*/
         }
     }
 }

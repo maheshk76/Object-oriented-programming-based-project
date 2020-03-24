@@ -43,7 +43,7 @@ namespace Hospital
             // searchTextbox
             // 
             this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextbox.Location = new System.Drawing.Point(0, 63);
+            this.searchTextbox.Location = new System.Drawing.Point(0, 58);
             this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(549, 38);
@@ -65,7 +65,7 @@ namespace Hospital
             this.dataGridView1.ColumnHeadersHeight = 38;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dataGridView1.Location = new System.Drawing.Point(0, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 131);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -80,7 +80,7 @@ namespace Hospital
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-5, 24);
+            this.label2.Location = new System.Drawing.Point(-5, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 25);
             this.label2.TabIndex = 15;
@@ -105,7 +105,7 @@ namespace Hospital
             this.Controls.Add(this.searchTextbox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DAppointment";
-            this.Size = new System.Drawing.Size(1153, 643);
+            this.Size = new System.Drawing.Size(1069, 650);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

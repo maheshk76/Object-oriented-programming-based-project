@@ -60,7 +60,6 @@ namespace Hospital
             //Resetting the Global variable
             //Logout
             this.Hide();
-            SessionClass.SessionId = 0;
             u.Logout();
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();

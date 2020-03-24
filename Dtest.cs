@@ -20,10 +20,12 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            int PID = Convert.ToInt32(textBox2.Text);
+            string PID = textBox2.Text;
             string Tests = richTextBox1.Text;
-            df.AddTestDetails(PID,Tests);
+            if (PID.Equals("") || Tests.Equals(""))
+                MessageBox.Show("Enter valid data");
+            else
+                df.AddTestDetails(PID,Tests);
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -19,9 +19,13 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             //ADD Prescription By Doctor
-            int patient_id = Convert.ToInt32(PID.Text);
+            string patient_id =PID.Text;
             string med = medicine.Text;
-            df.MakePrescription(patient_id, med);
+
+            if (patient_id.Equals("") || med.Equals(""))
+                MessageBox.Show("Enter valid data");
+            else
+                df.MakePrescription(patient_id, med);
         }
         private void button2_Click(object sender, EventArgs e)
         {
