@@ -13,14 +13,17 @@ namespace Hospital
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
-        public void MakeTestResults(string PatientID,string TestResult)
+        public int MakeTestResults(string PatientID,string TestResult)
         {
             try
             {
                 dt = df.GetPatientReport(PatientID);
+                if (dt == null)
+                    return 0;
                 string RES_ID=(from DataRow dr in dt.Rows where dr["Result"].ToString().Length.Equals(0)
                              select dr["Id"]).FirstOrDefault().ToString();
                 Console.WriteLine(RES_ID);
+
                 DateTime date = DateTime.Now.Date;
                 cmd.Connection = con;
                 if (!(RES_ID.Equals(null)))
@@ -32,7 +35,9 @@ namespace Hospital
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.ExecuteNonQuery();
                     con.Close();
+                    MessageBox.Show("Success", "Done");
                 }
+                return 1;
             }
             catch (Exception ex)
             {
@@ -40,13 +45,14 @@ namespace Hospital
                 string etype = ex.GetType().ToString();
                 Console.WriteLine(etype);
                 if (etype.Equals("System.FormatException"))
-                    MessageBox.Show("Enter valid data");
+                    MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.Data.SqlClient.SqlException"))
-                    MessageBox.Show("Patient data is not available", "Info");
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.NullReferenceException"))
-                    MessageBox.Show("No any pending test(s) found", "Info");
+                    MessageBox.Show("No any pending test(s) found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Please try again later", "Error");
+                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
             finally
             {

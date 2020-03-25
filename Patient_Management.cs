@@ -37,7 +37,7 @@ namespace Hospital
             }
             catch(Exception)
             {
-                MessageBox.Show("Please try again", "Error");
+                MessageBox.Show("Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return l;
             }
             finally{

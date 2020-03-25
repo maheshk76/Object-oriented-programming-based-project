@@ -24,7 +24,7 @@ namespace Hospital
             //Search Report by ID
             string PID = textBox1.Text;
             if (PID.Equals(""))
-                MessageBox.Show("Enter valid data");
+                MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 DataTable dt = df.GetPatientReport(PID);
@@ -47,7 +47,7 @@ namespace Hospital
             //Generate Report
             string PID = textBox1.Text;
             string Result = richTextBox1.Text;
-            lf.MakeTestResults(PID, Result);
+            int x=lf.MakeTestResults(PID, Result);
         }
     }
 }
