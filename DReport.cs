@@ -31,8 +31,8 @@ namespace Hospital
                     dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 if (dt != null)
                 {
-                    dataGridView1.Columns[0].Width = 80;
                     dataGridView1.Columns[1].Width = 80;
+                    dataGridView1.Columns[2].Width = 80;
                     dataGridView1.Columns[5].Width = 200;
                 }
             }

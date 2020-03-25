@@ -17,11 +17,11 @@ namespace Hospital
         public Laboratorian(string uname)
         {
             InitializeComponent();
-            
+
 
             SidePanel.Height = button7.Height;
             lReport1.BringToFront();
-            if (SessionClass.SessionId== 0)
+            if (SessionClass.SessionId == 0)
             {
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();

@@ -182,9 +182,9 @@
             this.panel2.Controls.Add(this.button8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(291, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1352, 96);
+            this.panel2.Size = new System.Drawing.Size(1352, 98);
             this.panel2.TabIndex = 14;
             // 
             // panel3
@@ -194,7 +194,7 @@
             this.panel3.Controls.Add(this.userControl11);
             this.panel3.Controls.Add(this.rRegister1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, -1170);
+            this.panel3.Location = new System.Drawing.Point(0, -1168);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1352, 633);
@@ -203,7 +203,7 @@
             // rPayment1
             // 
             this.rPayment1.Location = new System.Drawing.Point(71, 0);
-            this.rPayment1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rPayment1.Margin = new System.Windows.Forms.Padding(5);
             this.rPayment1.Name = "rPayment1";
             this.rPayment1.Size = new System.Drawing.Size(1128, 657);
             this.rPayment1.TabIndex = 2;
@@ -219,7 +219,7 @@
             // rRegister1
             // 
             this.rRegister1.Location = new System.Drawing.Point(71, 0);
-            this.rRegister1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rRegister1.Margin = new System.Windows.Forms.Padding(5);
             this.rRegister1.Name = "rRegister1";
             this.rRegister1.Size = new System.Drawing.Size(1128, 657);
             this.rRegister1.TabIndex = 0;
@@ -229,7 +229,7 @@
             this.panel.AutoScroll = true;
             this.panel.Controls.Add(this.button4);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(0, -537);
+            this.panel.Location = new System.Drawing.Point(0, -535);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1352, 633);
@@ -260,7 +260,6 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.Control;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(1196, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -288,7 +287,7 @@
             // lInventory1
             // 
             this.lInventory1.Location = new System.Drawing.Point(88, 0);
-            this.lInventory1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lInventory1.Margin = new System.Windows.Forms.Padding(5);
             this.lInventory1.Name = "lInventory1";
             this.lInventory1.Size = new System.Drawing.Size(1128, 657);
             this.lInventory1.TabIndex = 2;
@@ -304,7 +303,7 @@
             // lReport1
             // 
             this.lReport1.Location = new System.Drawing.Point(88, 0);
-            this.lReport1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lReport1.Margin = new System.Windows.Forms.Padding(5);
             this.lReport1.Name = "lReport1";
             this.lReport1.Size = new System.Drawing.Size(1128, 657);
             this.lReport1.TabIndex = 0;
@@ -318,7 +317,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Laboratorian";
             this.Text = "Form5";
             this.panel1.ResumeLayout(false);

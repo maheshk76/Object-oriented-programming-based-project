@@ -24,7 +24,7 @@ namespace Hospital
             {
                 int PID = Convert.ToInt32(PId);
                 cmd.Connection = con;
-                cmd.CommandText = "insert into PatientDiagnosis(PatientId,PendingTests) Values(@PID,@Tests)";
+                cmd.CommandText = "insert into PatientDiagnosis(PatientId,Tests) Values(@PID,@Tests)";
                 con.Open();
                 cmd.Parameters.AddWithValue("@PID", PID);
                 cmd.Parameters.AddWithValue("@Tests", Tests);
@@ -43,6 +43,12 @@ namespace Hospital
                     MessageBox.Show("Patient data is not available", "Info");
                 else
                     MessageBox.Show("Please try again later", "Error");
+            }
+
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
             }
         }
         public DataTable GetPatientReport(string Query)
@@ -63,15 +69,16 @@ namespace Hospital
                     MessageBox.Show("No data found", "Info");
                     return null;
                 }
-                dt.Columns.Remove("Id");
                 return dt;
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                if (ex.GetType().ToString().Equals("System.FormatException"))
+                string etype = ex.GetType().ToString();
+                Console.WriteLine(etype);
+                if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data");
-                else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info");
                 else
                     MessageBox.Show("Please try again later", "Error");
@@ -79,7 +86,8 @@ namespace Hospital
             }
             finally
             {
-                con.Close();
+                if (con.State == ConnectionState.Open)
+                    con.Close();
             }
         }
         public DataTable GetAllAppointments(string ser)
@@ -113,8 +121,9 @@ namespace Hospital
             finally
             {
                 cmd.Parameters.RemoveAt("@Approved_or_not");
-                cmd.Parameters.RemoveAt("@ser");
-                con.Close();
+                cmd.Parameters.RemoveAt("@ser"); 
+                if (con.State == ConnectionState.Open)
+                    con.Close();
             }
         }
         //Search Algorithm
@@ -206,7 +215,7 @@ namespace Hospital
                 cmd.Parameters.RemoveAt("@user_name");
                 cmd.Parameters.RemoveAt("@medicine");
             }
-            catch (SqlException ex)
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
                 if (ex.GetType().ToString().Equals("System.FormatException"))
@@ -214,7 +223,7 @@ namespace Hospital
                 if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info");
                 else
-                MessageBox.Show("Please try after some time", "Error");
+                    MessageBox.Show("Please try after some time", "Error");
             }
             finally
             {
