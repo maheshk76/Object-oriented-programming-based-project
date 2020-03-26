@@ -103,7 +103,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 220;
-            this.dataGridView1.Size = new System.Drawing.Size(1128, 340);
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 328);
             this.dataGridView1.TabIndex = 13;
             // 
             // richTextBox1
@@ -151,7 +151,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LReport";
             this.Size = new System.Drawing.Size(1128, 616);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

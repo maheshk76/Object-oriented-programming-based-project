@@ -32,6 +32,7 @@ namespace Hospital
             SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
             rRegister1.BringToFront();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

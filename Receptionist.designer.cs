@@ -67,7 +67,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 783);
+            this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 742);
+            this.label1.Location = new System.Drawing.Point(69, 742);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 12;
@@ -84,7 +84,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 742);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 742);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
@@ -106,7 +106,7 @@
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.SidePanel.ForeColor = System.Drawing.Color.DimGray;
-            this.SidePanel.Location = new System.Drawing.Point(276, 143);
+            this.SidePanel.Location = new System.Drawing.Point(285, 143);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 60);
@@ -125,7 +125,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(277, 60);
             this.button7.TabIndex = 9;
-            this.button7.Text = "  Register patient";
+            this.button7.Text = " New Patient";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 60);
             this.button1.TabIndex = 3;
-            this.button1.Text = "  All Patient";
+            this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -174,10 +174,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.panel2.Controls.Add(this.panel);
             this.panel2.Controls.Add(this.button8);
-            this.panel2.Location = new System.Drawing.Point(291, 0);
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1352, 96);
+            this.panel2.Size = new System.Drawing.Size(1351, 96);
             this.panel2.TabIndex = 6;
             // 
             // panel
@@ -188,7 +188,7 @@
             this.panel.Location = new System.Drawing.Point(0, -537);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1352, 633);
+            this.panel.Size = new System.Drawing.Size(1351, 633);
             this.panel.TabIndex = 11;
             // 
             // button4
@@ -199,10 +199,11 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1177, 537);
+            this.button4.Location = new System.Drawing.Point(1087, 537);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 96);
+            this.button4.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(161, 98);
             this.button4.TabIndex = 14;
             this.button4.Text = "Logout";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,10 +236,10 @@
             this.panel3.Controls.Add(this.userControl11);
             this.panel3.Controls.Add(this.rRegister1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(291, 150);
+            this.panel3.Location = new System.Drawing.Point(292, 162);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1352, 633);
+            this.panel3.Size = new System.Drawing.Size(1248, 633);
             this.panel3.TabIndex = 7;
             // 
             // rPayment1
@@ -269,13 +270,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1643, 783);
+            this.ClientSize = new System.Drawing.Size(1540, 795);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Receptionist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Receptionist";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

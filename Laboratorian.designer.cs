@@ -46,14 +46,10 @@
             this.lInventory1 = new Hospital.LInventory();
             this.userControl12 = new Hospital.UserControl1();
             this.lReport1 = new Hospital.LReport();
-          //T  this.rPayment1 = new Hospital.RPayment();
-           //T this.userControl11 = new Hospital.UserControl1();
-           //T this.rRegister1 = new Hospital.RRegister();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 795);
+            this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 13;
             // 
             // label1
@@ -111,7 +107,7 @@
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.SidePanel.ForeColor = System.Drawing.Color.DimGray;
-            this.SidePanel.Location = new System.Drawing.Point(276, 143);
+            this.SidePanel.Location = new System.Drawing.Point(285, 145);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 60);
@@ -125,12 +121,12 @@
             this.button7.ForeColor = System.Drawing.SystemColors.Control;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(13, 143);
+            this.button7.Location = new System.Drawing.Point(12, 145);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(277, 60);
             this.button7.TabIndex = 9;
-            this.button7.Text = "  Report Generate";
+            this.button7.Text = "  Make Report";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -144,7 +140,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 274);
+            this.button5.Location = new System.Drawing.Point(15, 279);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(277, 60);
@@ -163,12 +159,12 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(13, 209);
+            this.button1.Location = new System.Drawing.Point(13, 212);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 60);
             this.button1.TabIndex = 3;
-            this.button1.Text = "  All Patient";
+            this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -180,23 +176,21 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel);
             this.panel2.Controls.Add(this.button8);
-            this.panel2.Location = new System.Drawing.Point(291, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1249, 96);
+            this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
-          //T  this.panel3.Controls.Add(this.rPayment1);
-           // T  this.panel3.Controls.Add(this.userControl11);
-           //T this.panel3.Controls.Add(this.rRegister1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, -1170);
+            this.panel3.Location = new System.Drawing.Point(0, -1168);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1249, 633);
+            this.panel3.Size = new System.Drawing.Size(1248, 633);
             this.panel3.TabIndex = 12;
             // 
             // panel
@@ -204,10 +198,10 @@
             this.panel.AutoScroll = true;
             this.panel.Controls.Add(this.button4);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(0, -537);
+            this.panel.Location = new System.Drawing.Point(0, -535);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1249, 633);
+            this.panel.Size = new System.Drawing.Size(1248, 633);
             this.panel.TabIndex = 11;
             // 
             // button4
@@ -218,10 +212,11 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1390, 535);
+            this.button4.Location = new System.Drawing.Point(1098, 533);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 96);
+            this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(147, 98);
             this.button4.TabIndex = 14;
             this.button4.Text = "Logout";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,10 +248,10 @@
             this.panel4.Controls.Add(this.userControl12);
             this.panel4.Controls.Add(this.lReport1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(291, 153);
+            this.panel4.Location = new System.Drawing.Point(292, 153);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1249, 642);
+            this.panel4.Size = new System.Drawing.Size(1248, 642);
             this.panel4.TabIndex = 15;
             // 
             // lInventory1
@@ -282,30 +277,6 @@
             this.lReport1.Name = "lReport1";
             this.lReport1.Size = new System.Drawing.Size(1137, 628);
             this.lReport1.TabIndex = 0;
-         /*T   // 
-            // rPayment1
-            // 
-            this.rPayment1.Location = new System.Drawing.Point(71, 0);
-            this.rPayment1.Margin = new System.Windows.Forms.Padding(5);
-            this.rPayment1.Name = "rPayment1";
-            this.rPayment1.Size = new System.Drawing.Size(1128, 657);
-            this.rPayment1.TabIndex = 2;
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(88, 0);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1137, 628);
-            this.userControl11.TabIndex = 1;
-            // 
-            // rRegister1
-            // 
-            this.rRegister1.Location = new System.Drawing.Point(71, 0);
-            this.rRegister1.Margin = new System.Windows.Forms.Padding(5);
-            this.rRegister1.Name = "rRegister1";
-            this.rRegister1.Size = new System.Drawing.Size(1128, 657);
-            this.rRegister1.TabIndex = 0;*/
             // 
             // Laboratorian
             // 
@@ -318,14 +289,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Laboratorian";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form5";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);

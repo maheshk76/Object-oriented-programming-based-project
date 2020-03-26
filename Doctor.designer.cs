@@ -70,7 +70,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 795);
+            this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 4;
             // 
             // button2
@@ -97,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 754);
+            this.label1.Location = new System.Drawing.Point(63, 750);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
@@ -108,7 +108,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 754);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 750);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 29);
@@ -121,7 +121,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -130,7 +130,7 @@
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.SidePanel.ForeColor = System.Drawing.Color.DimGray;
-            this.SidePanel.Location = new System.Drawing.Point(259, 145);
+            this.SidePanel.Location = new System.Drawing.Point(285, 145);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(12, 61);
@@ -247,10 +247,10 @@
             this.panel.Controls.Add(this.duserdetails);
             this.panel.Controls.Add(this.dPrescription);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(272, 153);
+            this.panel.Location = new System.Drawing.Point(292, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1268, 642);
+            this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 6;
             // 
             // dtest1
@@ -278,10 +278,11 @@
             this.button8.ForeColor = System.Drawing.SystemColors.Control;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1121, 0);
+            this.button8.Location = new System.Drawing.Point(1101, -2);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(164, 98);
+            this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(147, 98);
             this.button8.TabIndex = 10;
             this.button8.Text = "Logout";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,10 +295,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.panel2.Controls.Add(this.button8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(272, 0);
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1268, 98);
+            this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 5;
             // 
             // Doctor
@@ -311,7 +312,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Doctor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Doctor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

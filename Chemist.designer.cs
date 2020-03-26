@@ -46,14 +46,10 @@
             this.cMedicine1 = new Hospital.CMedicine();
             this.cPrescription1 = new Hospital.CPrescription();
             this.userControl12 = new Hospital.UserControl1();
-         /*T   this.rPayment1 = new Hospital.RPayment();
-            this.userControl11 = new Hospital.UserControl1();
-            this.rRegister1 = new Hospital.RRegister();o*/
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 783);
+            this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 12;
             // 
             // label1
@@ -111,7 +107,7 @@
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(40)))), ((int)(((byte)(61)))));
             this.SidePanel.ForeColor = System.Drawing.Color.DimGray;
-            this.SidePanel.Location = new System.Drawing.Point(276, 143);
+            this.SidePanel.Location = new System.Drawing.Point(285, 145);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 60);
@@ -130,7 +126,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(277, 60);
             this.button7.TabIndex = 9;
-            this.button7.Text = "  Prescription";
+            this.button7.Text = "  Prescription(s)";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -168,7 +164,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 60);
             this.button1.TabIndex = 3;
-            this.button1.Text = "  All Patient";
+            this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -181,23 +177,20 @@
             this.panel2.Controls.Add(this.panel);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(291, 0);
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1352, 96);
+            this.panel2.Size = new System.Drawing.Size(1248, 96);
             this.panel2.TabIndex = 13;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
-         /*   this.panel3.Controls.Add(this.rPayment1);
-            this.panel3.Controls.Add(this.userControl11);
-            this.panel3.Controls.Add(this.rRegister1);*/
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, -1170);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1352, 633);
+            this.panel3.Size = new System.Drawing.Size(1248, 633);
             this.panel3.TabIndex = 12;
             // 
             // panel
@@ -208,7 +201,7 @@
             this.panel.Location = new System.Drawing.Point(0, -537);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1352, 633);
+            this.panel.Size = new System.Drawing.Size(1248, 633);
             this.panel.TabIndex = 11;
             // 
             // button4
@@ -219,10 +212,11 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1177, 537);
+            this.button4.Location = new System.Drawing.Point(1098, 533);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 96);
+            this.button4.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(147, 98);
             this.button4.TabIndex = 14;
             this.button4.Text = "Logout";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,10 +249,10 @@
             this.panel4.Controls.Add(this.cPrescription1);
             this.panel4.Controls.Add(this.userControl12);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(291, 150);
+            this.panel4.Location = new System.Drawing.Point(292, 162);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1352, 633);
+            this.panel4.Size = new System.Drawing.Size(1248, 633);
             this.panel4.TabIndex = 14;
             // 
             // cMedicine1
@@ -284,49 +278,25 @@
             this.userControl12.Name = "userControl12";
             this.userControl12.Size = new System.Drawing.Size(1128, 630);
             this.userControl12.TabIndex = 0;
-          /*T  // 
-            // rPayment1
-            // 
-            this.rPayment1.Location = new System.Drawing.Point(71, 0);
-            this.rPayment1.Margin = new System.Windows.Forms.Padding(5);
-            this.rPayment1.Name = "rPayment1";
-            this.rPayment1.Size = new System.Drawing.Size(1128, 657);
-            this.rPayment1.TabIndex = 2;
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(71, 0);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1128, 657);
-            this.userControl11.TabIndex = 1;
-            // 
-            // rRegister1
-            // 
-            this.rRegister1.Location = new System.Drawing.Point(71, 0);
-            this.rRegister1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.rRegister1.Name = "rRegister1";
-            this.rRegister1.Size = new System.Drawing.Size(1128, 657);
-            this.rRegister1.TabIndex = 0;*/
             // 
             // Chemist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1643, 783);
+            this.ClientSize = new System.Drawing.Size(1540, 795);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Chemist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form4";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
