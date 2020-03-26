@@ -58,8 +58,8 @@ namespace Hospital
                             //m.ShowDialog();
                             break;
                         case "Nurse":
-                            //Nurse nu= new Nurse(uname);
-                            //nu.ShowDialog();
+                           //Nurse nu= new Nurse(uname);
+                           //nu.ShowDialog();
                             break;
                         case "Ward_Manager":
                             //Ward_Manager wm = new Ward_Manager(uname);

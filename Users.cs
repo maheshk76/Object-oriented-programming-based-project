@@ -39,7 +39,6 @@ namespace Hospital
         }
         public string Login(int user_id, string pass,out string role)
         {
-
             role = "";
             try
             {
@@ -72,8 +71,16 @@ namespace Hospital
             catch (Exception e)
             {
                 Console.WriteLine(e.Message.ToString());
-                MessageBox.Show("Please try after some time", "Error");
+                MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return "";
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if (cmd.Parameters.Contains("@user_id"))
+                    cmd.Parameters.RemoveAt("@user_id");
             }
 
         }

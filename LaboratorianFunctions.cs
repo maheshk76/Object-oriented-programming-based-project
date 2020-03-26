@@ -35,7 +35,7 @@ namespace Hospital
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Success", "Done");
+                    MessageBox.Show("Success", "Done",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 return 1;
             }
@@ -51,7 +51,7 @@ namespace Hospital
                 else if (etype.Equals("System.NullReferenceException"))
                     MessageBox.Show("No any pending test(s) found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             finally

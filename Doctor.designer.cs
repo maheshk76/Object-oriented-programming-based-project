@@ -214,28 +214,28 @@
             // 
             // duserdetails
             // 
-            this.duserdetails.Location = new System.Drawing.Point(76, 0);
+            this.duserdetails.Location = new System.Drawing.Point(90, 0);
             this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
             this.duserdetails.Name = "duserdetails";
-            this.duserdetails.Size = new System.Drawing.Size(1058, 668);
+            this.duserdetails.Size = new System.Drawing.Size(1058, 635);
             this.duserdetails.TabIndex = 0;
             // 
             // dPrescription
             // 
             this.dPrescription.AutoScroll = true;
-            this.dPrescription.Location = new System.Drawing.Point(76, 16);
-            this.dPrescription.Margin = new System.Windows.Forms.Padding(5);
+            this.dPrescription.Location = new System.Drawing.Point(90, 0);
+            this.dPrescription.Margin = new System.Windows.Forms.Padding(2);
             this.dPrescription.Name = "dPrescription";
-            this.dPrescription.Size = new System.Drawing.Size(1058, 695);
+            this.dPrescription.Size = new System.Drawing.Size(1058, 635);
             this.dPrescription.TabIndex = 1;
             // 
             // dreport
             // 
             this.dreport.AllowDrop = true;
-            this.dreport.Location = new System.Drawing.Point(76, 0);
-            this.dreport.Margin = new System.Windows.Forms.Padding(5);
+            this.dreport.Location = new System.Drawing.Point(90, 0);
+            this.dreport.Margin = new System.Windows.Forms.Padding(2);
             this.dreport.Name = "dreport";
-            this.dreport.Size = new System.Drawing.Size(1058, 668);
+            this.dreport.Size = new System.Drawing.Size(1058, 635);
             this.dreport.TabIndex = 2;
             // 
             // panel
@@ -244,8 +244,8 @@
             this.panel.Controls.Add(this.dtest1);
             this.panel.Controls.Add(this.dAppointment);
             this.panel.Controls.Add(this.dreport);
-            this.panel.Controls.Add(this.dPrescription);
             this.panel.Controls.Add(this.duserdetails);
+            this.panel.Controls.Add(this.dPrescription);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(272, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
@@ -255,19 +255,19 @@
             // 
             // dtest1
             // 
-            this.dtest1.Location = new System.Drawing.Point(76, 0);
-            this.dtest1.Margin = new System.Windows.Forms.Padding(5);
+            this.dtest1.Location = new System.Drawing.Point(90, 0);
+            this.dtest1.Margin = new System.Windows.Forms.Padding(2);
             this.dtest1.Name = "dtest1";
-            this.dtest1.Size = new System.Drawing.Size(1058, 668);
+            this.dtest1.Size = new System.Drawing.Size(1058, 635);
             this.dtest1.TabIndex = 4;
             this.dtest1.Load += new System.EventHandler(this.dtest1_Load);
             // 
             // dAppointment
             // 
-            this.dAppointment.Location = new System.Drawing.Point(76, 16);
-            this.dAppointment.Margin = new System.Windows.Forms.Padding(5);
+            this.dAppointment.Location = new System.Drawing.Point(90, 0);
+            this.dAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.dAppointment.Name = "dAppointment";
-            this.dAppointment.Size = new System.Drawing.Size(1058, 668);
+            this.dAppointment.Size = new System.Drawing.Size(1058, 635);
             this.dAppointment.TabIndex = 3;
             // 
             // button8

@@ -66,7 +66,7 @@ namespace Hospital
                 cmd.Parameters.RemoveAt("@query");
                 if (dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("No data found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No data found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return null;
                 }
                 return dt;
@@ -146,7 +146,7 @@ namespace Hospital
                 con.Close();
                 if (dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("No Data Found,From GetPatient", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("No Data Found", "Info",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                     
                     return null;
                 }
@@ -169,7 +169,7 @@ namespace Hospital
                 if (ex.GetType().ToString().Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
-                    MessageBox.Show("No Data Found,From GetPatient catch", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No Data Found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                 MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
@@ -210,7 +210,7 @@ namespace Hospital
                 cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@medicine", medicine);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
                 cmd.Parameters.RemoveAt("@pa_name");
                 cmd.Parameters.RemoveAt("@user_name");
@@ -222,9 +222,10 @@ namespace Hospital
                 if (ex.GetType().ToString().Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
-                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
-                    MessageBox.Show("Please try after some time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {

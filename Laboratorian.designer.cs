@@ -39,9 +39,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rPayment1 = new Hospital.RPayment();
-            this.userControl11 = new Hospital.UserControl1();
-            this.rRegister1 = new Hospital.RRegister();
             this.panel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -49,6 +46,9 @@
             this.lInventory1 = new Hospital.LInventory();
             this.userControl12 = new Hospital.UserControl1();
             this.lReport1 = new Hospital.LReport();
+          //T  this.rPayment1 = new Hospital.RPayment();
+           //T this.userControl11 = new Hospital.UserControl1();
+           //T this.rRegister1 = new Hospital.RRegister();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +72,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 783);
+            this.panel1.Size = new System.Drawing.Size(291, 795);
             this.panel1.TabIndex = 13;
             // 
             // label1
@@ -180,59 +180,34 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel);
             this.panel2.Controls.Add(this.button8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(291, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1352, 98);
+            this.panel2.Size = new System.Drawing.Size(1249, 96);
             this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.rPayment1);
-            this.panel3.Controls.Add(this.userControl11);
-            this.panel3.Controls.Add(this.rRegister1);
+          //T  this.panel3.Controls.Add(this.rPayment1);
+           // T  this.panel3.Controls.Add(this.userControl11);
+           //T this.panel3.Controls.Add(this.rRegister1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, -1168);
+            this.panel3.Location = new System.Drawing.Point(0, -1170);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1352, 633);
+            this.panel3.Size = new System.Drawing.Size(1249, 633);
             this.panel3.TabIndex = 12;
-            // 
-            // rPayment1
-            // 
-            this.rPayment1.Location = new System.Drawing.Point(71, 0);
-            this.rPayment1.Margin = new System.Windows.Forms.Padding(5);
-            this.rPayment1.Name = "rPayment1";
-            this.rPayment1.Size = new System.Drawing.Size(1128, 657);
-            this.rPayment1.TabIndex = 2;
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(71, 0);
-            this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1128, 657);
-            this.userControl11.TabIndex = 1;
-            // 
-            // rRegister1
-            // 
-            this.rRegister1.Location = new System.Drawing.Point(71, 0);
-            this.rRegister1.Margin = new System.Windows.Forms.Padding(5);
-            this.rRegister1.Name = "rRegister1";
-            this.rRegister1.Size = new System.Drawing.Size(1128, 657);
-            this.rRegister1.TabIndex = 0;
             // 
             // panel
             // 
             this.panel.AutoScroll = true;
             this.panel.Controls.Add(this.button4);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel.Location = new System.Drawing.Point(0, -535);
+            this.panel.Location = new System.Drawing.Point(0, -537);
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1352, 633);
+            this.panel.Size = new System.Drawing.Size(1249, 633);
             this.panel.TabIndex = 11;
             // 
             // button4
@@ -243,7 +218,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1177, 537);
+            this.button4.Location = new System.Drawing.Point(1390, 535);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 96);
@@ -278,10 +253,10 @@
             this.panel4.Controls.Add(this.userControl12);
             this.panel4.Controls.Add(this.lReport1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(291, 150);
+            this.panel4.Location = new System.Drawing.Point(291, 153);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1352, 633);
+            this.panel4.Size = new System.Drawing.Size(1249, 642);
             this.panel4.TabIndex = 15;
             // 
             // lInventory1
@@ -289,7 +264,7 @@
             this.lInventory1.Location = new System.Drawing.Point(88, 0);
             this.lInventory1.Margin = new System.Windows.Forms.Padding(5);
             this.lInventory1.Name = "lInventory1";
-            this.lInventory1.Size = new System.Drawing.Size(1128, 657);
+            this.lInventory1.Size = new System.Drawing.Size(1137, 628);
             this.lInventory1.TabIndex = 2;
             // 
             // userControl12
@@ -297,7 +272,7 @@
             this.userControl12.Location = new System.Drawing.Point(88, 0);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
-            this.userControl12.Size = new System.Drawing.Size(1128, 657);
+            this.userControl12.Size = new System.Drawing.Size(1137, 628);
             this.userControl12.TabIndex = 1;
             // 
             // lReport1
@@ -305,20 +280,45 @@
             this.lReport1.Location = new System.Drawing.Point(88, 0);
             this.lReport1.Margin = new System.Windows.Forms.Padding(5);
             this.lReport1.Name = "lReport1";
-            this.lReport1.Size = new System.Drawing.Size(1128, 657);
+            this.lReport1.Size = new System.Drawing.Size(1137, 628);
             this.lReport1.TabIndex = 0;
+         /*T   // 
+            // rPayment1
+            // 
+            this.rPayment1.Location = new System.Drawing.Point(71, 0);
+            this.rPayment1.Margin = new System.Windows.Forms.Padding(5);
+            this.rPayment1.Name = "rPayment1";
+            this.rPayment1.Size = new System.Drawing.Size(1128, 657);
+            this.rPayment1.TabIndex = 2;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(88, 0);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1137, 628);
+            this.userControl11.TabIndex = 1;
+            // 
+            // rRegister1
+            // 
+            this.rRegister1.Location = new System.Drawing.Point(71, 0);
+            this.rRegister1.Margin = new System.Windows.Forms.Padding(5);
+            this.rRegister1.Name = "rRegister1";
+            this.rRegister1.Size = new System.Drawing.Size(1128, 657);
+            this.rRegister1.TabIndex = 0;*/
             // 
             // Laboratorian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1643, 783);
+            this.ClientSize = new System.Drawing.Size(1540, 795);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Laboratorian";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -344,15 +344,15 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private RPayment rPayment1;
-        private UserControl1 userControl11;
-        private RRegister rRegister1;
-        private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button button4;
+      //T  private RPayment rPayment1;
+       //T private UserControl1 userControl11;
+       //T private RRegister rRegister1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel4;
         private UserControl1 userControl12;
         private LReport lReport1;
         private LInventory lInventory1;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button button4;
     }
 }
