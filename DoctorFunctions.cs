@@ -44,7 +44,6 @@ namespace Hospital
                 else
                     MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             finally
             {
                 if (con.State == ConnectionState.Open)
@@ -77,9 +76,9 @@ namespace Hospital
                 string etype = ex.GetType().ToString();
                 Console.WriteLine(etype);
                 if (etype.Equals("System.FormatException"))
-                    MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.Data.SqlClient.SqlException"))
-                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                     MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
@@ -198,8 +197,11 @@ namespace Hospital
                 
                 int user_id = SessionClass.SessionId;
                 cmd.CommandText = "select * from Users where Id=@user_id";
+
+                cmd.Parameters.AddWithValue("@user_id", user_id);
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
+
                 string user_name = "";
                 while (r.Read())
                     user_name = r["Name"].ToString();
@@ -212,6 +214,7 @@ namespace Hospital
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
+                cmd.Parameters.RemoveAt("@user_id");
                 cmd.Parameters.RemoveAt("@pa_name");
                 cmd.Parameters.RemoveAt("@user_name");
                 cmd.Parameters.RemoveAt("@medicine");

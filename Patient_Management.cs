@@ -70,11 +70,9 @@ namespace Hospital
         public int RegisterNewPatient(string pname,string gname,string paddress,int page,string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
         {
             DateTime adddate = DateTime.Now.Date;
-            cmd.Connection = con;
             try
             {
-                if (page <= 0)
-                    return -99;
+                cmd.Connection = con;
                 cmd.CommandText = "insert into Patient_Record(PName,GuardianName,PAddress,PAge,PEmail,PContact,PGender,AddDate,Birthdate) Values(@pname,@gname,@paddress,@page,@PEmail,@pcontact,@pgender,@adddate,@bdate)";
                 con.Open();
                 cmd.Parameters.AddWithValue("@pname", pname);

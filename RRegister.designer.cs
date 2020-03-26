@@ -71,7 +71,6 @@
             this.Pname.Name = "Pname";
             this.Pname.Size = new System.Drawing.Size(460, 38);
             this.Pname.TabIndex = 12;
-            this.Pname.TextChanged += new System.EventHandler(this.Pname_TextChanged);
             // 
             // label2
             // 
@@ -82,7 +81,6 @@
             this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Gurdian Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Gname
             // 
@@ -140,7 +138,6 @@
             this.label5.Size = new System.Drawing.Size(85, 25);
             this.label5.TabIndex = 21;
             this.label5.Text = "Address";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Address
             // 
@@ -218,7 +215,6 @@
             this.agebar.Name = "agebar";
             this.agebar.Size = new System.Drawing.Size(69, 37);
             this.agebar.TabIndex = 26;
-            this.agebar.ValueChanged += new System.EventHandler(this.agebar_ValueChanged);
             // 
             // label8
             // 
@@ -229,7 +225,6 @@
             this.label8.Size = new System.Drawing.Size(89, 25);
             this.label8.TabIndex = 27;
             this.label8.Text = "Birthdate";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // dateTimePicker1
             // 
@@ -239,7 +234,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(350, 37);
             this.dateTimePicker1.TabIndex = 28;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // listBox1
             // 

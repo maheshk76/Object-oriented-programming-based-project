@@ -46,7 +46,7 @@ namespace Hospital
             this.searchTextbox.Location = new System.Drawing.Point(0, 41);
             this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(549, 38);
+            this.searchTextbox.Size = new System.Drawing.Size(773, 38);
             this.searchTextbox.TabIndex = 11;
             this.searchTextbox.TextChanged += new System.EventHandler(this.TextBox_Changed);
             // 
