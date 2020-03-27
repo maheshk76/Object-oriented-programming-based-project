@@ -167,6 +167,12 @@
     <Compile Include="Receptionist.designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </Compile>
+    <Compile Include="RExPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RExPatient.Designer.cs">
+      <DependentUpon>RExPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="RPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RExPatient.resx">
+      <DependentUpon>RExPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPayment.resx">
       <DependentUpon>RPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,10 +277,13 @@
     <None Include="Resources\refresh.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\refresh.png" />
+    <None Include="Resources\button2.Image.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\button2.Image.png" />
+    <None Include="Resources\refresh.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

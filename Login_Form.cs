@@ -32,7 +32,7 @@ namespace Hospital
                 string role = "";//returned value will be stored
                 string uname = u.Login(user_id, pass, out role);
                 if (uname.Equals(""))
-                    throw new Exception();
+                    throw new FormatException();
                 SessionClass.SessionId = user_id;
                 this.Hide();
                 switch (role)
@@ -74,7 +74,10 @@ namespace Hospital
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                    MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (ex.GetType().ToString().Equals("System.FormatException"))
+                    MessageBox.Show("User doesn't exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                 MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 label8.Text = "NOT FOUND";
             }
         }

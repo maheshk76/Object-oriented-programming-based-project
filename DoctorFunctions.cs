@@ -89,27 +89,39 @@ namespace Hospital
                     con.Close();
             }
         }
-        public DataTable GetAllAppointments(string ser)
+        public DataTable GetAllAppointments(string ser,bool flg)
         {
             try
             {
                 dt = new DataTable();
                 cmd.Connection = con;
+                
+                    int did = SessionClass.SessionId;
                 //if 0 then show all appoints
-                if (ser.Length.Equals(0))
-                    cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where Approved_or_not='false'";
+                if (flg)
+                {
+                    if (ser.Length.Equals(0))
+                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where Approved_or_not='false' and DoctorId=@did";
+                    else
+                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where (PatientId like @ser+'%' or PName like @ser+'%') and DoctorId=@did";
+
+                }
                 else
-                    cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
+                {
+                    cmd.CommandText = "select PatientId,PName,Date_of_Appoint,Doctor_Assigned from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
+                }
                 con.Open();
-                cmd.Parameters.AddWithValue("@Approved_or_not", false);
-                cmd.Parameters.AddWithValue("@ser", ser);
+                    cmd.Parameters.AddWithValue("@Approved_or_not", false);
+                    cmd.Parameters.AddWithValue("@ser", ser);
+                cmd.Parameters.AddWithValue("@did", did);
                 SqlDataReader r = cmd.ExecuteReader();
-                dt.Load(r);
-                dt.Columns[1].ColumnName = "Patient Name";
-                dt.Columns[2].ColumnName = "Date of Appointment";
-                con.Close();
-                dt = ReverseRowsInDataTable(dt);
-                return dt;
+                    dt.Load(r);
+                    dt.Columns[1].ColumnName = "Patient Name";
+                    dt.Columns[2].ColumnName = "Date of Appointment";
+                    con.Close();
+                    dt = ReverseRowsInDataTable(dt);
+                    return dt;
+                
             }
             catch (Exception e)
             {
@@ -120,6 +132,7 @@ namespace Hospital
             finally
             {
                 cmd.Parameters.RemoveAt("@Approved_or_not");
+                cmd.Parameters.RemoveAt("@did");
                 cmd.Parameters.RemoveAt("@ser"); 
                 if (con.State == ConnectionState.Open)
                     con.Close();

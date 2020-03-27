@@ -57,5 +57,12 @@ namespace Hospital
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button2.Height;
+            SidePanel.Top = button2.Top;
+            rexpatient.BringToFront();
+        }
     }
 }

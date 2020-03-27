@@ -11,6 +11,7 @@ namespace Hospital
 {
     class Patient_Management:MakeConnection
     {
+        DoctorFunctions df = new DoctorFunctions();
         public List<string> GetDoctorList(string DoctorName)
         {
             //For assigning a doctor
@@ -44,27 +45,65 @@ namespace Hospital
                 con.Close();
             }
         }
-        public void AddtoAppointments(int pid,string pname,string dname,DateTime appointdate)
+        public void AddtoAppointments(string PID,string pname,string dname)
         {
-            int did = Convert.ToInt32(GetDoctorList(dname)[0]);
-            
+            int flg =0;
+            DateTime appointdate = DateTime.Now.Date;
            try
             {
+                int pid = Convert.ToInt32(PID);
                 cmd.Connection = con;
-                cmd.CommandText = "insert into Appointsments(PatientId,PName,Doctor_Assigned,DoctorId,Approved_or_not,Date_of_Appoint) Values(@pid,@pname,@dname,@did,'false',@appointdate)";
-                con.Open();
-                cmd.Parameters.AddWithValue("@pid", pid);
-                cmd.Parameters.AddWithValue("@did", did);
-                cmd.Parameters.AddWithValue("@dname", dname);
-
-                cmd.Parameters.AddWithValue("@appointdate", appointdate);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                //Code for existing patient
+                DataTable x=df.GetAllAppointments(PID, false);
+                if ((from DataRow dr in x.Rows select Convert.ToInt32(dr["PatientId"])).FirstOrDefault() == pid)
+                {
+                    pname = (from DataRow dr in x.Rows where Convert.ToInt32(dr["PatientId"]) == pid select dr["Patient Name"].ToString()).FirstOrDefault();
+                    dname = (from DataRow dr in x.Rows where Convert.ToInt32(dr["PatientId"]) == pid select dr["Doctor_Assigned"].ToString()).FirstOrDefault();
+                    flg = 1;
+                    if ((from DataRow dr in x.Rows select Convert.ToDateTime(dr["Date of Appointment"])).FirstOrDefault() == appointdate)
+                        flg = 2;
+                }
+                if (!(flg.Equals(2)))
+                {
+                    int did = Convert.ToInt32(GetDoctorList(dname)[0]);
+                    cmd.CommandText = "insert into Appointsments(PatientId,PName,Doctor_Assigned,DoctorId,Approved_or_not,Date_of_Appoint) Values(@pid,@pname,@dname,@did,'false',@appointdate)";
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@pid", pid);
+                    cmd.Parameters.AddWithValue("@did", did);
+                    cmd.Parameters.AddWithValue("@pname", pname);
+                    cmd.Parameters.AddWithValue("@dname", dname);
+                    cmd.Parameters.AddWithValue("@appointdate", appointdate);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    cmd.Parameters.RemoveAt("@pid");
+                    cmd.Parameters.RemoveAt("@did");
+                    cmd.Parameters.RemoveAt("@pname");
+                    cmd.Parameters.RemoveAt("@dname");
+                    cmd.Parameters.RemoveAt("@appointdate");
+                }
+                if (flg.Equals(0))
+                    MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (flg.Equals(1))
+                    MessageBox.Show("New Appointment added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Appointment exists for today", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                
+                if (ex.GetType().ToString().Equals("System.FormatException"))
+                    MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if(cmd.Parameters.Contains("@pid"))
+                    cmd.Parameters.RemoveAt("@pid");
             }
         }
         public int RegisterNewPatient(string pname,string gname,string paddress,int page,string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
@@ -93,15 +132,28 @@ namespace Hospital
                 while (r.Read())
                     Patient_Id = Convert.ToInt32(r["Id"]);
                 con.Close();
-            //Add to aapointment table
-                AddtoAppointments(Patient_Id, pname, doctor_assinged,adddate);
+                cmd.Parameters.RemoveAt("@pname");
+                cmd.Parameters.RemoveAt("@gname");
+                cmd.Parameters.RemoveAt("@paddress");
+                cmd.Parameters.RemoveAt("@page");
+                cmd.Parameters.RemoveAt("@PEmail");
+                cmd.Parameters.RemoveAt("@pcontact");
+                cmd.Parameters.RemoveAt("@pgender");
+                cmd.Parameters.RemoveAt("@adddate");
+                cmd.Parameters.RemoveAt("@bdate");
+                //Add to aapointment table
+                AddtoAppointments(Patient_Id.ToString(), pname, doctor_assinged);
                 return Patient_Id;
             }
             catch (Exception)
             {
                 return -99;
             }
-
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
         }
         public int DischargePatient(int Pid,string pname)
         {
@@ -113,6 +165,6 @@ namespace Hospital
             cmd.ExecuteNonQuery();
             con.Close();
             return 1;
-        }       
+        }  
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receptionist));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,7 @@
             this.rPayment1 = new Hospital.RPayment();
             this.userControl11 = new Hospital.UserControl1();
             this.rRegister1 = new Hospital.RRegister();
-            this.button2 = new System.Windows.Forms.Button();
+            this.rexpatient = new Hospital.RExPatient();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,8 +70,27 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 795);
+            this.panel1.Size = new System.Drawing.Size(292, 821);
             this.panel1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(13, 209);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(273, 60);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "  Existing Patient";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -141,7 +161,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 274);
+            this.button5.Location = new System.Drawing.Point(15, 338);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(277, 60);
@@ -160,7 +180,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(13, 209);
+            this.button1.Location = new System.Drawing.Point(15, 274);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 60);
@@ -237,59 +257,51 @@
             this.panel3.Controls.Add(this.rPayment1);
             this.panel3.Controls.Add(this.userControl11);
             this.panel3.Controls.Add(this.rRegister1);
+            this.panel3.Controls.Add(this.rexpatient);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(292, 162);
+            this.panel3.Location = new System.Drawing.Point(292, 165);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1248, 633);
+            this.panel3.Size = new System.Drawing.Size(1248, 656);
             this.panel3.TabIndex = 7;
             // 
             // rPayment1
             // 
-            this.rPayment1.Location = new System.Drawing.Point(92, 0);
+            this.rPayment1.Location = new System.Drawing.Point(45, 2);
             this.rPayment1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rPayment1.Name = "rPayment1";
-            this.rPayment1.Size = new System.Drawing.Size(1128, 598);
+            this.rPayment1.Size = new System.Drawing.Size(1128, 643);
             this.rPayment1.TabIndex = 2;
             // 
             // userControl11
             // 
-            this.userControl11.Location = new System.Drawing.Point(92, 0);
+            this.userControl11.Location = new System.Drawing.Point(45, 2);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1128, 598);
+            this.userControl11.Size = new System.Drawing.Size(1141, 643);
             this.userControl11.TabIndex = 1;
             // 
             // rRegister1
             // 
-            this.rRegister1.Location = new System.Drawing.Point(92, 0);
+            this.rRegister1.Location = new System.Drawing.Point(45, 2);
             this.rRegister1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rRegister1.Name = "rRegister1";
-            this.rRegister1.Size = new System.Drawing.Size(1128, 598);
+            this.rRegister1.Size = new System.Drawing.Size(1128, 643);
             this.rRegister1.TabIndex = 0;
             // 
-            // button2
+            // rexpatient
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(8, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(277, 60);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "  Existing Patient";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.rexpatient.Location = new System.Drawing.Point(45, 2);
+            this.rexpatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rexpatient.Name = "rexpatient";
+            this.rexpatient.Size = new System.Drawing.Size(1128, 643);
+            this.rexpatient.TabIndex = 3;
             // 
             // Receptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 795);
+            this.ClientSize = new System.Drawing.Size(1540, 821);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -328,5 +340,6 @@
         private UserControl1 userControl11;
         private RPayment rPayment1;
         private System.Windows.Forms.Button button2;
+        private RExPatient rexpatient;
     }
 }
