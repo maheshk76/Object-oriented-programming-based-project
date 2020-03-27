@@ -77,72 +77,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chemist.cs">
+    <Compile Include="UserForms\Chemist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chemist.designer.cs">
+    <Compile Include="UserForms\Chemist.designer.cs">
       <DependentUpon>Chemist.cs</DependentUpon>
     </Compile>
-    <Compile Include="CMedicine.cs">
+    <Compile Include="ChemistComponents\CMedicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CMedicine.designer.cs">
+    <Compile Include="ChemistComponents\CMedicine.designer.cs">
       <DependentUpon>CMedicine.cs</DependentUpon>
     </Compile>
-    <Compile Include="CPrescription.cs">
+    <Compile Include="ChemistComponents\CPrescription.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CPrescription.designer.cs">
+    <Compile Include="ChemistComponents\CPrescription.designer.cs">
       <DependentUpon>CPrescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoctorFunctions.cs" />
-    <Compile Include="DAppointment.cs">
+    <Compile Include="Classes\DoctorFunctions.cs" />
+    <Compile Include="DoctorComponents\DAppointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DAppointment.designer.cs">
+    <Compile Include="DoctorComponents\DAppointment.designer.cs">
       <DependentUpon>DAppointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctor.cs">
+    <Compile Include="UserForms\Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor.designer.cs">
+    <Compile Include="UserForms\Doctor.designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="DPrescription.cs">
+    <Compile Include="DoctorComponents\DPrescription.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DPrescription.designer.cs">
+    <Compile Include="DoctorComponents\DPrescription.designer.cs">
       <DependentUpon>DPrescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="DReport.cs">
+    <Compile Include="DoctorComponents\DReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DReport.designer.cs">
+    <Compile Include="DoctorComponents\DReport.designer.cs">
       <DependentUpon>DReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dtest.cs">
+    <Compile Include="DoctorComponents\Dtest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dtest.designer.cs">
+    <Compile Include="DoctorComponents\Dtest.designer.cs">
       <DependentUpon>Dtest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Duserdetails.cs">
+    <Compile Include="CommonComponents\Duserdetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Duserdetails.designer.cs">
+    <Compile Include="CommonComponents\Duserdetails.designer.cs">
       <DependentUpon>Duserdetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Laboratorian.cs">
+    <Compile Include="UserForms\Laboratorian.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laboratorian.designer.cs">
+    <Compile Include="UserForms\Laboratorian.designer.cs">
       <DependentUpon>Laboratorian.cs</DependentUpon>
     </Compile>
-    <Compile Include="LaboratorianFunctions.cs" />
-    <Compile Include="LInventory.cs">
+    <Compile Include="Classes\LaboratorianFunctions.cs" />
+    <Compile Include="LaboratorianComponents\LInventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LInventory.designer.cs">
+    <Compile Include="LaboratorianComponents\LInventory.designer.cs">
       <DependentUpon>LInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Form.cs">
@@ -151,79 +151,79 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="LReport.cs">
+    <Compile Include="LaboratorianComponents\LReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LReport.Designer.cs">
+    <Compile Include="LaboratorianComponents\LReport.Designer.cs">
       <DependentUpon>LReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakeConnection.cs" />
-    <Compile Include="Patient_Management.cs" />
+    <Compile Include="Classes\MakeConnection.cs" />
+    <Compile Include="Classes\Patient_Management.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receptionist.cs">
+    <Compile Include="UserForms\Receptionist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Receptionist.designer.cs">
+    <Compile Include="UserForms\Receptionist.designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </Compile>
-    <Compile Include="RExPatient.cs">
+    <Compile Include="ReceptionistComponents\RExPatient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RExPatient.Designer.cs">
+    <Compile Include="ReceptionistComponents\RExPatient.Designer.cs">
       <DependentUpon>RExPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="RPayment.cs">
+    <Compile Include="ReceptionistComponents\RPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RPayment.designer.cs">
+    <Compile Include="ReceptionistComponents\RPayment.designer.cs">
       <DependentUpon>RPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="RRegister.cs">
+    <Compile Include="ReceptionistComponents\RRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RRegister.designer.cs">
+    <Compile Include="ReceptionistComponents\RRegister.designer.cs">
       <DependentUpon>RRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="SessionClass.cs" />
-    <Compile Include="Users.cs" />
-    <EmbeddedResource Include="Chemist.resx">
+    <Compile Include="Classes\SessionClass.cs" />
+    <Compile Include="Classes\Users.cs" />
+    <EmbeddedResource Include="UserForms\Chemist.resx">
       <DependentUpon>Chemist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CMedicine.resx">
+    <EmbeddedResource Include="ChemistComponents\CMedicine.resx">
       <DependentUpon>CMedicine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CPrescription.resx">
+    <EmbeddedResource Include="ChemistComponents\CPrescription.resx">
       <DependentUpon>CPrescription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DAppointment.resx">
+    <EmbeddedResource Include="DoctorComponents\DAppointment.resx">
       <DependentUpon>DAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor.resx">
+    <EmbeddedResource Include="UserForms\Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DPrescription.resx">
+    <EmbeddedResource Include="DoctorComponents\DPrescription.resx">
       <DependentUpon>DPrescription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DReport.resx">
+    <EmbeddedResource Include="DoctorComponents\DReport.resx">
       <DependentUpon>DReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dtest.resx">
+    <EmbeddedResource Include="DoctorComponents\Dtest.resx">
       <DependentUpon>Dtest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Duserdetails.resx">
+    <EmbeddedResource Include="CommonComponents\Duserdetails.resx">
       <DependentUpon>Duserdetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laboratorian.resx">
+    <EmbeddedResource Include="UserForms\Laboratorian.resx">
       <DependentUpon>Laboratorian.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LInventory.resx">
+    <EmbeddedResource Include="LaboratorianComponents\LInventory.resx">
       <DependentUpon>LInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LReport.resx">
+    <EmbeddedResource Include="LaboratorianComponents\LReport.resx">
       <DependentUpon>LReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -235,16 +235,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Receptionist.resx">
+    <EmbeddedResource Include="UserForms\Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RExPatient.resx">
+    <EmbeddedResource Include="ReceptionistComponents\RExPatient.resx">
       <DependentUpon>RExPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RPayment.resx">
+    <EmbeddedResource Include="ReceptionistComponents\RPayment.resx">
       <DependentUpon>RPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RRegister.resx">
+    <EmbeddedResource Include="ReceptionistComponents\RRegister.resx">
       <DependentUpon>RRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Hospital_TemporaryKey.pfx" />
@@ -285,5 +285,6 @@
   <ItemGroup>
     <None Include="Resources\refresh.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
