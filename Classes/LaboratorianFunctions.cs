@@ -11,7 +11,7 @@ namespace Hospital
 {
     class LaboratorianFunctions:MakeConnection
     {
-        DataTable dt;
+        DataTable dt = new DataTable();
         DoctorFunctions df = new DoctorFunctions();
         public int MakeTestResults(string PatientID,string TestResult)
         {
@@ -22,8 +22,6 @@ namespace Hospital
                     return 0;
                 string RES_ID=(from DataRow dr in dt.Rows where dr["Result"].ToString().Length.Equals(0)
                              select dr["Id"]).FirstOrDefault().ToString();
-                Console.WriteLine(RES_ID);
-
                 DateTime date = DateTime.Now.Date;
                 cmd.Connection = con;
                 if (!(RES_ID.Equals(null)))
@@ -43,7 +41,6 @@ namespace Hospital
             {
                 Console.WriteLine(ex.Message.ToString());
                 string etype = ex.GetType().ToString();
-                Console.WriteLine(etype);
                 if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.Data.SqlClient.SqlException"))

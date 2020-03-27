@@ -66,6 +66,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ManagerFunctions.cs" />
+    <Compile Include="UserForms\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerComponents\AllUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagerComponents\AllUsers.Designer.cs">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerComponents\AttandanceManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagerComponents\AttandanceManager.Designer.cs">
+      <DependentUpon>AttandanceManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\Chemist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +207,15 @@
     </Compile>
     <Compile Include="Classes\SessionClass.cs" />
     <Compile Include="Classes\Users.cs" />
+    <EmbeddedResource Include="UserForms\Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerComponents\AllUsers.resx">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerComponents\AttandanceManager.resx">
+      <DependentUpon>AttandanceManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Chemist.resx">
       <DependentUpon>Chemist.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +263,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserForms\Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>

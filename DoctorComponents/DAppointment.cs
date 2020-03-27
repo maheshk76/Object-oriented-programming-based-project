@@ -31,8 +31,6 @@ namespace Hospital
             //Search Appointment
             DataTable dt = df.GetAllAppointments(searchTextbox.Text,true);
             dataGridView1.DataSource = dt;
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

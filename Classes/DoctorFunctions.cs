@@ -37,9 +37,10 @@ namespace Hospital
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                if (ex.GetType().ToString().Equals("System.FormatException"))
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -60,8 +61,7 @@ namespace Hospital
                 cmd.CommandText = "select * from PatientDiagnosis where PatientId=@query";
                 con.Open();
                 cmd.Parameters.AddWithValue("@query", query);
-                SqlDataReader r = cmd.ExecuteReader();
-                dt.Load(r);
+                dt.Load(cmd.ExecuteReader());
                 cmd.Parameters.RemoveAt("@query");
                 if (dt.Rows.Count == 0)
                 {
@@ -74,13 +74,12 @@ namespace Hospital
             {
                 Console.WriteLine(ex.Message.ToString());
                 string etype = ex.GetType().ToString();
-                Console.WriteLine(etype);
                 if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
-                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -95,45 +94,41 @@ namespace Hospital
             {
                 dt = new DataTable();
                 cmd.Connection = con;
-                
-                    int did = SessionClass.SessionId;
-                //if 0 then show all appoints
+                int did = SessionClass.SessionId;
+                //flg=true for doctor
                 if (flg)
                 {
                     if (ser.Length.Equals(0))
                         cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where Approved_or_not='false' and DoctorId=@did";
                     else
                         cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where (PatientId like @ser+'%' or PName like @ser+'%') and DoctorId=@did";
-
                 }
+                //flg=false for Receptionist to get all appointments
                 else
-                {
                     cmd.CommandText = "select PatientId,PName,Date_of_Appoint,Doctor_Assigned from Appointsments where PatientId like @ser+'%' or PName like @ser+'%'";
-                }
-                con.Open();
-                    cmd.Parameters.AddWithValue("@Approved_or_not", false);
-                    cmd.Parameters.AddWithValue("@ser", ser);
-                cmd.Parameters.AddWithValue("@did", did);
-                SqlDataReader r = cmd.ExecuteReader();
-                    dt.Load(r);
-                    dt.Columns[1].ColumnName = "Patient Name";
-                    dt.Columns[2].ColumnName = "Date of Appointment";
-                    con.Close();
-                    dt = ReverseRowsInDataTable(dt);
-                    return dt;
                 
+                con.Open();
+                cmd.Parameters.AddWithValue("@Approved_or_not", false);
+                cmd.Parameters.AddWithValue("@ser", ser);
+                cmd.Parameters.AddWithValue("@did", did);
+                dt.Load(cmd.ExecuteReader());
+                dt.Columns[1].ColumnName = "Patient Name";
+                dt.Columns[2].ColumnName = "Date of Appointment";
+                con.Close();
+                cmd.Parameters.RemoveAt("@Approved_or_not");
+                cmd.Parameters.RemoveAt("@did");
+                cmd.Parameters.RemoveAt("@ser");
+                dt = ReverseRowsInDataTable(dt);
+                return dt;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message.ToString());
-                MessageBox.Show("Error in getting details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message.ToString());
+                MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
             {
-                cmd.Parameters.RemoveAt("@Approved_or_not");
-                cmd.Parameters.RemoveAt("@did");
-                cmd.Parameters.RemoveAt("@ser"); 
                 if (con.State == ConnectionState.Open)
                     con.Close();
             }
@@ -141,25 +136,24 @@ namespace Hospital
         //Search Algorithm
         public DataTable GetPatient(string searchString, bool PData)
         {
-            //if PData=true=>select from Patient_record,else select from Patient_Presc
             try
             {
                 dt = new DataTable();
                 cmd.Connection = con;
                 con.Open();
+                //PData=true->Patient Details,PData=false->Presc details
                 if (PData)
                     cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
                 else
                     cmd.CommandText = "select * from Patient_Presc where PId=@searchString";
+
                 cmd.Parameters.AddWithValue("@searchString", searchString);
-                SqlDataReader r = cmd.ExecuteReader();
-                cmd.Parameters.RemoveAt("@searchString");
-                dt.Load(r);
+                dt.Load(cmd.ExecuteReader());
                 con.Close();
+                cmd.Parameters.RemoveAt("@searchString");
                 if (dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("No Data Found", "Info",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    
+                    MessageBox.Show("No data found", "Info",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                     return null;
                 }
                 if (PData)
@@ -171,19 +165,19 @@ namespace Hospital
                     dt.Columns[8].ColumnName = "Details";
                     dt.Columns[9].ColumnName = "Addmission Date";
                     dt.Columns[10].ColumnName = "Discharge Date";
-                   
                 }
                 return dt;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                if (ex.GetType().ToString().Equals("System.FormatException"))
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("No Data Found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
-                MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -194,9 +188,9 @@ namespace Hospital
         }
         public void MakePrescription(string p_id, string medicine)
         {
-            cmd.Connection = con;
             try
             {
+                cmd.Connection = con;
                 cmd.CommandText = "update Appointsments set Approved_or_not='true' where PatientId=@p_id";
                 con.Open();
                 cmd.Parameters.AddWithValue("@p_id", p_id);
@@ -206,15 +200,12 @@ namespace Hospital
                 string pa_name = (from DataRow dr in x.Rows
                                   where dr["PatientId"].ToString() == p_id
                                   select (string)dr["Patient Name"]).FirstOrDefault();
-                Console.WriteLine(pa_name);
-                
                 int user_id = SessionClass.SessionId;
-                cmd.CommandText = "select * from Users where Id=@user_id";
 
+                cmd.CommandText = "select * from Users where Id=@user_id";
                 cmd.Parameters.AddWithValue("@user_id", user_id);
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
-
                 string user_name = "";
                 while (r.Read())
                     user_name = r["Name"].ToString();
@@ -235,9 +226,10 @@ namespace Hospital
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                if (ex.GetType().ToString().Equals("System.FormatException"))
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data","Info",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
+                if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                     MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

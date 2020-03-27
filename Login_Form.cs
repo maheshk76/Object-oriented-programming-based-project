@@ -10,11 +10,7 @@ namespace Hospital
             InitializeComponent(); 
             SessionClass.SessionId =id;
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This Panel is for Fortis hospital staff member only.\nCheck your internet connection.\n Be sure before submitting sign in details.");
-        }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
             //Exit the Application
@@ -25,8 +21,8 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             Users u = new Users();
-            try
-            {
+          //  try
+            //{
                 int user_id = Convert.ToInt32(textBox1.Text);
                 string pass = textBox2.Text;
                 string role = "";//returned value will be stored
@@ -54,8 +50,8 @@ namespace Hospital
                             rc.ShowDialog();
                             break;
                         case "Manager":
-                            // Manager m = new Manager(uname);
-                            //m.ShowDialog();
+                             Manager m = new Manager(uname);
+                            m.ShowDialog();
                             break;
                         case "Nurse":
                            //Nurse nu= new Nurse(uname);
@@ -70,7 +66,7 @@ namespace Hospital
                             // a.ShowDialog();
                             break;
                     }
-            }
+          /*  }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -79,7 +75,7 @@ namespace Hospital
                 else
                  MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 label8.Text = "NOT FOUND";
-            }
+            }*/
         }
     }
 }

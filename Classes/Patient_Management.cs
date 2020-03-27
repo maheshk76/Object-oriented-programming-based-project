@@ -14,7 +14,7 @@ namespace Hospital
         DoctorFunctions df = new DoctorFunctions();
         public List<string> GetDoctorList(string DoctorName)
         {
-            //For assigning a doctor
+            //Returns a list to receptionist For assigning a doctor
             List<string> l = new List<string>();
             try
             {
@@ -42,7 +42,8 @@ namespace Hospital
                 return l;
             }
             finally{
-                con.Close();
+                if(con.State==ConnectionState.Open)
+                    con.Close();
             }
         }
         public void AddtoAppointments(string PID,string pname,string dname)
@@ -89,12 +90,13 @@ namespace Hospital
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
-                if (ex.GetType().ToString().Equals("System.FormatException"))
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
                     MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                else if (ex.GetType().ToString().Equals("System.Data.SqlClient.SqlException"))
-                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
-                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -151,15 +153,18 @@ namespace Hospital
                     con.Close();
             }
         }
-        public int DischargePatient(int Pid,string pname)
+        public int DischargePatient(int Pid)
         {
             DateTime disdate = DateTime.Now.Date;
             cmd.Connection = con;
-            cmd.CommandText = "insert into Patient_Record(DisDate) Values(@disdate) where Id=@Pid and PName=@pname ";
+            cmd.CommandText = "update Patient_Record set DisDate=@disdate where Id=@Pid";
             con.Open();
             cmd.Parameters.AddWithValue("@disdate",disdate);
+            cmd.Parameters.AddWithValue("@Pid",Pid);
             cmd.ExecuteNonQuery();
             con.Close();
+            cmd.Parameters.RemoveAt("@disdate");
+            cmd.Parameters.RemoveAt("@Pid");
             return 1;
         }  
     }
