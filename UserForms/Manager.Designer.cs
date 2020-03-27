@@ -31,26 +31,26 @@ namespace Hospital
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
             this.attandance = new Hospital.ManagerComponents.AttandanceManager();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,17 @@ namespace Hospital
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Hospital.Properties.Resources.pictureBox2_Image;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 740);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // button2
             // 
@@ -101,6 +112,17 @@ namespace Hospital
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Username";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital.Properties.Resources.pictureBox1_Image;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(291, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // SidePanel
             // 
@@ -200,6 +222,30 @@ namespace Hospital
             this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 6;
             // 
+            // allusers
+            // 
+            this.allusers.Location = new System.Drawing.Point(79, 0);
+            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.allusers.Name = "allusers";
+            this.allusers.Size = new System.Drawing.Size(1131, 635);
+            this.allusers.TabIndex = 0;
+            // 
+            // duserdetails
+            // 
+            this.duserdetails.Location = new System.Drawing.Point(79, 0);
+            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
+            this.duserdetails.Name = "duserdetails";
+            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
+            this.duserdetails.TabIndex = 1;
+            // 
+            // attandance
+            // 
+            this.attandance.Location = new System.Drawing.Point(79, 0);
+            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.attandance.Name = "attandance";
+            this.attandance.Size = new System.Drawing.Size(1131, 635);
+            this.attandance.TabIndex = 2;
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -231,52 +277,6 @@ namespace Hospital
             this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 5;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hospital.Properties.Resources.pictureBox1_Image;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Hospital.Properties.Resources.pictureBox2_Image;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 740);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // allusers
-            // 
-            this.allusers.Location = new System.Drawing.Point(59, 0);
-            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.allusers.Name = "allusers";
-            this.allusers.Size = new System.Drawing.Size(1131, 635);
-            this.allusers.TabIndex = 0;
-            // 
-            // duserdetails
-            // 
-            this.duserdetails.Location = new System.Drawing.Point(59, 0);
-            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
-            this.duserdetails.Name = "duserdetails";
-            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
-            this.duserdetails.TabIndex = 1;
-            // 
-            // attandance
-            // 
-            this.attandance.Location = new System.Drawing.Point(59, 0);
-            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.attandance.Name = "attandance";
-            this.attandance.Size = new System.Drawing.Size(1131, 635);
-            this.attandance.TabIndex = 2;
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -292,10 +292,10 @@ namespace Hospital
             this.Text = "Doctor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

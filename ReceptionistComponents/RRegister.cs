@@ -19,16 +19,17 @@ namespace Hospital
             InitializeComponent();
             listBox1.DataSource= pm.GetDoctorList("");
         }
+        bool isNum(string s)
+        {
+            for (int i = 0; i < s.Length; i++)
+                if (char.IsDigit(s[i]) == false)
+                    return false;
+            return true;
+        }
         public bool FormValidation(string pname,string gname,string email,string contact,string addr,string gender,int age,DateTime bdate,string doc_as)
         {
             bool flg = true;
-            bool isNum(string s)
-            {
-                for (int i = 0; i < s.Length; i++)
-                    if (char.IsDigit(s[i]) == false)
-                        return false;
-                return true;
-            }
+           
             if (pname == "" || gname == "" || contact == "" || addr == "" || gender == "" || doc_as == "" 
                 || age<=0 || bdate==null || isNum(pname) || isNum(gname) || isNum(gender) || !isNum(contact) || contact.Length < 10)
                 flg = false;

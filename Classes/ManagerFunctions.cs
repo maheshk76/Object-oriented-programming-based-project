@@ -13,6 +13,13 @@ namespace Hospital.Classes
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
+        bool isNum(string s)
+        {
+            for (int i = 0; i < s.Length; i++)
+                if (char.IsDigit(s[i]) == false)
+                    return false;
+            return true;
+        }
         public DataTable GetAllUsers(string searchValue)
         {
             dt = new DataTable();
@@ -29,25 +36,30 @@ namespace Hospital.Classes
             return dt;
 
         }
-        public DataTable GetAttandance(string dAte)
+        public DataTable GetAttandance(string searchVal,bool flg)
         {
-           //  try
-            //{
+            try
+            {
                 dt = new DataTable();
-            DateTime date = Convert.ToDateTime(dAte).Date;
-                Console.WriteLine(date);
+                DateTime DATE=DateTime.Now.Date;
                 cmd.Connection = con;
                 con.Open();
-                cmd.CommandText = "select * from Attendance_Manager where Date=@date";
-                cmd.Parameters.AddWithValue("@date", date);
+                if (flg)
+                    cmd.CommandText = "select * from Attendance_Manager where Uid like @searchVal+'%' or UName like @searchVal+'%'";
+                else
+                {
+                    DATE = Convert.ToDateTime(searchVal).Date;
+                    cmd.CommandText = "select * from Attendance_Manager where Date=@DATE";
+                }
+                cmd.Parameters.AddWithValue("@DATE",DATE);
+                cmd.Parameters.AddWithValue("@searchVal", searchVal);
                 SqlDataReader r = cmd.ExecuteReader();
+                cmd.Parameters.RemoveAt("@DATE");
+                cmd.Parameters.RemoveAt("@searchVal");
                 dt.Load(r);
-                cmd.Parameters.RemoveAt("@date");
                 con.Close();
-            if (dt.Rows.Count == 0)
-                MessageBox.Show("Not FOund");
                 return dt;
-           /* }
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -57,7 +69,7 @@ namespace Hospital.Classes
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
-            }*/
+            }
         }
     }
 }
