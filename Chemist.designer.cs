@@ -85,7 +85,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 742);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 739);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
@@ -121,7 +121,7 @@
             this.button7.ForeColor = System.Drawing.SystemColors.Control;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(13, 143);
+            this.button7.Location = new System.Drawing.Point(12, 145);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(277, 60);
@@ -140,7 +140,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 274);
+            this.button5.Location = new System.Drawing.Point(12, 279);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(277, 60);
@@ -159,10 +159,10 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(13, 209);
+            this.button1.Location = new System.Drawing.Point(12, 212);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(277, 60);
+            this.button1.Size = new System.Drawing.Size(274, 60);
             this.button1.TabIndex = 3;
             this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,7 +212,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1098, 533);
+            this.button4.Location = new System.Drawing.Point(1101, 533);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
@@ -257,7 +257,7 @@
             // 
             // cMedicine1
             // 
-            this.cMedicine1.Location = new System.Drawing.Point(71, 0);
+            this.cMedicine1.Location = new System.Drawing.Point(60, 0);
             this.cMedicine1.Margin = new System.Windows.Forms.Padding(5);
             this.cMedicine1.Name = "cMedicine1";
             this.cMedicine1.Size = new System.Drawing.Size(1128, 630);
@@ -265,7 +265,7 @@
             // 
             // cPrescription1
             // 
-            this.cPrescription1.Location = new System.Drawing.Point(71, 0);
+            this.cPrescription1.Location = new System.Drawing.Point(60, 0);
             this.cPrescription1.Margin = new System.Windows.Forms.Padding(5);
             this.cPrescription1.Name = "cPrescription1";
             this.cPrescription1.Size = new System.Drawing.Size(1128, 630);
@@ -273,7 +273,7 @@
             // 
             // userControl12
             // 
-            this.userControl12.Location = new System.Drawing.Point(71, 0);
+            this.userControl12.Location = new System.Drawing.Point(60, 0);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
             this.userControl12.Size = new System.Drawing.Size(1128, 630);

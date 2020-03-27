@@ -85,7 +85,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 742);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 739);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
@@ -140,7 +140,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 279);
+            this.button5.Location = new System.Drawing.Point(12, 279);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(277, 60);
@@ -159,7 +159,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(13, 212);
+            this.button1.Location = new System.Drawing.Point(12, 212);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 60);
@@ -256,7 +256,7 @@
             // 
             // lInventory1
             // 
-            this.lInventory1.Location = new System.Drawing.Point(88, 0);
+            this.lInventory1.Location = new System.Drawing.Point(60, 0);
             this.lInventory1.Margin = new System.Windows.Forms.Padding(5);
             this.lInventory1.Name = "lInventory1";
             this.lInventory1.Size = new System.Drawing.Size(1137, 628);
@@ -264,7 +264,7 @@
             // 
             // userControl12
             // 
-            this.userControl12.Location = new System.Drawing.Point(88, 0);
+            this.userControl12.Location = new System.Drawing.Point(60, 0);
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
             this.userControl12.Size = new System.Drawing.Size(1137, 628);
@@ -272,7 +272,7 @@
             // 
             // lReport1
             // 
-            this.lReport1.Location = new System.Drawing.Point(88, 0);
+            this.lReport1.Location = new System.Drawing.Point(60, 0);
             this.lReport1.Margin = new System.Windows.Forms.Padding(5);
             this.lReport1.Name = "lReport1";
             this.lReport1.Size = new System.Drawing.Size(1137, 628);

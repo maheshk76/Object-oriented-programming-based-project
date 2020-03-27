@@ -106,7 +106,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 742);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 739);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
@@ -267,7 +267,7 @@
             // 
             // rPayment1
             // 
-            this.rPayment1.Location = new System.Drawing.Point(45, 2);
+            this.rPayment1.Location = new System.Drawing.Point(50, 0);
             this.rPayment1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rPayment1.Name = "rPayment1";
             this.rPayment1.Size = new System.Drawing.Size(1128, 643);
@@ -275,7 +275,7 @@
             // 
             // userControl11
             // 
-            this.userControl11.Location = new System.Drawing.Point(45, 2);
+            this.userControl11.Location = new System.Drawing.Point(50, 0);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(1141, 643);
@@ -283,7 +283,7 @@
             // 
             // rRegister1
             // 
-            this.rRegister1.Location = new System.Drawing.Point(45, 2);
+            this.rRegister1.Location = new System.Drawing.Point(50, 0);
             this.rRegister1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rRegister1.Name = "rRegister1";
             this.rRegister1.Size = new System.Drawing.Size(1128, 643);
@@ -291,7 +291,7 @@
             // 
             // rexpatient
             // 
-            this.rexpatient.Location = new System.Drawing.Point(45, 2);
+            this.rexpatient.Location = new System.Drawing.Point(50, 0);
             this.rexpatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rexpatient.Name = "rexpatient";
             this.rexpatient.Size = new System.Drawing.Size(1128, 643);

@@ -21,19 +21,17 @@ namespace Hospital
         }
         public bool FormValidation(string pname,string gname,string email,string contact,string addr,string gender,int age,DateTime bdate,string doc_as)
         {
-             bool isNumber(string s)
+            bool flg = true;
+            bool isNum(string s)
             {
                 for (int i = 0; i < s.Length; i++)
                     if (char.IsDigit(s[i]) == false)
                         return false;
                 return true;
             }
-            bool flg = true;
-            if (pname == "" || gname == "" || contact == "" || addr == "" || gender == "" || doc_as == "" || age<=0 || bdate==null)
+            if (pname == "" || gname == "" || contact == "" || addr == "" || gender == "" || doc_as == "" 
+                || age<=0 || bdate==null || isNum(pname) || isNum(gname) || isNum(gender) || !isNum(contact) || contact.Length < 10)
                 flg = false;
-            if (isNumber(pname) || isNumber(gname) || isNumber(gender) || !isNumber(contact))
-                flg = false;
-            err.SetError(Pname, "Enter name");
             return flg;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -57,14 +55,13 @@ namespace Hospital
             {
                 int patient_number_returned = pm.RegisterNewPatient(p_name, g_name, address, age, email, contact, gender, bdate, doctor_assigned);
                 if (patient_number_returned < 0)
-                    MessageBox.Show("Something went wrong,Please try agian", "Error");
+                    MessageBox.Show("Something went wrong,Please try agian", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Patient Id Number: " + patient_number_returned, "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Patient Id Number: " + patient_number_returned, "Done",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
-            {
                 MessageBox.Show("Enter sufficient data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
     }
 }

@@ -49,11 +49,10 @@ namespace Hospital
         {
             int flg =0;
             DateTime appointdate = DateTime.Now.Date;
-           try
+            try
             {
-                int pid = Convert.ToInt32(PID);
                 cmd.Connection = con;
-                //Code for existing patient
+                int pid = Convert.ToInt32(PID);
                 DataTable x=df.GetAllAppointments(PID, false);
                 if ((from DataRow dr in x.Rows select Convert.ToInt32(dr["PatientId"])).FirstOrDefault() == pid)
                 {
@@ -81,12 +80,11 @@ namespace Hospital
                     cmd.Parameters.RemoveAt("@dname");
                     cmd.Parameters.RemoveAt("@appointdate");
                 }
-                if (flg.Equals(0))
-                    MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (flg.Equals(2))
+                    MessageBox.Show("Appointment exists for today", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else if (flg.Equals(1))
                     MessageBox.Show("New Appointment added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Appointment exists for today", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch(Exception ex)
             {
@@ -102,8 +100,6 @@ namespace Hospital
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
-                if(cmd.Parameters.Contains("@pid"))
-                    cmd.Parameters.RemoveAt("@pid");
             }
         }
         public int RegisterNewPatient(string pname,string gname,string paddress,int page,string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
