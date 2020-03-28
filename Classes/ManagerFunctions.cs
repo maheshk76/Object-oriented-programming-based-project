@@ -57,6 +57,9 @@ namespace Hospital.Classes
                 cmd.Parameters.RemoveAt("@DATE");
                 cmd.Parameters.RemoveAt("@searchVal");
                 dt.Load(r);
+                dt.Columns.Remove("Id");
+                dt.Columns[1].ColumnName = "Username";
+                dt.Columns[0].ColumnName = "UserId";
                 con.Close();
                 return dt;
             }

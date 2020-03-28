@@ -41,11 +41,11 @@ namespace Hospital
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
             this.attandance = new Hospital.ManagerComponents.AttandanceManager();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,10 +96,11 @@ namespace Hospital
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 61);
             this.button2.TabIndex = 13;
-            this.button2.Text = "  Inventory Management";
+            this.button2.Text = "  Inventory Manager";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -170,6 +171,7 @@ namespace Hospital
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -222,30 +224,6 @@ namespace Hospital
             this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 6;
             // 
-            // allusers
-            // 
-            this.allusers.Location = new System.Drawing.Point(79, 0);
-            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.allusers.Name = "allusers";
-            this.allusers.Size = new System.Drawing.Size(1131, 635);
-            this.allusers.TabIndex = 0;
-            // 
-            // duserdetails
-            // 
-            this.duserdetails.Location = new System.Drawing.Point(79, 0);
-            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
-            this.duserdetails.Name = "duserdetails";
-            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
-            this.duserdetails.TabIndex = 1;
-            // 
-            // attandance
-            // 
-            this.attandance.Location = new System.Drawing.Point(79, 0);
-            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.attandance.Name = "attandance";
-            this.attandance.Size = new System.Drawing.Size(1131, 635);
-            this.attandance.TabIndex = 2;
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -276,6 +254,30 @@ namespace Hospital
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 5;
+            // 
+            // allusers
+            // 
+            this.allusers.Location = new System.Drawing.Point(79, 0);
+            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.allusers.Name = "allusers";
+            this.allusers.Size = new System.Drawing.Size(1131, 635);
+            this.allusers.TabIndex = 0;
+            // 
+            // duserdetails
+            // 
+            this.duserdetails.Location = new System.Drawing.Point(79, 0);
+            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
+            this.duserdetails.Name = "duserdetails";
+            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
+            this.duserdetails.TabIndex = 1;
+            // 
+            // attandance
+            // 
+            this.attandance.Location = new System.Drawing.Point(79, 0);
+            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.attandance.Name = "attandance";
+            this.attandance.Size = new System.Drawing.Size(1131, 635);
+            this.attandance.TabIndex = 2;
             // 
             // Manager
             // 

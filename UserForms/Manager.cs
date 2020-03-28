@@ -53,5 +53,19 @@ namespace Hospital
             Login_Form f1 = new Login_Form(0);
             f1.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button5.Height;
+            SidePanel.Top = button5.Top;
+            attandance.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button2.Height;
+            SidePanel.Top = button2.Top;
+            attandance.BringToFront();
+        }
     }
 }

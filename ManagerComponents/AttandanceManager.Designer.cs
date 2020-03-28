@@ -30,8 +30,8 @@ namespace Hospital.ManagerComponents
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@ namespace Hospital.ManagerComponents
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResultGridView)).BeginInit();
@@ -91,14 +90,14 @@ namespace Hospital.ManagerComponents
             this.SearchResultGridView.AllowUserToAddRows = false;
             this.SearchResultGridView.AllowUserToDeleteRows = false;
             this.SearchResultGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SearchResultGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SearchResultGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SearchResultGridView.ColumnHeadersHeight = 42;
             this.SearchResultGridView.EnableHeadersVisualStyles = false;
             this.SearchResultGridView.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -108,8 +107,8 @@ namespace Hospital.ManagerComponents
             this.SearchResultGridView.ReadOnly = true;
             this.SearchResultGridView.RowHeadersVisible = false;
             this.SearchResultGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1128, 485);
             this.SearchResultGridView.TabIndex = 32;
@@ -153,17 +152,6 @@ namespace Hospital.ManagerComponents
             this.label7.Size = new System.Drawing.Size(2, 27);
             this.label7.TabIndex = 36;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(662, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 25);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "?";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,7 +178,6 @@ namespace Hospital.ManagerComponents
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -219,7 +206,6 @@ namespace Hospital.ManagerComponents
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
     }

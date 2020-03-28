@@ -18,10 +18,11 @@ namespace Hospital.ManagerComponents
         {
             InitializeComponent(); ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(label8, "Showing available users on that day");
+            toolTip1.SetToolTip(label5, "Showing available users on that day");
             label4.Text =mf.GetAllUsers("").Rows.Count.ToString();
             dateTimePicker1.Hide();
-            label8.Hide();
+            label6.Hide();
+            label5.Hide();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -57,13 +58,16 @@ namespace Hospital.ManagerComponents
         {
             if (checkBox1.Checked)
             {
-                label8.Show();
+                label6.Text = "";
+                label5.Show();
+                label6.Show();
                 dateTimePicker1.Show();
                 textBox1.Hide();
             }
             else
             {
-                label8.Hide();
+                label5.Hide();
+                label6.Hide();
                 textBox1.Show();
                 dateTimePicker1.Hide();
             }
