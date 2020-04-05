@@ -21,7 +21,7 @@ namespace Hospital
             //Get-Report by Id
             string PID = textBox1.Text;
             if (PID.Equals(""))
-                MessageBox.Show("Enter valid data");
+                MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 DataTable dt = df.GetPatientReport(PID);

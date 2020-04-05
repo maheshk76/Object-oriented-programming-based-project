@@ -23,7 +23,7 @@ namespace Hospital
             string med = medicine.Text;
 
             if (patient_id.Equals("") || med.Equals(""))
-                MessageBox.Show("Enter valid data");
+                MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
                 df.MakePrescription(patient_id, med);
         }

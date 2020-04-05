@@ -23,7 +23,7 @@ namespace Hospital
             string PID = textBox2.Text;
             string Tests = richTextBox1.Text;
             if (PID.Equals("") || Tests.Equals(""))
-                MessageBox.Show("Enter valid data");
+                MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
                 df.AddTestDetails(PID,Tests);
         }

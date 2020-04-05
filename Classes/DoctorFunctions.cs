@@ -75,7 +75,7 @@ namespace Hospital
                 Console.WriteLine(ex.Message.ToString());
                 string etype = ex.GetType().ToString();
                 if (etype.Equals("System.FormatException"))
-                    MessageBox.Show("Enter valid data","Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Enter valid data","Info",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
@@ -190,6 +190,7 @@ namespace Hospital
         {
             try
             {
+                DateTime DATE = DateTime.Now.Date;
                 cmd.Connection = con;
                 cmd.CommandText = "update Appointsments set Approved_or_not='true' where PatientId=@p_id";
                 con.Open();
@@ -204,24 +205,28 @@ namespace Hospital
 
                 cmd.CommandText = "select * from Users where Id=@user_id";
                 cmd.Parameters.AddWithValue("@user_id", user_id);
+                
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
                 string user_name = "";
                 while (r.Read())
                     user_name = r["Name"].ToString();
                 con.Close();
-                cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname) Values(@p_id,@pa_name,@medicine,@user_id,@user_name)";
+                cmd.CommandText = "insert into Patient_Presc(PId,PName,Prescprition,Did,Dname,Date) Values(@p_id,@pa_name,@medicine,@user_id,@user_name,@DATE)";
                 con.Open();
                 cmd.Parameters.AddWithValue("@pa_name", pa_name);
                 cmd.Parameters.AddWithValue("@user_name", user_name);
                 cmd.Parameters.AddWithValue("@medicine", medicine);
+                cmd.Parameters.AddWithValue("@DATE", DATE);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
+                
                 cmd.Parameters.RemoveAt("@user_id");
                 cmd.Parameters.RemoveAt("@pa_name");
                 cmd.Parameters.RemoveAt("@user_name");
                 cmd.Parameters.RemoveAt("@medicine");
+                cmd.Parameters.RemoveAt("@DATE");
             }
             catch(Exception ex)
             {

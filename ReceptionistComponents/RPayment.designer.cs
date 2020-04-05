@@ -77,14 +77,14 @@
             this.textBox2.Location = new System.Drawing.Point(0, 41);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(460, 38);
+            this.textBox2.Size = new System.Drawing.Size(773, 38);
             this.textBox2.TabIndex = 14;
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(826, 38);
+            this.button1.Location = new System.Drawing.Point(992, 38);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 41);
@@ -132,7 +132,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(962, 126);
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 126);
             this.dataGridView1.TabIndex = 20;
             // 
             // RPayment

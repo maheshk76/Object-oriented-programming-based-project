@@ -16,7 +16,8 @@ namespace Hospital
         public Manager(string uname)
         {
             InitializeComponent();
-            SidePanel.Height = button7.Height; if (SessionClass.SessionId == 0)
+            SidePanel.Height = button7.Height;
+            if (SessionClass.SessionId == 0)
             {
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();

@@ -77,6 +77,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(67, 742);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 12;
@@ -122,9 +123,9 @@
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(12, 145);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(277, 60);
+            this.button7.Size = new System.Drawing.Size(260, 61);
             this.button7.TabIndex = 9;
             this.button7.Text = "  Prescription(s)";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,9 +142,9 @@
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(12, 279);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(277, 60);
+            this.button5.Size = new System.Drawing.Size(260, 61);
             this.button5.TabIndex = 7;
             this.button5.Text = "  Medicine Stock";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,9 +161,9 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(12, 212);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 60);
+            this.button1.Size = new System.Drawing.Size(260, 61);
             this.button1.TabIndex = 3;
             this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,10 +213,10 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1101, 533);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(1101, 534);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(147, 98);
             this.button4.TabIndex = 14;
             this.button4.Text = "Logout";

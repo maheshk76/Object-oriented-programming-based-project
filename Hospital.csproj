@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ChemistFunctions.cs" />
     <Compile Include="Classes\ManagerFunctions.cs" />
     <Compile Include="UserForms\Manager.cs">
       <SubType>Form</SubType>
@@ -181,6 +182,12 @@
     <Compile Include="Classes\Patient_Management.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserForms\Nurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\Receptionist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +214,12 @@
     </Compile>
     <Compile Include="Classes\SessionClass.cs" />
     <Compile Include="Classes\Users.cs" />
+    <Compile Include="UserForms\WardManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\WardManager.Designer.cs">
+      <DependentUpon>WardManager.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UserForms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +278,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserForms\Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistComponents\RRegister.resx">
       <DependentUpon>RRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\WardManager.resx">
+      <DependentUpon>WardManager.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Hospital_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -315,6 +334,9 @@
   <ItemGroup>
     <None Include="Resources\refresh.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="NurseComponents\" />
+    <Folder Include="WardManagerComponents\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

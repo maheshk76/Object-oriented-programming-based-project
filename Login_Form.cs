@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital.UserForms;
+using System;
 using System.Windows.Forms;
 
 namespace Hospital
@@ -25,8 +26,7 @@ namespace Hospital
             {
                 int user_id = Convert.ToInt32(textBox1.Text);
                 string pass = textBox2.Text;
-                string role = "";//returned value will be stored
-                string uname = u.Login(user_id, pass, out role);
+                string uname = u.Login(user_id, pass, out string role);
                 if (uname.Equals(""))
                     throw new FormatException();
                 SessionClass.SessionId = user_id;
@@ -34,32 +34,32 @@ namespace Hospital
                 switch (role)
                     {
                         case "Doctor":
-                            Doctor f2 = new Doctor(uname);
-                            f2.ShowDialog();
+                            Doctor doctor = new Doctor(uname);
+                            doctor.ShowDialog();
                             break;
                         case "Laboratorian":
-                            Laboratorian lr = new Laboratorian(uname);
-                            lr.ShowDialog();
+                            Laboratorian laboratorian = new Laboratorian(uname);
+                            laboratorian.ShowDialog();
                             break;
                         case "Chemist":
-                            Chemist ch = new Chemist(uname);
-                            ch.ShowDialog();
+                            Chemist chemist = new Chemist(uname);
+                            chemist.ShowDialog();
                             break;
                         case "Receptionist":
-                            Receptionist rc = new Receptionist(uname);
-                            rc.ShowDialog();
+                            Receptionist receptionist = new Receptionist(uname);
+                            receptionist.ShowDialog();
                             break;
                         case "Manager":
-                             Manager m = new Manager(uname);
-                            m.ShowDialog();
+                            Manager manager = new Manager(uname);
+                            manager.ShowDialog();
                             break;
                         case "Nurse":
-                           //Nurse nu= new Nurse(uname);
-                           //nu.ShowDialog();
+                            Nurse nurse= new Nurse(uname);
+                            nurse.ShowDialog();
                             break;
-                        case "Ward_Manager":
-                            //Ward_Manager wm = new Ward_Manager(uname);
-                            //wm.ShowDialog();
+                        case "WardManager":
+                            WardManager wm = new WardManager(uname);
+                            wm.ShowDialog();
                             break;
                         case "Admin":
                             //Admin a=new Admin(uname);
@@ -73,7 +73,7 @@ namespace Hospital
                 if (ex.GetType().ToString().Equals("System.FormatException"))
                     MessageBox.Show("User doesn't exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                 MessageBox.Show("abhi program me thoda chainge hai,sunday ko mast naa-dhoke aa", "Babu bhaiyaa",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                 MessageBox.Show("Something went wrong please try agian later", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 label8.Text = "NOT FOUND";
             }
         }
