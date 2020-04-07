@@ -23,10 +23,69 @@ namespace Hospital.Classes
             return dt;
             
         }
+        public void MakeBill(string pid,int amt,int choice)
+        {
+            //choice = 2 ==> Medi bill,3=> Rent,4=>Other
+            con.Open();
+            cmd.CommandText = "select * from Patient_Bills where PId=@pid";
+            SqlDataReader r = cmd.ExecuteReader();
+            long bill = 0;
+            long tot = 0;
+            while (r.Read())
+            {
+                bill = Convert.ToInt32(r["Medicines_Bill"]);
+                tot = Convert.ToInt32(r["Total"]);
+            }
+            bill += amt;
+            tot += amt;
+            con.Close();
+            con.Open();
+            if(choice==2)
+            cmd.CommandText = "update Patient_Bills set Medicines_Bill=@bill,Total=@tot where PId=@pid";
+            if(choice==3)
+                cmd.CommandText = "update Patient_Bills set Rent_Bill=@bill,Total=@tot where PId=@pid";
+            if(choice==4)
+                cmd.CommandText = "update Patient_Bills set Other_Fees=@bill,Total=@tot where PId=@pid";
+            cmd.Parameters.AddWithValue("@bill", bill);
+            cmd.Parameters.AddWithValue("@tot", tot);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.RemoveAt("@bill");
+            cmd.Parameters.RemoveAt("@tot");
+            con.Close();
+        }
+        public bool UpdateStock(string pid,string med,int quan)
+        {
+            con.Open();
+            cmd.CommandText = "select * from Medicine_Stock where Name=@med";
+            SqlDataReader r = cmd.ExecuteReader();
+            int stock = 0;
+            int prc = 0;
+            while (r.Read())
+            {
+                stock = Convert.ToInt32(r["Quantity"]);
+                prc = Convert.ToInt32(r["Price_per_piece"]);
+            }
+            stock = stock - quan;
+            if (stock <= 0)
+            {
+                MessageBox.Show("Not Available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            con.Close();
+            MakeBill(pid, quan*prc,2);
+            con.Open();
+            cmd.CommandText = "update Medicine_Stock set Quantity=@stock";
+            cmd.Parameters.AddWithValue("@stock", stock);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.RemoveAt("@stock");
+            cmd.Parameters.RemoveAt("@med");
+            con.Close();
+            return true;
+        }
         public DataTable AddToList(string pid,string med,int quan)
         {
-            try
-            {
+          //  try
+            //{
                 dt = new DataTable();
                 DateTime date = DateTime.Now.Date;
                 cmd.Connection = con;
@@ -37,35 +96,17 @@ namespace Hospital.Classes
                 cmd.ExecuteNonQuery();
                 con.Close();
                 //stock change Opr
-                con.Open();
-                cmd.CommandText = "select * from Medicine_Stock where Name=@med";
-                SqlDataReader r = cmd.ExecuteReader();
-                int stock = 0;
-                while (r.Read())
-                    stock = Convert.ToInt32(r["Quantity"]);
-                stock = stock - @quan;
-                if (stock <= 0)
-                {
-                    MessageBox.Show("Not Available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (!(UpdateStock(pid,med,quan)))
                     return null;
-                }
-                con.Close();
-                con.Open();
-                cmd.CommandText = "update Medicine_Stock set Quantity=@stock";
-                cmd.Parameters.AddWithValue("@stock", stock);
-                cmd.ExecuteNonQuery();
-                cmd.Parameters.RemoveAt("@stock");
-                cmd.Parameters.RemoveAt("@med");
-                con.Close();
                 //retrie opr
                 con.Open();
                 cmd.CommandText = "select * from Patient_Treatment where PId=@pid";
-                r = cmd.ExecuteReader();
+                SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
                 cmd.Parameters.RemoveAt("@pid");
                 con.Close();
                 return dt;
-            }
+           /* }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -77,7 +118,7 @@ namespace Hospital.Classes
                 else
                     MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
-            }
+            }*/
         }
         public List<string> GetMedicines()
         {

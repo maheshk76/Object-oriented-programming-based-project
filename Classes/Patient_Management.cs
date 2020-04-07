@@ -141,7 +141,14 @@ namespace Hospital
                 cmd.Parameters.RemoveAt("@bdate");
                 //Add to aapointment table
                 AddtoAppointments(Patient_Id.ToString(), pname, doctor_assinged);
-                return Patient_Id;
+                con.Open();
+                cmd.Parameters.AddWithValue("@Pat", Patient_Id);
+                cmd.CommandText = "insert into Patient_Bills(PId,Total,Medicines_Bill,Rent_Bill,Other_Fees) Values(@Patient_Id,0,0,0)";
+                cmd.ExecuteNonQuery();
+                
+                con.Close();
+                cmd.Parameters.RemoveAt("@Pat");
+               return Patient_Id;
             }
             catch (Exception)
             {
