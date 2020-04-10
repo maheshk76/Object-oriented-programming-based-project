@@ -3,15 +3,50 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Windows.Forms;
 namespace Hospital
 {
     class Patient_Management:MakeConnection
     {
-        DoctorFunctions df = new DoctorFunctions();
+        readonly DoctorFunctions df = new DoctorFunctions();
+        public DataTable GetBills(string query,out bool stat)
+        {
+            stat = false;
+            try
+            {
+                DataTable dt = new DataTable();
+                cmd.Connection = con;
+                con.Open();
+                cmd.CommandText = "select * from Patient_Bills where PId=@query";
+                cmd.Parameters.AddWithValue("@query", query);
+                SqlDataReader r = cmd.ExecuteReader();
+                dt.Load(r);
+                stat = (from DataRow dr in dt.Rows where dr["PId"].ToString() == query
+                        select Convert.ToBoolean(dr["Payment_Status"])).FirstOrDefault();
+                con.Close();
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
+                    MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return null;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if (cmd.Parameters.Contains("@query"))
+                cmd.Parameters.RemoveAt("@query");
+            }
+        }
         public List<string> GetDoctorList(string DoctorName)
         {
             //Returns a list to receptionist For assigning a doctor

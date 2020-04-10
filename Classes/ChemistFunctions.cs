@@ -21,7 +21,6 @@ namespace Hospital.Classes
             dt.Load(cmd.ExecuteReader());
             con.Close();
             return dt;
-            
         }
         public void MakeBill(string pid,int amt,int choice)
         {
@@ -84,8 +83,8 @@ namespace Hospital.Classes
         }
         public DataTable AddToList(string pid,string med,int quan)
         {
-          //  try
-            //{
+            try
+            {
                 dt = new DataTable();
                 DateTime date = DateTime.Now.Date;
                 cmd.Connection = con;
@@ -106,7 +105,7 @@ namespace Hospital.Classes
                 cmd.Parameters.RemoveAt("@pid");
                 con.Close();
                 return dt;
-           /* }
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -118,7 +117,7 @@ namespace Hospital.Classes
                 else
                     MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
-            }*/
+            }
         }
         public List<string> GetMedicines()
         {
@@ -150,18 +149,21 @@ namespace Hospital.Classes
             //flg=false==>things
             try
             {
+                DateTime date = DateTime.Now.Date;
                 if (quantity <= 0)
                     throw new ArgumentNullException();
                 cmd.Connection = con;
-                cmd.CommandText = "insert into StockManager(Name,Quantity,Flag) Values(@name,@quantity,@flg)";
+                cmd.CommandText = "insert into StockManager(Name,Quantity,Flag,Date,Delivered) Values(@name,@quantity,@flg,@date,'false')";
                 con.Open();
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@quantity", quantity);
                 cmd.Parameters.AddWithValue("@flg", flg);
+                cmd.Parameters.AddWithValue("@date", date);
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.RemoveAt("@name");
                 cmd.Parameters.RemoveAt("@quantity");
                 cmd.Parameters.RemoveAt("@flg");
+                cmd.Parameters.RemoveAt("@date");
                 MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
             }

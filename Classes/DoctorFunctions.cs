@@ -133,7 +133,6 @@ namespace Hospital
                     con.Close();
             }
         }
-        //Search Algorithm
         public DataTable GetPatient(string searchString, bool PData)
         {
             try

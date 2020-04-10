@@ -44,8 +44,10 @@ namespace Hospital
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
             this.attandance = new Hospital.ManagerComponents.AttandanceManager();
+            this.inven = new Hospital.ManagerComponents.Inventory();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +58,7 @@ namespace Hospital
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
@@ -217,6 +220,7 @@ namespace Hospital
             this.panel.Controls.Add(this.allusers);
             this.panel.Controls.Add(this.duserdetails);
             this.panel.Controls.Add(this.attandance);
+            this.panel.Controls.Add(this.inven);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(292, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
@@ -247,6 +251,13 @@ namespace Hospital
             this.attandance.Name = "attandance";
             this.attandance.Size = new System.Drawing.Size(1131, 635);
             this.attandance.TabIndex = 2;
+            // 
+            // inven
+            // 
+            this.inven.Location = new System.Drawing.Point(79, 0);
+            this.inven.Name = "inven";
+            this.inven.Size = new System.Drawing.Size(1131, 635);
+            this.inven.TabIndex = 3;
             // 
             // button8
             // 
@@ -279,6 +290,17 @@ namespace Hospital
             this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 5;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Location = new System.Drawing.Point(12, 426);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(17, 16);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -291,7 +313,7 @@ namespace Hospital
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nurse";
+            this.Text = "Manager";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -314,11 +336,13 @@ namespace Hospital
         private AllUsers allusers;
         private UserControl1 duserdetails;
         private AttandanceManager attandance;
+        private Inventory inven;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

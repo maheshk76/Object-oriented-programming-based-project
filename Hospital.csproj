@@ -80,6 +80,12 @@
   <ItemGroup>
     <Compile Include="Classes\ChemistFunctions.cs" />
     <Compile Include="Classes\ManagerFunctions.cs" />
+    <Compile Include="ManagerComponents\Inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagerComponents\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     <Compile Include="UserForms\WardManager.Designer.cs">
       <DependentUpon>WardManager.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ManagerComponents\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,6 +13,22 @@ namespace Hospital.Classes
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
+        public DataTable GetAllRequests(bool flg,bool all)
+        {
+            dt = new DataTable();
+            cmd.Connection = con;
+            con.Open();
+            if (all)
+                cmd.CommandText = "select * from StockManager where Delivered='false'";
+            else
+                cmd.CommandText = "select * from StockManager where Flag=@flg";
+            cmd.Parameters.AddWithValue("@flg", flg);
+            dt.Load(cmd.ExecuteReader());
+            cmd.Parameters.RemoveAt("@flg");
+            con.Close();
+            dt = df.ReverseRowsInDataTable(dt);
+            return dt;
+        }
         bool isNum(string s)
         {
             for (int i = 0; i < s.Length; i++)

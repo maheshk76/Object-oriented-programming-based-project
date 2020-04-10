@@ -25,7 +25,7 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe.manifest
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.application
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.pdb
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.Inventory.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.Manager.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.AllUsers.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.AttandanceManager.resources
@@ -43,14 +43,15 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.LInventory.r
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.Login_Form.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.LReport.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.Nurse.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.Receptionist.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RExPatient.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RPayment.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RRegister.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.WardManager.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe.manifest
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.application
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.pdb
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.Nurse.resources
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.WardManager.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache

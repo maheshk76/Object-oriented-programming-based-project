@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,14 @@ namespace Hospital
     public partial class Manager : Form
     {
         Users u = new Users();
+        ManagerFunctions mf = new ManagerFunctions();
         public Manager(string uname)
         {
             InitializeComponent();
+            if (mf.GetAllRequests(false, true).Rows.Count==0)
+                radioButton1.Hide();
+            else
+                radioButton1.Show();
             SidePanel.Height = button7.Height;
             if (SessionClass.SessionId == 0)
             {
@@ -66,7 +72,7 @@ namespace Hospital
         {
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
-            attandance.BringToFront();
+            inven.BringToFront();
         }
     }
 }
