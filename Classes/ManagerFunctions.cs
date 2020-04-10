@@ -13,6 +13,22 @@ namespace Hospital.Classes
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
+        public void AddStocks(string Val,bool flg,int quan)
+        {
+            cmd.Connection = con;
+            con.Open();
+            if(flg)
+                cmd.CommandText = "insert into Medicine_Stock(Name,Quantity,Price_per_piece,MFG_Date,Expiry_Date) Values(@Val,@quan,'50','10-04-2020','10-04-2025')";
+          
+            cmd.Parameters.AddWithValue("@val", Val);
+            cmd.Parameters.AddWithValue("@quan", quan);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.RemoveAt("@val");
+            cmd.Parameters.RemoveAt("@quan");
+            con.Close();
+            MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
         public DataTable GetAllRequests(bool flg,bool all)
         {
             dt = new DataTable();

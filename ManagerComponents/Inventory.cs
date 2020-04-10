@@ -33,5 +33,13 @@ namespace Hospital.ManagerComponents
                     gridview.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string val = text1.Text;
+            int quan = Convert.ToInt32(numericUpDown1.Value);
+            bool med = checkBox1.Checked;
+            mf.AddStocks(val, med, quan);
+        }
     }
 }
