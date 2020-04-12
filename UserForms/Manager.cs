@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,10 @@ namespace Hospital
         public Manager(string uname)
         {
             InitializeComponent();
-            if (mf.GetAllRequests(false, true).Rows.Count==0)
-                radioButton1.Hide();
-            else
-                radioButton1.Show();
+                if (mf.GetAllRequests(false, true).Rows.Count == 0)
+                    radioButton1.Hide();
+                else
+                    radioButton1.Show();
             SidePanel.Height = button7.Height;
             if (SessionClass.SessionId == 0)
             {

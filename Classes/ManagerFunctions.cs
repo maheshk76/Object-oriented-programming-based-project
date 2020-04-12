@@ -13,19 +13,28 @@ namespace Hospital.Classes
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
+        public void UpdateStockRequests(string Val, bool flg, int quan)
+        {
+            cmd.CommandText = "update StockRequests set Delivered='true' where Name=@Val";
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public void AddStocks(string Val,bool flg,int quan)
         {
             cmd.Connection = con;
             con.Open();
-            if(flg)
+            if (flg)
                 cmd.CommandText = "insert into Medicine_Stock(Name,Quantity,Price_per_piece,MFG_Date,Expiry_Date) Values(@Val,@quan,'50','10-04-2020','10-04-2025')";
-          
+            else
+                cmd.CommandText = "insert into Equipments_Stock(Name,Price,Quantity) Values(@Val,'10K',@quan)";
             cmd.Parameters.AddWithValue("@val", Val);
             cmd.Parameters.AddWithValue("@quan", quan);
             cmd.ExecuteNonQuery();
+            con.Close();
+            UpdateStockRequests(Val,flg,quan);
             cmd.Parameters.RemoveAt("@val");
             cmd.Parameters.RemoveAt("@quan");
-            con.Close();
             MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -35,9 +44,9 @@ namespace Hospital.Classes
             cmd.Connection = con;
             con.Open();
             if (all)
-                cmd.CommandText = "select * from StockManager where Delivered='false'";
+                cmd.CommandText = "select * from StockRequests where Delivered='false'";
             else
-                cmd.CommandText = "select * from StockManager where Flag=@flg";
+                cmd.CommandText = "select * from StockRequests where Flag=@flg";
             cmd.Parameters.AddWithValue("@flg", flg);
             dt.Load(cmd.ExecuteReader());
             cmd.Parameters.RemoveAt("@flg");

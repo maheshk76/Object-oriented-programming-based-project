@@ -153,7 +153,7 @@ namespace Hospital.Classes
                 if (quantity <= 0)
                     throw new ArgumentNullException();
                 cmd.Connection = con;
-                cmd.CommandText = "insert into StockManager(Name,Quantity,Flag,Date,Delivered) Values(@name,@quantity,@flg,@date,'false')";
+                cmd.CommandText = "insert into StockRequests(Name,Quantity,Flag,Date,Delivered) Values(@name,@quantity,@flg,@date,'false')";
                 con.Open();
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@quantity", quantity);

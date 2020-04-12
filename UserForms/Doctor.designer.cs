@@ -85,7 +85,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 61);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 5;
             this.button2.Text = "  Patient Test";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -148,7 +148,7 @@
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(260, 61);
-            this.button7.TabIndex = 9;
+            this.button7.TabIndex = 1;
             this.button7.Text = "  Appointments";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,7 +167,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 61);
-            this.button5.TabIndex = 7;
+            this.button5.TabIndex = 4;
             this.button5.Text = "  Prescription";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -186,7 +186,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(260, 61);
-            this.button3.TabIndex = 5;
+            this.button3.TabIndex = 3;
             this.button3.Text = "  Report";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -205,7 +205,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 61);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -218,7 +218,7 @@
             this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1058, 635);
-            this.duserdetails.TabIndex = 0;
+            this.duserdetails.TabIndex = 7;
             // 
             // dPrescription
             // 
@@ -227,7 +227,7 @@
             this.dPrescription.Margin = new System.Windows.Forms.Padding(2);
             this.dPrescription.Name = "dPrescription";
             this.dPrescription.Size = new System.Drawing.Size(1058, 635);
-            this.dPrescription.TabIndex = 1;
+            this.dPrescription.TabIndex = 10;
             // 
             // dreport
             // 
@@ -236,7 +236,7 @@
             this.dreport.Margin = new System.Windows.Forms.Padding(2);
             this.dreport.Name = "dreport";
             this.dreport.Size = new System.Drawing.Size(1058, 635);
-            this.dreport.TabIndex = 2;
+            this.dreport.TabIndex = 9;
             // 
             // panel
             // 
@@ -251,7 +251,7 @@
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
-            this.panel.TabIndex = 6;
+            this.panel.TabIndex = 7;
             // 
             // dtest1
             // 
@@ -259,7 +259,7 @@
             this.dtest1.Margin = new System.Windows.Forms.Padding(2);
             this.dtest1.Name = "dtest1";
             this.dtest1.Size = new System.Drawing.Size(1058, 635);
-            this.dtest1.TabIndex = 4;
+            this.dtest1.TabIndex = 11;
             this.dtest1.Load += new System.EventHandler(this.dtest1_Load);
             // 
             // dAppointment
@@ -268,7 +268,7 @@
             this.dAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.dAppointment.Name = "dAppointment";
             this.dAppointment.Size = new System.Drawing.Size(1058, 635);
-            this.dAppointment.TabIndex = 3;
+            this.dAppointment.TabIndex = 7;
             // 
             // button8
             // 
@@ -283,7 +283,7 @@
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(147, 98);
-            this.button8.TabIndex = 10;
+            this.button8.TabIndex = 6;
             this.button8.Text = "Logout";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
