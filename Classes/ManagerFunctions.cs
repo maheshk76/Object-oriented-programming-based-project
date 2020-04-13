@@ -13,37 +13,76 @@ namespace Hospital.Classes
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
-        public void UpdateStockRequests(string Val, bool flg, int quan)
+        public void UpdateStockRequests(string Val)
         {
             cmd.CommandText = "update StockRequests set Delivered='true' where Name=@Val";
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public int CheckExistenceOfStock(string Val,bool flg)
+        {
+            try
+            {
+                if (flg)
+                    cmd.CommandText = "select * from Medicine_Stock where Name=@Val";
+                else
+                    cmd.CommandText = "select * from Equipments_Stock where Name-@Val";
+                con.Open();
+                cmd.Parameters.AddWithValue("@val", Val);
+                SqlDataReader r = cmd.ExecuteReader();
+                while (r.Read())
+                    return Convert.ToInt32(r["Quantity"]);
+                return -99;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+        }
         public void AddStocks(string Val,bool flg,int quan)
         {
+            //flg=true=>medi stock,false=>equip stock
             cmd.Connection = con;
-            con.Open();
+            int stock_exist=CheckExistenceOfStock(Val, flg);
+            Console.WriteLine(stock_exist);
             if (flg)
-                cmd.CommandText = "insert into Medicine_Stock(Name,Quantity,Price_per_piece,MFG_Date,Expiry_Date) Values(@Val,@quan,'50','10-04-2020','10-04-2025')";
+            {
+                if (stock_exist > 0)
+                {
+                    quan += stock_exist;
+                    cmd.CommandText = "update Medicine_Stock set Quantity=@quan where Name=@Val";
+                }
+                else
+                    cmd.CommandText = "insert into Medicine_Stock(Name,Quantity,Price_per_piece,MFG_Date,Expiry_Date) Values(@Val,@quan,'50','10-04-2020','10-04-2025')";
+            }
             else
-                cmd.CommandText = "insert into Equipments_Stock(Name,Price,Quantity) Values(@Val,'10K',@quan)";
-            cmd.Parameters.AddWithValue("@val", Val);
+            {
+                if (stock_exist > 0)
+                {
+                    quan += stock_exist;
+                    cmd.CommandText = "update Equipments_Stock set Quantity=@quan where Name=@Val";
+                }
+                else
+                    cmd.CommandText = "insert into Equipments_Stock(Name,Price,Quantity) Values(@Val,'10K',@quan)";
+            }
+            con.Open();
             cmd.Parameters.AddWithValue("@quan", quan);
             cmd.ExecuteNonQuery();
             con.Close();
-            UpdateStockRequests(Val,flg,quan);
+            UpdateStockRequests(Val);
             cmd.Parameters.RemoveAt("@val");
             cmd.Parameters.RemoveAt("@quan");
             MessageBox.Show("Success", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-        public DataTable GetAllRequests(bool flg,bool all)
+        public DataTable GetAllRequests(bool flg,bool new_req)
         {
             dt = new DataTable();
             cmd.Connection = con;
             con.Open();
-            if (all)
+            if (new_req)
                 cmd.CommandText = "select * from StockRequests where Delivered='false'";
             else
                 cmd.CommandText = "select * from StockRequests where Flag=@flg";

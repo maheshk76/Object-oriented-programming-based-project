@@ -191,9 +191,9 @@ namespace Hospital
             // 
             this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(717, 35);
+            this.label6.Location = new System.Drawing.Point(722, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(10, 627);
+            this.label6.Size = new System.Drawing.Size(5, 627);
             this.label6.TabIndex = 15;
             // 
             // label7

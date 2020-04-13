@@ -13,9 +13,14 @@ namespace Hospital
     public partial class Doctor : Form
     {
         Users u = new Users();
+        DoctorFunctions df = new DoctorFunctions();
         public Doctor(string uname)
         {
             InitializeComponent();
+            if (df.GetAllAppointments("",true).Rows.Count == 0)
+                radioButton1.Hide();
+            else
+                radioButton1.Show();
             SidePanel.Height = button7.Height;
             dAppointment.BringToFront();
             if (SessionClass.SessionId == 0)
@@ -78,6 +83,11 @@ namespace Hospital
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

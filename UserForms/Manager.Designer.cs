@@ -31,6 +31,7 @@ namespace Hospital
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,13 +42,12 @@ namespace Hospital
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
             this.attandance = new Hospital.ManagerComponents.AttandanceManager();
             this.inven = new Hospital.ManagerComponents.Inventory();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +74,17 @@ namespace Hospital
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 4;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Location = new System.Drawing.Point(257, 436);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(17, 16);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -127,6 +138,7 @@ namespace Hospital
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SidePanel
             // 
@@ -228,37 +240,6 @@ namespace Hospital
             this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 6;
             // 
-            // allusers
-            // 
-            this.allusers.Location = new System.Drawing.Point(79, 0);
-            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.allusers.Name = "allusers";
-            this.allusers.Size = new System.Drawing.Size(1131, 635);
-            this.allusers.TabIndex = 0;
-            // 
-            // duserdetails
-            // 
-            this.duserdetails.Location = new System.Drawing.Point(79, 0);
-            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
-            this.duserdetails.Name = "duserdetails";
-            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
-            this.duserdetails.TabIndex = 1;
-            // 
-            // attandance
-            // 
-            this.attandance.Location = new System.Drawing.Point(79, 0);
-            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.attandance.Name = "attandance";
-            this.attandance.Size = new System.Drawing.Size(1131, 635);
-            this.attandance.TabIndex = 2;
-            // 
-            // inven
-            // 
-            this.inven.Location = new System.Drawing.Point(79, 0);
-            this.inven.Name = "inven";
-            this.inven.Size = new System.Drawing.Size(1131, 635);
-            this.inven.TabIndex = 3;
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -290,16 +271,36 @@ namespace Hospital
             this.panel2.Size = new System.Drawing.Size(1248, 98);
             this.panel2.TabIndex = 5;
             // 
-            // radioButton1
+            // allusers
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(12, 426);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(17, 16);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.allusers.Location = new System.Drawing.Point(79, 0);
+            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.allusers.Name = "allusers";
+            this.allusers.Size = new System.Drawing.Size(1131, 635);
+            this.allusers.TabIndex = 0;
+            // 
+            // duserdetails
+            // 
+            this.duserdetails.Location = new System.Drawing.Point(79, 0);
+            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
+            this.duserdetails.Name = "duserdetails";
+            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
+            this.duserdetails.TabIndex = 1;
+            // 
+            // attandance
+            // 
+            this.attandance.Location = new System.Drawing.Point(79, 0);
+            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.attandance.Name = "attandance";
+            this.attandance.Size = new System.Drawing.Size(1131, 635);
+            this.attandance.TabIndex = 2;
+            // 
+            // inven
+            // 
+            this.inven.Location = new System.Drawing.Point(79, 0);
+            this.inven.Name = "inven";
+            this.inven.Size = new System.Drawing.Size(1131, 635);
+            this.inven.TabIndex = 3;
             // 
             // Manager
             // 

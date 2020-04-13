@@ -22,12 +22,8 @@ namespace Hospital
         {
             DataTable dt = df.GetPatient(searchTextbox.Text, true);
             SearchResultGridView.DataSource = dt;
-
             if (dt != null)
-            {
-                SearchResultGridView.Columns[8].Width = 200;
-                SearchResultGridView.Columns[8].DisplayIndex = 0;
-            }
+                SearchResultGridView.Columns.Remove("Details");
         }
     }
 }

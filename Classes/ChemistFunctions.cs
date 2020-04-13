@@ -77,7 +77,7 @@ namespace Hospital.Classes
             cmd.Parameters.AddWithValue("@stock", stock);
             cmd.ExecuteNonQuery();
             cmd.Parameters.RemoveAt("@stock");
-            cmd.Parameters.RemoveAt("@med");
+            
             con.Close();
             return true;
         }
@@ -102,7 +102,7 @@ namespace Hospital.Classes
                 cmd.CommandText = "select * from Patient_Treatment where PId=@pid";
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);
-                cmd.Parameters.RemoveAt("@pid");
+                //cmd.Parameters.RemoveAt("@pid");
                 con.Close();
                 return dt;
             }
@@ -117,6 +117,15 @@ namespace Hospital.Classes
                 else
                     MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if (cmd.Parameters.Contains("@pid"))
+                    cmd.Parameters.RemoveAt("@pid");
+                if (cmd.Parameters.Contains("@med"))
+                    cmd.Parameters.RemoveAt("@med");
             }
         }
         public List<string> GetMedicines()
