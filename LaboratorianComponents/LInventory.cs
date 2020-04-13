@@ -14,9 +14,14 @@ namespace Hospital
     public partial class LInventory : UserControl
     {
         ChemistFunctions cf = new ChemistFunctions();
+        LaboratorianFunctions lf = new LaboratorianFunctions();
         public LInventory()
         {
             InitializeComponent();
+            dataGridView1.DataSource=lf.GetAllEquip();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
