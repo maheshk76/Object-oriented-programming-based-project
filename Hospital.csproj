@@ -86,6 +86,12 @@
     <Compile Include="ManagerComponents\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="NurseComponents\Diet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NurseComponents\Diet.Designer.cs">
+      <DependentUpon>Diet.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     <EmbeddedResource Include="ManagerComponents\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NurseComponents\Diet.resx">
+      <DependentUpon>Diet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,8 +353,16 @@
     <None Include="Resources\refresh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NurseComponents\" />
     <Folder Include="WardManagerComponents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Chopsticks-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Soup-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,7 +12,7 @@ namespace Hospital
 {
     public partial class Chemist : Form
     {
-        Users u = new Users();
+        readonly Users u = new Users();
         public Chemist()
         {
             InitializeComponent();

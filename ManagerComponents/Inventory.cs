@@ -13,8 +13,8 @@ namespace Hospital.ManagerComponents
 {
     public partial class Inventory: UserControl
     {
-        ManagerFunctions mf = new ManagerFunctions();
-        ChemistFunctions cf = new ChemistFunctions();
+        readonly ManagerFunctions mf = new ManagerFunctions();
+        readonly ChemistFunctions cf = new ChemistFunctions();
         DataTable dt = new DataTable();
         public Inventory()
         {
@@ -47,7 +47,6 @@ namespace Hospital.ManagerComponents
             int quan = Convert.ToInt32(numericUpDown1.Value);
             bool med = checkBox1.Checked;
             mf.AddStocks(val, med, quan);
-            
             radioButton1_CheckedChanged(sender, e);
         }
     }

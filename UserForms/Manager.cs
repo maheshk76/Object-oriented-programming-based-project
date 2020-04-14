@@ -14,8 +14,8 @@ namespace Hospital
 {
     public partial class Manager : Form
     {
-        Users u = new Users();
-        ManagerFunctions mf = new ManagerFunctions();
+        readonly Users u = new Users();
+        readonly ManagerFunctions mf = new ManagerFunctions();
         public Manager()
         {
             InitializeComponent();

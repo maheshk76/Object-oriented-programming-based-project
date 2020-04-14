@@ -9,6 +9,54 @@ namespace Hospital
     class Patient_Management:MakeConnection
     {
         readonly DoctorFunctions df = new DoctorFunctions();
+        public DataTable GetPatientDiagnosis(string searchQ)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "select * from PatientDiagnosis where PatientId=@searchQ";
+            con.Open();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            dt.Columns.Remove("Id");
+            dt.Columns.Remove("PatientId");
+            return dt;
+        }
+        public DataTable GetPatientTreatment(string searchQ)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                DataTable dt1;
+                cmd.Connection = con;
+                cmd.CommandText = "select * from Patient_Treatment where PId=@searchQ";
+                con.Open();
+                cmd.Parameters.AddWithValue("@searchQ", searchQ);
+                dt.Load(cmd.ExecuteReader());
+                dt.Columns.Remove("Id");
+                con.Close();
+                dt1=GetPatientDiagnosis(searchQ);
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
+                    MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return null;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if (cmd.Parameters.Contains("@searchQ"))
+                    cmd.Parameters.RemoveAt("@searchQ");
+            }
+        }
         public DataTable GetBills(string query,out bool stat)
         {
             stat = false;

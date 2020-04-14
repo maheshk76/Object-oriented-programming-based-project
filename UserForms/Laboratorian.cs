@@ -12,8 +12,8 @@ namespace Hospital
 {
     public partial class Laboratorian : Form
     {
-        Users u = new Users();
-        Patient_Management pm = new Patient_Management();
+        readonly Users u = new Users();
+        readonly Patient_Management pm = new Patient_Management();
         public Laboratorian()
         {
             InitializeComponent();

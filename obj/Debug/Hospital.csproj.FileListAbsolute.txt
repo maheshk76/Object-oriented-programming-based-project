@@ -20,12 +20,8 @@ C:\Users\hp\Documents\Visual Studio 2019\Hospital\Hospital\obj\Debug\Hospital.Us
 C:\Users\hp\Documents\Visual Studio 2019\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
 C:\Users\hp\Documents\Visual Studio 2019\Hospital\Hospital\obj\Debug\Hospital.exe
 C:\Users\hp\Documents\Visual Studio 2019\Hospital\Hospital\obj\Debug\Hospital.pdb
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe.config
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe.manifest
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.application
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.pdb
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.Inventory.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.NurseComponents.Diet.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.Manager.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.AllUsers.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.ManagerComponents.AttandanceManager.resources
@@ -50,7 +46,13 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RPayment.res
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RRegister.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.WardManager.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe.config
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe.manifest
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.application
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.exe
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\Hospital.pdb
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe.manifest
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.application
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.pdb
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache

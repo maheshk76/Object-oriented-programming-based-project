@@ -12,8 +12,8 @@ namespace Hospital
 {
     public partial class Doctor : Form
     {
-        Users u = new Users();
-        DoctorFunctions df = new DoctorFunctions();
+        readonly Users u = new Users();
+        readonly DoctorFunctions df = new DoctorFunctions();
         public Doctor()
         {
             InitializeComponent(); notify();

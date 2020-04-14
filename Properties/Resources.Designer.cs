@@ -123,6 +123,16 @@ namespace Hospital.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chopsticks_icon {
+            get {
+                object obj = ResourceManager.GetObject("Chopsticks_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pictureBox1_Image {
             get {
                 object obj = ResourceManager.GetObject("pictureBox1.Image", resourceCulture);
@@ -136,6 +146,16 @@ namespace Hospital.Properties {
         internal static System.Drawing.Bitmap pictureBox2_Image {
             get {
                 object obj = ResourceManager.GetObject("pictureBox2.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Soup_icon {
+            get {
+                object obj = ResourceManager.GetObject("Soup-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

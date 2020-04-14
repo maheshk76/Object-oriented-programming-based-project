@@ -13,7 +13,7 @@ namespace Hospital.ManagerComponents
 {
     public partial class AllUsers : UserControl
     {
-        ManagerFunctions mf = new ManagerFunctions();
+        readonly ManagerFunctions mf = new ManagerFunctions();
         public AllUsers()
         {
             InitializeComponent();
