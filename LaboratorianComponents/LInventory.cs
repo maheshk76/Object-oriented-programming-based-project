@@ -23,7 +23,6 @@ namespace Hospital
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             cf.RequestStock(textBox2.Text, Convert.ToInt32(numericUpDown1.Value), false);

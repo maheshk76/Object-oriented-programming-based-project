@@ -195,8 +195,10 @@ namespace Hospital
                     con.Close();
             }
         }
-        public int DischargePatient(int Pid)
+        public void DischargePatient(string PID)
         {
+            try { 
+            int Pid = Convert.ToInt32(PID);
             DateTime disdate = DateTime.Now.Date;
             cmd.Connection = con;
             cmd.CommandText = "update Patient_Record set DisDate=@disdate where Id=@Pid";
@@ -207,7 +209,25 @@ namespace Hospital
             con.Close();
             cmd.Parameters.RemoveAt("@disdate");
             cmd.Parameters.RemoveAt("@Pid");
-            return 1;
+            MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.FormatException"))
+                    MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+ 
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
         }  
     }
 }
