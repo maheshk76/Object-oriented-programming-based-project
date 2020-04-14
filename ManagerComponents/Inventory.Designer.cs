@@ -76,8 +76,6 @@
             this.gridview.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridview.RowTemplate.Height = 60;
             this.gridview.Size = new System.Drawing.Size(682, 205);
-            this.gridview.TabIndex = 1;
-            this.gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridview_CellContentClick);
             // 
             // label2
             // 
@@ -86,7 +84,6 @@
             this.label2.Location = new System.Drawing.Point(-5, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 25);
-            this.label2.TabIndex = 5;
             this.label2.Text = "Requests";
             // 
             // groupBox1
@@ -98,7 +95,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(348, 54);
-            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // radioButton2
@@ -109,7 +106,7 @@
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(136, 29);
-            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Equipments";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -123,7 +120,7 @@
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(122, 29);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Medicines";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -136,7 +133,6 @@
             this.label1.Location = new System.Drawing.Point(847, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 25);
-            this.label1.TabIndex = 26;
             this.label1.Text = "Stock Supply";
             // 
             // text1
@@ -146,7 +142,7 @@
             this.text1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.text1.Name = "text1";
             this.text1.Size = new System.Drawing.Size(272, 38);
-            this.text1.TabIndex = 27;
+            this.text1.TabIndex = 4;
             // 
             // numericUpDown1
             // 
@@ -165,7 +161,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(272, 37);
-            this.numericUpDown1.TabIndex = 28;
+            this.numericUpDown1.TabIndex = 6;
             // 
             // checkBox1
             // 
@@ -173,7 +169,7 @@
             this.checkBox1.Location = new System.Drawing.Point(852, 186);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(93, 21);
-            this.checkBox1.TabIndex = 29;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Medicines";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +181,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 41);
-            this.button2.TabIndex = 30;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Supply";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -225,7 +221,6 @@
             this.label3.Location = new System.Drawing.Point(-5, 378);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 25);
-            this.label3.TabIndex = 32;
             this.label3.Text = "Stock";
             // 
             // Inventory

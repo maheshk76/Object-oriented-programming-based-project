@@ -26,8 +26,6 @@ namespace Hospital.UserForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             duserdetails.BringToFront();
         }

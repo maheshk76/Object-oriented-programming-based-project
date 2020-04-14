@@ -51,7 +51,6 @@ namespace Hospital
             this.label2.Location = new System.Drawing.Point(-5, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 25);
-            this.label2.TabIndex = 5;
             this.label2.Text = "Prescription";
             // 
             // medicine
@@ -62,7 +61,7 @@ namespace Hospital
             this.medicine.Multiline = true;
             this.medicine.Name = "medicine";
             this.medicine.Size = new System.Drawing.Size(930, 84);
-            this.medicine.TabIndex = 4;
+            this.medicine.TabIndex = 3;
             // 
             // button1
             // 
@@ -72,7 +71,7 @@ namespace Hospital
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 44);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -112,7 +111,6 @@ namespace Hospital
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 100;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 383);
-            this.dataGridView1.TabIndex = 9;
             // 
             // label1
             // 
@@ -121,7 +119,6 @@ namespace Hospital
             this.label1.Location = new System.Drawing.Point(-5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
-            this.label1.TabIndex = 11;
             this.label1.Text = "Patient ID";
             // 
             // PID
@@ -131,7 +128,7 @@ namespace Hospital
             this.PID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PID.Name = "PID";
             this.PID.Size = new System.Drawing.Size(460, 38);
-            this.PID.TabIndex = 10;
+            this.PID.TabIndex = 1;
             // 
             // button2
             // 
@@ -141,7 +138,7 @@ namespace Hospital
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 41);
-            this.button2.TabIndex = 12;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Check";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

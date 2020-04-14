@@ -47,7 +47,7 @@ namespace Hospital
             this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(773, 38);
-            this.searchTextbox.TabIndex = 11;
+            this.searchTextbox.TabIndex = 1;
             this.searchTextbox.TextChanged += new System.EventHandler(this.TextBox_Changed);
             // 
             // dataGridView1
@@ -74,7 +74,6 @@ namespace Hospital
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 485);
-            this.dataGridView1.TabIndex = 14;
             // 
             // label2
             // 
@@ -83,7 +82,6 @@ namespace Hospital
             this.label2.Location = new System.Drawing.Point(-5, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 25);
-            this.label2.TabIndex = 15;
             this.label2.Text = "Search Appointment";
             // 
             // label1
@@ -92,7 +90,6 @@ namespace Hospital
             this.label1.Location = new System.Drawing.Point(1109, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 17);
-            this.label1.TabIndex = 16;
             this.label1.Text = "?";
             // 
             // DAppointment

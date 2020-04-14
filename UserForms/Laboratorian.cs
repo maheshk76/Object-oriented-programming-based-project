@@ -31,21 +31,18 @@ namespace Hospital
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
             lReport1.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             userControl12.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
             lInventory1.BringToFront();
         }

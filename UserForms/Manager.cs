@@ -19,10 +19,7 @@ namespace Hospital
         public Manager(string uname)
         {
             InitializeComponent();
-                if (mf.GetAllRequests(false, true).Rows.Count == 0)
-                    radioButton1.Hide();
-                else
-                    radioButton1.Show();
+            Refres();
             SidePanel.Height = button7.Height;
             if (SessionClass.SessionId == 0)
             {
@@ -31,24 +28,27 @@ namespace Hospital
             }
             label1.Text = uname;
         }
-
+        public void Refres()
+        {
+            if (mf.GetAllRequests(false, true).Rows.Count == 0)
+                radioButton1.Hide();
+            else
+                radioButton1.Show();
+        }
         private void button7_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
             allusers.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             duserdetails.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
             attandance.BringToFront();
         }
@@ -64,21 +64,19 @@ namespace Hospital
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
             attandance.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             inven.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            Refres();
         }
     }
 }

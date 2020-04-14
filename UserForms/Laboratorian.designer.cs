@@ -69,7 +69,6 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
-            this.panel1.TabIndex = 13;
             // 
             // label1
             // 
@@ -79,7 +78,6 @@
             this.label1.Location = new System.Drawing.Point(67, 742);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Username";
             // 
             // pictureBox2
@@ -89,7 +87,6 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
-            this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -100,7 +97,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // SidePanel
@@ -111,7 +107,6 @@
             this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 60);
-            this.SidePanel.TabIndex = 3;
             // 
             // button7
             // 
@@ -125,7 +120,7 @@
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(260, 61);
-            this.button7.TabIndex = 9;
+            this.button7.TabIndex = 1;
             this.button7.Text = "  Make Report";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,7 +139,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 61);
-            this.button5.TabIndex = 7;
+            this.button5.TabIndex = 3;
             this.button5.Text = "  Inventory";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -163,7 +158,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 61);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +176,6 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
-            this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
@@ -191,7 +185,6 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1248, 633);
-            this.panel3.TabIndex = 12;
             // 
             // panel
             // 
@@ -202,7 +195,6 @@
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 633);
-            this.panel.TabIndex = 11;
             // 
             // button4
             // 
@@ -217,29 +209,12 @@
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(147, 98);
-            this.button4.TabIndex = 14;
+            this.button4.TabIndex = 4;
             this.button4.Text = "Logout";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.Control;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1196, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(175, 96);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Logout";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -252,7 +227,6 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1248, 642);
-            this.panel4.TabIndex = 15;
             // 
             // lInventory1
             // 
@@ -260,7 +234,6 @@
             this.lInventory1.Margin = new System.Windows.Forms.Padding(5);
             this.lInventory1.Name = "lInventory1";
             this.lInventory1.Size = new System.Drawing.Size(1137, 628);
-            this.lInventory1.TabIndex = 2;
             // 
             // userControl12
             // 
@@ -268,7 +241,6 @@
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
             this.userControl12.Size = new System.Drawing.Size(1137, 628);
-            this.userControl12.TabIndex = 1;
             // 
             // lReport1
             // 
@@ -276,7 +248,6 @@
             this.lReport1.Margin = new System.Windows.Forms.Padding(5);
             this.lReport1.Name = "lReport1";
             this.lReport1.Size = new System.Drawing.Size(1137, 628);
-            this.lReport1.TabIndex = 0;
             // 
             // Laboratorian
             // 

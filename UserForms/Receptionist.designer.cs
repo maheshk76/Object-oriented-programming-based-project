@@ -71,7 +71,6 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 821);
-            this.panel1.TabIndex = 5;
             // 
             // button2
             // 
@@ -85,7 +84,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 61);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 2;
             this.button2.Text = "  Existing Patient";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -100,7 +99,6 @@
             this.label1.Location = new System.Drawing.Point(69, 742);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Username";
             // 
             // pictureBox2
@@ -110,7 +108,6 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
-            this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -121,7 +118,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // SidePanel
@@ -132,7 +128,6 @@
             this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(13, 60);
-            this.SidePanel.TabIndex = 3;
             // 
             // button7
             // 
@@ -146,7 +141,7 @@
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(260, 61);
-            this.button7.TabIndex = 9;
+            this.button7.TabIndex = 1;
             this.button7.Text = "  New Patient";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,7 +160,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(260, 61);
-            this.button5.TabIndex = 7;
+            this.button5.TabIndex = 4;
             this.button5.Text = "  Payment/Discharge";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,7 +195,6 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1351, 96);
-            this.panel2.TabIndex = 6;
             // 
             // panel
             // 
@@ -211,7 +205,6 @@
             this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1351, 633);
-            this.panel.TabIndex = 11;
             // 
             // button4
             // 
@@ -226,30 +219,12 @@
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(161, 98);
-            this.button4.TabIndex = 14;
+            this.button4.TabIndex = 5;
             this.button4.Text = "Logout";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.Control;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(1196, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(175, 96);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Logout";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -263,7 +238,6 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1248, 656);
-            this.panel3.TabIndex = 7;
             // 
             // rPayment1
             // 
@@ -271,7 +245,6 @@
             this.rPayment1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rPayment1.Name = "rPayment1";
             this.rPayment1.Size = new System.Drawing.Size(1128, 643);
-            this.rPayment1.TabIndex = 2;
             // 
             // userControl11
             // 
@@ -279,7 +252,6 @@
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(1141, 643);
-            this.userControl11.TabIndex = 1;
             // 
             // rRegister1
             // 
@@ -287,7 +259,6 @@
             this.rRegister1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rRegister1.Name = "rRegister1";
             this.rRegister1.Size = new System.Drawing.Size(1128, 643);
-            this.rRegister1.TabIndex = 0;
             // 
             // rexpatient
             // 
@@ -295,7 +266,6 @@
             this.rexpatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rexpatient.Name = "rexpatient";
             this.rexpatient.Size = new System.Drawing.Size(1128, 643);
-            this.rexpatient.TabIndex = 3;
             // 
             // Receptionist
             // 

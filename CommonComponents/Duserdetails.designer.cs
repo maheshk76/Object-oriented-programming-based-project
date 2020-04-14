@@ -67,7 +67,7 @@ namespace Hospital
             this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1128, 485);
-            this.SearchResultGridView.TabIndex = 0;
+            this.SearchResultGridView.TabIndex = 4;
             // 
             // searchTextbox
             // 
@@ -76,7 +76,7 @@ namespace Hospital
             this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(773, 38);
-            this.searchTextbox.TabIndex = 3;
+            this.searchTextbox.TabIndex = 1;
             // 
             // label2
             // 
@@ -85,7 +85,6 @@ namespace Hospital
             this.label2.Location = new System.Drawing.Point(-5, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 25);
-            this.label2.TabIndex = 4;
             this.label2.Text = "Search Patient";
             // 
             // button1
@@ -96,7 +95,7 @@ namespace Hospital
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 39);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -109,7 +108,7 @@ namespace Hospital
             this.button3.Location = new System.Drawing.Point(0, 102);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 31);
-            this.button3.TabIndex = 9;
+            this.button3.TabIndex = 3;
             this.button3.Text = "i";
             this.button3.UseVisualStyleBackColor = true;
             // 

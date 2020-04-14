@@ -60,7 +60,6 @@
             this.label1.Location = new System.Drawing.Point(-5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 25);
-            this.label1.TabIndex = 13;
             this.label1.Text = "Patient Name";
             // 
             // Pname
@@ -70,7 +69,7 @@
             this.Pname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pname.Name = "Pname";
             this.Pname.Size = new System.Drawing.Size(460, 38);
-            this.Pname.TabIndex = 12;
+            this.Pname.TabIndex = 1;
             // 
             // label2
             // 
@@ -79,7 +78,6 @@
             this.label2.Location = new System.Drawing.Point(-5, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 25);
-            this.label2.TabIndex = 15;
             this.label2.Text = "Gurdian Name";
             // 
             // Gname
@@ -89,7 +87,7 @@
             this.Gname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gname.Name = "Gname";
             this.Gname.Size = new System.Drawing.Size(460, 38);
-            this.Gname.TabIndex = 14;
+            this.Gname.TabIndex = 2;
             // 
             // label3
             // 
@@ -98,7 +96,6 @@
             this.label3.Location = new System.Drawing.Point(-5, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 25);
-            this.label3.TabIndex = 17;
             this.label3.Text = "Phone Number";
             // 
             // Phnum
@@ -108,7 +105,7 @@
             this.Phnum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Phnum.Name = "Phnum";
             this.Phnum.Size = new System.Drawing.Size(460, 38);
-            this.Phnum.TabIndex = 16;
+            this.Phnum.TabIndex = 3;
             // 
             // label4
             // 
@@ -117,7 +114,6 @@
             this.label4.Location = new System.Drawing.Point(-5, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 25);
-            this.label4.TabIndex = 19;
             this.label4.Text = "Email Address(Optional)";
             // 
             // mailadd
@@ -127,7 +123,7 @@
             this.mailadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mailadd.Name = "mailadd";
             this.mailadd.Size = new System.Drawing.Size(460, 38);
-            this.mailadd.TabIndex = 18;
+            this.mailadd.TabIndex = 4;
             // 
             // label5
             // 
@@ -136,7 +132,6 @@
             this.label5.Location = new System.Drawing.Point(-5, 325);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 25);
-            this.label5.TabIndex = 21;
             this.label5.Text = "Address";
             // 
             // Address
@@ -146,7 +141,7 @@
             this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(460, 117);
-            this.Address.TabIndex = 22;
+            this.Address.TabIndex = 5;
             this.Address.Text = "";
             // 
             // label6
@@ -156,7 +151,6 @@
             this.label6.Location = new System.Drawing.Point(-5, 485);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 25);
-            this.label6.TabIndex = 23;
             this.label6.Text = "Gender";
             // 
             // groupBox1
@@ -168,8 +162,8 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(456, 54);
-            this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            this.groupBox1.TabIndex = 6;
             // 
             // radioButton2
             // 
@@ -179,7 +173,7 @@
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(98, 29);
-            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabIndex = 8;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Female";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -192,7 +186,7 @@
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(76, 29);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 7;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -204,7 +198,6 @@
             this.label7.Location = new System.Drawing.Point(519, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 25);
-            this.label7.TabIndex = 25;
             this.label7.Text = "Age";
             // 
             // agebar
@@ -214,7 +207,7 @@
             this.agebar.Margin = new System.Windows.Forms.Padding(4);
             this.agebar.Name = "agebar";
             this.agebar.Size = new System.Drawing.Size(69, 37);
-            this.agebar.TabIndex = 26;
+            this.agebar.TabIndex = 9;
             // 
             // label8
             // 
@@ -223,7 +216,6 @@
             this.label8.Location = new System.Drawing.Point(632, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 25);
-            this.label8.TabIndex = 27;
             this.label8.Text = "Birthdate";
             // 
             // dateTimePicker1
@@ -233,7 +225,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(350, 37);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dateTimePicker1.TabIndex = 10;
             // 
             // listBox1
             // 
@@ -250,7 +242,7 @@
             this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(463, 124);
-            this.listBox1.TabIndex = 29;
+            this.listBox1.TabIndex = 11;
             // 
             // label9
             // 
@@ -259,7 +251,6 @@
             this.label9.Location = new System.Drawing.Point(519, 93);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 25);
-            this.label9.TabIndex = 30;
             this.label9.Text = "Assign Doctor";
             // 
             // button1
@@ -270,7 +261,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 43);
-            this.button1.TabIndex = 31;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

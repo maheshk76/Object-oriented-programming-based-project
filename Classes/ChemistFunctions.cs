@@ -12,11 +12,14 @@ namespace Hospital.Classes
     class ChemistFunctions:MakeConnection
     {
         DataTable dt;
-        public DataTable GetAllMed()
+        public DataTable GetAllStock(bool med)
         {
             dt = new DataTable();
             cmd.Connection=con;
-            cmd.CommandText = "select * from Medicine_Stock";
+            if(med)
+                cmd.CommandText = "select * from Medicine_Stock";
+            else
+                cmd.CommandText = "select * from Equipments_Stock";
             con.Open();
             dt.Load(cmd.ExecuteReader());
             con.Close();

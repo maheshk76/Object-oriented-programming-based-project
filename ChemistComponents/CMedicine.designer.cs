@@ -84,7 +84,7 @@
             this.label1.Location = new System.Drawing.Point(-1, 463);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 25);
-            this.label1.TabIndex = 21;
+            this.label1.TabIndex = 27;
             this.label1.Text = "Medicine Name";
             // 
             // textBox2
@@ -123,7 +123,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(272, 37);
-            this.numericUpDown1.TabIndex = 27;
+            this.numericUpDown1.TabIndex = 21;
             // 
             // CMedicine
             // 

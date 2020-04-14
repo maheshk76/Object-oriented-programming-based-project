@@ -73,7 +73,6 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
-            this.panel1.TabIndex = 4;
             // 
             // radioButton1
             // 
@@ -82,7 +81,6 @@
             this.radioButton1.Location = new System.Drawing.Point(255, 170);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(17, 16);
-            this.radioButton1.TabIndex = 16;
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -114,9 +112,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -125,7 +121,6 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 29);
-            this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -136,8 +131,8 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SidePanel
             // 
@@ -147,7 +142,6 @@
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(12, 61);
-            this.SidePanel.TabIndex = 3;
             // 
             // button7
             // 
@@ -231,7 +225,6 @@
             this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1058, 635);
-            this.duserdetails.TabIndex = 7;
             // 
             // dPrescription
             // 
@@ -240,7 +233,6 @@
             this.dPrescription.Margin = new System.Windows.Forms.Padding(2);
             this.dPrescription.Name = "dPrescription";
             this.dPrescription.Size = new System.Drawing.Size(1058, 635);
-            this.dPrescription.TabIndex = 10;
             // 
             // dreport
             // 
@@ -249,7 +241,6 @@
             this.dreport.Margin = new System.Windows.Forms.Padding(2);
             this.dreport.Name = "dreport";
             this.dreport.Size = new System.Drawing.Size(1058, 635);
-            this.dreport.TabIndex = 9;
             // 
             // panel
             // 
@@ -264,8 +255,6 @@
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
-            this.panel.TabIndex = 7;
-            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // dtest1
             // 
@@ -273,8 +262,6 @@
             this.dtest1.Margin = new System.Windows.Forms.Padding(2);
             this.dtest1.Name = "dtest1";
             this.dtest1.Size = new System.Drawing.Size(1058, 635);
-            this.dtest1.TabIndex = 11;
-            this.dtest1.Load += new System.EventHandler(this.dtest1_Load);
             // 
             // dAppointment
             // 
@@ -282,7 +269,6 @@
             this.dAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.dAppointment.Name = "dAppointment";
             this.dAppointment.Size = new System.Drawing.Size(1058, 635);
-            this.dAppointment.TabIndex = 7;
             // 
             // button8
             // 
@@ -313,7 +299,6 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
-            this.panel2.TabIndex = 5;
             // 
             // Doctor
             // 

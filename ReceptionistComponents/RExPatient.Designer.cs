@@ -44,7 +44,6 @@
             this.label3.Location = new System.Drawing.Point(-5, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
-            this.label3.TabIndex = 15;
             this.label3.Text = "Patient ID";
             // 
             // textBox2
@@ -54,7 +53,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(773, 38);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
@@ -65,7 +64,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(288, 41);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Make Appointment";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -96,7 +95,6 @@
             this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1128, 485);
-            this.SearchResultGridView.TabIndex = 17;
             // 
             // RExPatient
             // 

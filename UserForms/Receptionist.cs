@@ -17,7 +17,6 @@ namespace Hospital
         public Receptionist(string uname)
         {
             InitializeComponent();
-            SidePanel.Height = button7.Height;
             rRegister1.BringToFront();
             if (SessionClass.SessionId == 0)
             {
@@ -29,7 +28,6 @@ namespace Hospital
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
             rRegister1.BringToFront();
 
@@ -37,14 +35,12 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             userControl11.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
             rPayment1.BringToFront();
         }

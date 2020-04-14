@@ -64,7 +64,6 @@ namespace Hospital.ManagerComponents
             this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.SearchResultGridView.RowTemplate.Height = 60;
             this.SearchResultGridView.Size = new System.Drawing.Size(1128, 485);
-            this.SearchResultGridView.TabIndex = 0;
             // 
             // searchTextbox
             // 
@@ -73,7 +72,7 @@ namespace Hospital.ManagerComponents
             this.searchTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(824, 38);
-            this.searchTextbox.TabIndex = 3;
+            this.searchTextbox.TabIndex = 1;
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // label2
@@ -83,7 +82,6 @@ namespace Hospital.ManagerComponents
             this.label2.Location = new System.Drawing.Point(-5, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 25);
-            this.label2.TabIndex = 4;
             this.label2.Text = "Search User";
             // 
             // AllUsers

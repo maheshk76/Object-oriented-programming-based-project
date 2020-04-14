@@ -42,7 +42,6 @@
             this.label1.Location = new System.Drawing.Point(-5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
-            this.label1.TabIndex = 18;
             this.label1.Text = "Patient ID";
             // 
             // textBox2
@@ -52,7 +51,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(460, 38);
-            this.textBox2.TabIndex = 17;
+            this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
@@ -63,7 +62,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 41);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -75,7 +74,6 @@
             this.label2.Location = new System.Drawing.Point(-5, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
-            this.label2.TabIndex = 14;
             this.label2.Text = "Add Test(s)";
             // 
             // richTextBox1
@@ -85,7 +83,7 @@
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(925, 248);
-            this.richTextBox1.TabIndex = 20;
+            this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // Dtest

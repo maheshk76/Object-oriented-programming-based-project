@@ -16,11 +16,7 @@ namespace Hospital
         DoctorFunctions df = new DoctorFunctions();
         public Doctor(string uname)
         {
-            InitializeComponent();
-            if (df.GetAllAppointments("",true).Rows.Count == 0)
-                radioButton1.Hide();
-            else
-                radioButton1.Show();
+            InitializeComponent(); notify();
             SidePanel.Height = button7.Height;
             dAppointment.BringToFront();
             if (SessionClass.SessionId == 0)
@@ -30,24 +26,27 @@ namespace Hospital
             }
             label1.Text = uname;
         }
-
+        public void notify()
+        {
+            if (df.GetAllAppointments("", true).Rows.Count == 0)
+                radioButton1.Hide();
+            else
+                radioButton1.Show();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             duserdetails.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
             dPrescription.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
             dreport.BringToFront();
         }
@@ -55,7 +54,6 @@ namespace Hospital
         private void button7_Click(object sender, EventArgs e)
         {
             //Show All Appointments
-            SidePanel.Height = button7.Height;
             SidePanel.Top = button7.Top;
             dAppointment.BringToFront();
         }
@@ -72,24 +70,12 @@ namespace Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             dtest1.BringToFront();
         }
-
-        private void dtest1_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_Paint(object sender, PaintEventArgs e)
-        {
-
+            notify();
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Hospital
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 39);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -61,7 +61,6 @@ namespace Hospital
             this.label2.Location = new System.Drawing.Point(-5, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 25);
-            this.label2.TabIndex = 10;
             this.label2.Text = "Patient ID";
             // 
             // textBox1
@@ -71,7 +70,7 @@ namespace Hospital
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(773, 38);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -98,7 +97,6 @@ namespace Hospital
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 220;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 485);
-            this.dataGridView1.TabIndex = 8;
             // 
             // label1
             // 
@@ -107,7 +105,6 @@ namespace Hospital
             this.label1.Location = new System.Drawing.Point(-5, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Report";
             // 
             // Dreport

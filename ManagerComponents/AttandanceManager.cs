@@ -24,12 +24,6 @@ namespace Hospital.ManagerComponents
             label6.Hide();
             label5.Hide();
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DataTable dt;
@@ -37,23 +31,16 @@ namespace Hospital.ManagerComponents
                 dt = mf.GetAttandance(dateTimePicker1.Text, false);
             else
                 dt = mf.GetAttandance(textBox1.Text, true);
+            if (dt != null)
+            {
+                dt.Columns.Remove("Department");
+                label6.Text = dt.Rows.Count.ToString();
+            }
             SearchResultGridView.DataSource = dt;
             for (int i = 0; i < SearchResultGridView.Columns.Count; i++)
                 SearchResultGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            if(dt!=null)
-            label6.Text = dt.Rows.Count.ToString();
+           
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)

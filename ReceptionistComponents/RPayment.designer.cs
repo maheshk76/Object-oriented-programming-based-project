@@ -47,7 +47,6 @@
             this.label1.Location = new System.Drawing.Point(-5, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Payment";
             // 
             // label2
@@ -57,7 +56,6 @@
             this.label2.Location = new System.Drawing.Point(177, 279);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 39);
-            this.label2.TabIndex = 13;
             this.label2.Text = "Pending";
             // 
             // label3
@@ -67,7 +65,6 @@
             this.label3.Location = new System.Drawing.Point(-5, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
-            this.label3.TabIndex = 15;
             this.label3.Text = "Patient ID";
             // 
             // textBox2
@@ -77,7 +74,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(773, 38);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
@@ -87,7 +84,6 @@
             this.label4.Location = new System.Drawing.Point(177, 359);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 39);
-            this.label4.TabIndex = 18;
             this.label4.Text = "Treatment";
             // 
             // label5
@@ -97,7 +93,6 @@
             this.label5.Location = new System.Drawing.Point(-5, 371);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 25);
-            this.label5.TabIndex = 17;
             this.label5.Text = "Patient Status";
             // 
             // button2
@@ -108,7 +103,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 66);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Discharge";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -137,7 +132,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 100;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 145);
-            this.dataGridView1.TabIndex = 20;
             // 
             // RPayment
             // 

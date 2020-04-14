@@ -56,7 +56,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(272, 37);
-            this.numericUpDown1.TabIndex = 33;
+            this.numericUpDown1.TabIndex = 2;
             // 
             // label2
             // 
@@ -65,7 +65,6 @@
             this.label2.Location = new System.Drawing.Point(522, 463);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 25);
-            this.label2.TabIndex = 32;
             this.label2.Text = "Quantity";
             // 
             // button2
@@ -76,7 +75,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 41);
-            this.button2.TabIndex = 31;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Request";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -88,7 +87,6 @@
             this.label1.Location = new System.Drawing.Point(-1, 463);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 25);
-            this.label1.TabIndex = 30;
             this.label1.Text = "Inventory Name";
             // 
             // textBox2
@@ -98,7 +96,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(460, 38);
-            this.textBox2.TabIndex = 29;
+            this.textBox2.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -119,11 +117,11 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ColumnHeadersHeight = 38;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 220;
             this.dataGridView1.Size = new System.Drawing.Size(1088, 368);
-            this.dataGridView1.TabIndex = 28;
             // 
             // LInventory
             // 

@@ -47,7 +47,6 @@
             this.label1.Location = new System.Drawing.Point(-5, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 25);
-            this.label1.TabIndex = 17;
             this.label1.Text = "Report";
             // 
             // button1
@@ -58,7 +57,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 39);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,7 +69,6 @@
             this.label2.Location = new System.Drawing.Point(-5, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 25);
-            this.label2.TabIndex = 15;
             this.label2.Text = "Patient ID";
             // 
             // textBox1
@@ -80,7 +78,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(460, 38);
-            this.textBox1.TabIndex = 14;
+            this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -113,7 +111,7 @@
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(950, 117);
-            this.richTextBox1.TabIndex = 24;
+            this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // label5
@@ -123,7 +121,6 @@
             this.label5.Location = new System.Drawing.Point(-5, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 25);
-            this.label5.TabIndex = 23;
             this.label5.Text = "Enter Report ";
             // 
             // button2
@@ -134,7 +131,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 39);
-            this.button2.TabIndex = 25;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

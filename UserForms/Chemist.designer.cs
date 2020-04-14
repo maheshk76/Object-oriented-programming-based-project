@@ -69,7 +69,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
-            this.panel1.TabIndex = 12;
+            this.panel1.TabIndex = 16;
             // 
             // label1
             // 
@@ -90,7 +90,7 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
-            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -101,7 +101,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
             // SidePanel
@@ -182,7 +182,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 96);
-            this.panel2.TabIndex = 13;
+            this.panel2.TabIndex = 15;
             // 
             // panel3
             // 
@@ -192,7 +192,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1248, 633);
-            this.panel3.TabIndex = 12;
+            this.panel3.TabIndex = 0;
             // 
             // panel
             // 
@@ -254,7 +254,6 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1248, 633);
-            this.panel4.TabIndex = 14;
             // 
             // cMedicine1
             // 
@@ -262,7 +261,6 @@
             this.cMedicine1.Margin = new System.Windows.Forms.Padding(5);
             this.cMedicine1.Name = "cMedicine1";
             this.cMedicine1.Size = new System.Drawing.Size(1128, 630);
-            this.cMedicine1.TabIndex = 2;
             // 
             // cPrescription1
             // 
@@ -270,7 +268,6 @@
             this.cPrescription1.Margin = new System.Windows.Forms.Padding(5);
             this.cPrescription1.Name = "cPrescription1";
             this.cPrescription1.Size = new System.Drawing.Size(1128, 630);
-            this.cPrescription1.TabIndex = 1;
             // 
             // userControl12
             // 
@@ -278,7 +275,6 @@
             this.userControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl12.Name = "userControl12";
             this.userControl12.Size = new System.Drawing.Size(1128, 630);
-            this.userControl12.TabIndex = 0;
             // 
             // Chemist
             // 

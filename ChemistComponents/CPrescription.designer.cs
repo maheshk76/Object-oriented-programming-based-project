@@ -54,7 +54,7 @@ namespace Hospital
             this.label1.Location = new System.Drawing.Point(-5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
-            this.label1.TabIndex = 13;
+            this.label1.TabIndex = 18;
             this.label1.Text = "Patient ID";
             // 
             // PId
@@ -74,7 +74,7 @@ namespace Hospital
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 41);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Check";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -103,7 +103,7 @@ namespace Hospital
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 100;
             this.dataGridView1.Size = new System.Drawing.Size(1128, 162);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.TabIndex = 18;
             // 
             // label2
             // 
@@ -137,8 +137,7 @@ namespace Hospital
             this.comboBox1.Location = new System.Drawing.Point(0, 367);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(20, 24);
-            this.comboBox1.TabIndex = 18;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.TabIndex = 14;
             // 
             // comboBox2
             // 
@@ -166,7 +165,7 @@ namespace Hospital
             this.comboBox2.Location = new System.Drawing.Point(0, 449);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 19;
+            this.comboBox2.TabIndex = 15;
             // 
             // label4
             // 
@@ -186,7 +185,7 @@ namespace Hospital
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 41);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 16;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -215,7 +214,7 @@ namespace Hospital
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 100;
             this.dataGridView2.Size = new System.Drawing.Size(686, 258);
-            this.dataGridView2.TabIndex = 22;
+            this.dataGridView2.TabIndex = 19;
             // 
             // CPrescription
             // 

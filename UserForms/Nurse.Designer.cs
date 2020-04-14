@@ -60,7 +60,6 @@ namespace Hospital.UserForms
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
-            this.panel1.TabIndex = 4;
             // 
             // pictureBox2
             // 
@@ -70,7 +69,6 @@ namespace Hospital.UserForms
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
             // label1
@@ -82,7 +80,6 @@ namespace Hospital.UserForms
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 12;
             this.label1.Text = "Username";
             // 
             // pictureBox1
@@ -93,7 +90,6 @@ namespace Hospital.UserForms
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // SidePanel
@@ -104,7 +100,6 @@ namespace Hospital.UserForms
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(12, 61);
-            this.SidePanel.TabIndex = 3;
             // 
             // button1
             // 
@@ -118,7 +113,7 @@ namespace Hospital.UserForms
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 61);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 1;
             this.button1.Text = "  Search Patient";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,7 +129,6 @@ namespace Hospital.UserForms
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
-            this.panel.TabIndex = 6;
             // 
             // duserdetails
             // 
@@ -142,7 +136,6 @@ namespace Hospital.UserForms
             this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1131, 635);
-            this.duserdetails.TabIndex = 1;
             // 
             // button8
             // 
@@ -157,7 +150,7 @@ namespace Hospital.UserForms
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(147, 98);
-            this.button8.TabIndex = 10;
+            this.button8.TabIndex = 2;
             this.button8.Text = "Logout";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -173,7 +166,6 @@ namespace Hospital.UserForms
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
-            this.panel2.TabIndex = 5;
             // 
             // Nurse
             // 
