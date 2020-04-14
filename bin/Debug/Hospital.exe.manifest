@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital.exe" size="437168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital.exe" size="438192">
       <assemblyIdentity name="Hospital" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wJR+1Mu6+sALsggxLuIUHuxWaa6o8gqS9UqTzMFkPKo=</dsig:DigestValue>
+        <dsig:DigestValue>yY6dkuT6TL497BaT8n7qnW3ZKhDC2sTlk2BKhCWcgss=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
