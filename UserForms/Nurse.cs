@@ -13,7 +13,7 @@ namespace Hospital.UserForms
     public partial class Nurse : Form
     {
         Users u = new Users();
-        public Nurse(string uname)
+        public Nurse()
         {
             InitializeComponent(); 
             if (SessionClass.SessionId == 0)
@@ -21,7 +21,7 @@ namespace Hospital.UserForms
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = uname;
+            label1.Text =SessionClass.SessionName;
         }
 
         private void button1_Click(object sender, EventArgs e)

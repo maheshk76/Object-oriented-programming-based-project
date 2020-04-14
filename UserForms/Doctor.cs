@@ -14,7 +14,7 @@ namespace Hospital
     {
         Users u = new Users();
         DoctorFunctions df = new DoctorFunctions();
-        public Doctor(string uname)
+        public Doctor()
         {
             InitializeComponent(); notify();
             SidePanel.Height = button7.Height;
@@ -24,7 +24,7 @@ namespace Hospital
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = uname;
+            label1.Text = SessionClass.SessionName;
         }
         public void notify()
         {

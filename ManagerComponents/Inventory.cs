@@ -47,6 +47,7 @@ namespace Hospital.ManagerComponents
             int quan = Convert.ToInt32(numericUpDown1.Value);
             bool med = checkBox1.Checked;
             mf.AddStocks(val, med, quan);
+            
             radioButton1_CheckedChanged(sender, e);
         }
     }

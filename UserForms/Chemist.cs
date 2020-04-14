@@ -13,7 +13,7 @@ namespace Hospital
     public partial class Chemist : Form
     {
         Users u = new Users();
-        public Chemist(string uname)
+        public Chemist()
         {
             InitializeComponent();
             SidePanel.Height = button7.Height;
@@ -23,7 +23,7 @@ namespace Hospital
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = uname;
+            label1.Text =SessionClass.SessionName;
         }
 
         private void button7_Click(object sender, EventArgs e)

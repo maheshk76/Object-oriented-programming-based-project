@@ -16,7 +16,7 @@ namespace Hospital
     {
         Users u = new Users();
         ManagerFunctions mf = new ManagerFunctions();
-        public Manager(string uname)
+        public Manager()
         {
             InitializeComponent();
             Refres();
@@ -26,7 +26,7 @@ namespace Hospital
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = uname;
+            label1.Text = SessionClass.SessionName;
         }
         public void Refres()
         {

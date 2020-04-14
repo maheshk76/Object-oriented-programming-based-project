@@ -14,7 +14,7 @@ namespace Hospital
     {
         Users u = new Users();
         Patient_Management pm = new Patient_Management();
-        public Laboratorian(string uname)
+        public Laboratorian()
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace Hospital
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = uname;
+            label1.Text = SessionClass.SessionName;
         }
 
         private void button7_Click(object sender, EventArgs e)
