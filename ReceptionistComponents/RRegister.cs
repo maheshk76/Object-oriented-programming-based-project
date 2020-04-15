@@ -35,7 +35,12 @@ namespace Hospital
                 flg = false;
             return flg;
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Phnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+            private void button1_Click(object sender, EventArgs e)
         {
             //Register Patient
             string p_name = Pname.Text;

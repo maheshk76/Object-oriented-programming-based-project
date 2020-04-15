@@ -27,14 +27,10 @@ namespace Hospital
             else
                 df.AddTestDetails(PID,Tests);
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

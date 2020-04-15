@@ -22,6 +22,11 @@ namespace Hospital
         {
             pm.DischargePatient(textBox2.Text);
         }
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             DataTable dt = pm.GetBills(textBox2.Text, out bool stat);

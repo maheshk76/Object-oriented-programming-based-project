@@ -30,11 +30,15 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SearchResultGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResultGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // searchTextbox
@@ -45,6 +49,7 @@
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(824, 38);
             this.searchTextbox.TabIndex = 2;
+            this.searchTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_KeyPress);
             // 
             // label2
             // 
@@ -85,7 +90,7 @@
             this.SearchResultGridView.ColumnHeadersHeight = 42;
             this.SearchResultGridView.EnableHeadersVisualStyles = false;
             this.SearchResultGridView.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.SearchResultGridView.Location = new System.Drawing.Point(0, 140);
+            this.SearchResultGridView.Location = new System.Drawing.Point(0, 371);
             this.SearchResultGridView.Margin = new System.Windows.Forms.Padding(4);
             this.SearchResultGridView.Name = "SearchResultGridView";
             this.SearchResultGridView.ReadOnly = true;
@@ -94,13 +99,42 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.SearchResultGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.SearchResultGridView.RowTemplate.Height = 60;
-            this.SearchResultGridView.Size = new System.Drawing.Size(1128, 485);
+            this.SearchResultGridView.Size = new System.Drawing.Size(1128, 254);
             this.SearchResultGridView.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeight = 42;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 140);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowTemplate.Height = 60;
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 187);
+            this.dataGridView1.TabIndex = 7;
             // 
             // Diet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SearchResultGridView);
             this.Controls.Add(this.label2);
@@ -109,6 +143,7 @@
             this.Name = "Diet";
             this.Size = new System.Drawing.Size(1128, 616);
             ((System.ComponentModel.ISupportInitialize)(this.SearchResultGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +155,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView SearchResultGridView;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

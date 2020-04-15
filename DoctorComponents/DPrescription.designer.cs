@@ -129,6 +129,7 @@ namespace Hospital
             this.PID.Name = "PID";
             this.PID.Size = new System.Drawing.Size(460, 38);
             this.PID.TabIndex = 1;
+            this.PID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PID_KeyPress);
             // 
             // button2
             // 

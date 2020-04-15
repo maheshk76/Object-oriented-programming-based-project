@@ -17,13 +17,23 @@ namespace Hospital.NurseComponents
         {
             InitializeComponent();
         }
-
+        private void text_KeyPress(object s,KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable dt=pm.GetPatientTreatment(searchTextbox.Text);
-            if (dt != null)
+            DataSet ds=pm.GetPatientTreatment(searchTextbox.Text);
+            if (ds.Tables[1] != null)
             {
-                SearchResultGridView.DataSource = dt;
+                dataGridView1.DataSource = ds.Tables[1];
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            if (ds.Tables[0] != null)
+            {
+                SearchResultGridView.DataSource = ds.Tables[0];
                 for (int i = 0; i < SearchResultGridView.Columns.Count; i++)
                     SearchResultGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }

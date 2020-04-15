@@ -20,7 +20,11 @@ namespace Hospital
             InitializeComponent();
             comboBox1.DataSource = cf.GetMedicines();
         }
-
+        private void PId_KeyPress(object sender,KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             //Search Patient Prescription By PId

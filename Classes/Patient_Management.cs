@@ -17,15 +17,15 @@ namespace Hospital
             dt.Load(cmd.ExecuteReader());
             con.Close();
             dt.Columns.Remove("Id");
-            dt.Columns.Remove("PatientId");
             return dt;
         }
-        public DataTable GetPatientTreatment(string searchQ)
+        public DataSet GetPatientTreatment(string searchQ)
         {
             try
             {
                 DataTable dt = new DataTable();
                 DataTable dt1;
+                DataSet ds = new DataSet();
                 cmd.Connection = con;
                 cmd.CommandText = "select * from Patient_Treatment where PId=@searchQ";
                 con.Open();
@@ -34,7 +34,9 @@ namespace Hospital
                 dt.Columns.Remove("Id");
                 con.Close();
                 dt1=GetPatientDiagnosis(searchQ);
-                return dt;
+                ds.Tables.Add(dt);
+                ds.Tables.Add(dt1);
+                return ds;
             }
             catch(Exception ex)
             {
@@ -72,7 +74,7 @@ namespace Hospital
                 stat = (from DataRow dr in dt.Rows where dr["PId"].ToString() == query
                         select Convert.ToBoolean(dr["Payment_Status"])).FirstOrDefault();
                 con.Close();
-                return dt;
+            return dt;
             }
             catch(Exception ex)
             {
@@ -245,31 +247,29 @@ namespace Hospital
         }
         public void DischargePatient(string PID)
         {
-            try { 
-            int Pid = Convert.ToInt32(PID);
-            DateTime disdate = DateTime.Now.Date;
-            cmd.Connection = con;
-            cmd.CommandText = "update Patient_Record set DisDate=@disdate where Id=@Pid";
-            con.Open();
-            cmd.Parameters.AddWithValue("@disdate",disdate);
-            cmd.Parameters.AddWithValue("@Pid",Pid);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            cmd.Parameters.RemoveAt("@disdate");
-            cmd.Parameters.RemoveAt("@Pid");
-            MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            try 
+            { 
+                int Pid = Convert.ToInt32(PID);
+                DateTime disdate = DateTime.Now.Date;
+                cmd.Connection = con;
+                cmd.CommandText = "update Patient_Record set DisDate=@disdate where Id=@Pid";
+                con.Open();
+                cmd.Parameters.AddWithValue("@disdate",disdate);
+                cmd.Parameters.AddWithValue("@Pid",Pid);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                cmd.Parameters.RemoveAt("@disdate");
+                cmd.Parameters.RemoveAt("@Pid");
+                MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
                 string etype = ex.GetType().ToString();
-                if (etype.Equals("System.FormatException"))
-                    MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                else if (etype.Equals("System.Data.SqlClient.SqlException"))
+                if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                     MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
- 
             }
             finally
             {

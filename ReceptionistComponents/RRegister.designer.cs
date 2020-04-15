@@ -106,6 +106,7 @@
             this.Phnum.Name = "Phnum";
             this.Phnum.Size = new System.Drawing.Size(460, 38);
             this.Phnum.TabIndex = 3;
+            this.Phnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Phnum_KeyPress);
             // 
             // label4
             // 

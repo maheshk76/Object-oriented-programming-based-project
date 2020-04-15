@@ -38,8 +38,9 @@ namespace Hospital.UserForms
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.diet = new Hospital.NurseComponents.Diet();
             this.duserdetails = new Hospital.UserControl1();
+
+            this.diet = new Hospital.NurseComponents.Diet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -150,8 +151,8 @@ namespace Hospital.UserForms
             // panel
             // 
             this.panel.AutoScroll = true;
-            this.panel.Controls.Add(this.diet);
             this.panel.Controls.Add(this.duserdetails);
+            this.panel.Controls.Add(this.diet);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(292, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
