@@ -38,5 +38,11 @@ namespace Hospital.UserForms
             f1.ShowDialog();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = button3.Top;
+            roommanager.BringToFront();
+        }
     }
 }

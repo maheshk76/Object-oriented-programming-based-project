@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Classes\ChemistFunctions.cs" />
     <Compile Include="Classes\ManagerFunctions.cs" />
+    <Compile Include="Classes\WardManagerFunctions.cs" />
     <Compile Include="ManagerComponents\Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +233,12 @@
     <Compile Include="UserForms\WardManager.Designer.cs">
       <DependentUpon>WardManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="WardManagerComponents\RoomManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WardManagerComponents\RoomManager.Designer.cs">
+      <DependentUpon>RoomManager.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ManagerComponents\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +321,9 @@
     <EmbeddedResource Include="UserForms\WardManager.resx">
       <DependentUpon>WardManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WardManagerComponents\RoomManager.resx">
+      <DependentUpon>RoomManager.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Hospital_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -352,9 +362,7 @@
   <ItemGroup>
     <None Include="Resources\refresh.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WardManagerComponents\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\button1.Image.png" />
   </ItemGroup>

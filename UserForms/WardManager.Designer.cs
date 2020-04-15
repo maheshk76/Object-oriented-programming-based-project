@@ -1,4 +1,5 @@
 ﻿using Hospital.ManagerComponents;
+using Hospital.WardManagerComponents;
 
 namespace Hospital.UserForms
 {
@@ -30,7 +31,10 @@ namespace Hospital.UserForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WardManager));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,6 +42,7 @@ namespace Hospital.UserForms
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.duserdetails = new Hospital.UserControl1();
+            this.roommanager = new Hospital.WardManagerComponents.RoomManager();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -50,6 +55,8 @@ namespace Hospital.UserForms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -61,6 +68,43 @@ namespace Hospital.UserForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(12, 279);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(260, 61);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "  Wards";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 145);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(260, 61);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "  Requirements";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -114,7 +158,7 @@ namespace Hospital.UserForms
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = global::Hospital.Properties.Resources.button1_Image;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 145);
+            this.button1.Location = new System.Drawing.Point(12, 209);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 61);
@@ -129,6 +173,7 @@ namespace Hospital.UserForms
             // 
             this.panel.AutoScroll = true;
             this.panel.Controls.Add(this.duserdetails);
+            this.panel.Controls.Add(this.roommanager);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(292, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
@@ -143,6 +188,14 @@ namespace Hospital.UserForms
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1131, 635);
             this.duserdetails.TabIndex = 1;
+            // 
+            // roommanager
+            // 
+            this.roommanager.Location = new System.Drawing.Point(79, 0);
+            this.roommanager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roommanager.Name = "roommanager";
+            this.roommanager.Size = new System.Drawing.Size(1131, 635);
+            this.roommanager.TabIndex = 2;
             // 
             // button8
             // 
@@ -210,5 +263,8 @@ namespace Hospital.UserForms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UserControl1 duserdetails;
+        private RoomManager roommanager;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
