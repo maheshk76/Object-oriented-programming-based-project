@@ -43,10 +43,7 @@ namespace Hospital.ManagerComponents
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string val = text1.Text;
-            int quan = Convert.ToInt32(numericUpDown1.Value);
-            bool med = checkBox1.Checked;
-            mf.AddStocks(val, med, quan);
+            mf.AddStocks(text1.Text, checkBox1.Checked, Convert.ToInt32(numericUpDown1.Value));
             radioButton1_CheckedChanged(sender, e);
         }
     }

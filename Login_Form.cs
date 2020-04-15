@@ -22,8 +22,8 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             Users u = new Users();
-            try
-            {
+            //try
+            //{
                 int user_id = Convert.ToInt32(textBox1.Text);
                 string pass = textBox2.Text;
                 string uname = u.Login(user_id, pass, out string role);
@@ -67,7 +67,7 @@ namespace Hospital
                             // a.ShowDialog();
                             break;
                     }
-            }
+           /* }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -76,7 +76,7 @@ namespace Hospital
                 else
                  MessageBox.Show("Something went wrong please try agian later", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 label8.Text = "NOT FOUND";
-            }
+            }*/
         }
     }
 }

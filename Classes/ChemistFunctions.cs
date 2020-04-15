@@ -158,11 +158,11 @@ namespace Hospital.Classes
         public void RequestStock(string name, int quantity,bool flg)
         {
             //flg=true ==>medicines
-            //flg=false==>things
+            //flg=false==>Equipments
             try
             {
                 DateTime date = DateTime.Now.Date;
-                if (quantity <= 0)
+                if (quantity <= 0 || name.Length.Equals(0))
                     throw new ArgumentNullException();
                 cmd.Connection = con;
                 cmd.CommandText = "insert into StockRequests(Name,Quantity,Flag,Date,Delivered) Values(@name,@quantity,@flg,@date,'false')";
@@ -183,9 +183,10 @@ namespace Hospital.Classes
             {
                 Console.WriteLine(ex.Message.ToString());
                 string etype = ex.GetType().ToString();
-                if (etype.Equals("System.FormatException") || etype.Equals("'System.ArgumentNullException"))
+                Console.WriteLine(etype);
+                if (etype.Equals("System.FormatException") || etype.Equals("System.ArgumentNullException"))
                     MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                if (etype.Equals("System.Data.SqlClient.SqlException"))
+                else if (etype.Equals("System.Data.SqlClient.SqlException"))
                     MessageBox.Show("Patient data is not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                     MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
