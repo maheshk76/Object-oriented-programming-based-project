@@ -42,7 +42,13 @@ namespace Hospital.UserForms
         private void button3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = button3.Top;
-            roommanager.BringToFront();
+            wards.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = button2.Top;
+            assign.BringToFront();
         }
     }
 }

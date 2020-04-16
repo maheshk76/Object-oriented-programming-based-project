@@ -11,10 +11,10 @@ using Hospital.Classes;
 
 namespace Hospital.WardManagerComponents
 {
-    public partial class RoomManager : UserControl
+    public partial class Wards : UserControl
     {
         WardManagerFunctions wf = new WardManagerFunctions();
-        public RoomManager()
+        public Wards()
         {
             InitializeComponent();
             dataGridView1.DataSource = wf.GetWards();

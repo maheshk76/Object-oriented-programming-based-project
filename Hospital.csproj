@@ -233,11 +233,17 @@
     <Compile Include="UserForms\WardManager.Designer.cs">
       <DependentUpon>WardManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="WardManagerComponents\RoomManager.cs">
+    <Compile Include="WardManagerComponents\Assign.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WardManagerComponents\RoomManager.Designer.cs">
-      <DependentUpon>RoomManager.cs</DependentUpon>
+    <Compile Include="WardManagerComponents\Assign.Designer.cs">
+      <DependentUpon>Assign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WardManagerComponents\Wards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WardManagerComponents\Wards.Designer.cs">
+      <DependentUpon>Wards.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ManagerComponents\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
@@ -321,8 +327,11 @@
     <EmbeddedResource Include="UserForms\WardManager.resx">
       <DependentUpon>WardManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WardManagerComponents\RoomManager.resx">
-      <DependentUpon>RoomManager.cs</DependentUpon>
+    <EmbeddedResource Include="WardManagerComponents\Assign.resx">
+      <DependentUpon>Assign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WardManagerComponents\Wards.resx">
+      <DependentUpon>Wards.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Hospital_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

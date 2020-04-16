@@ -51,9 +51,10 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RExPatient.r
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RPayment.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.RRegister.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.WardManager.resources
-D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.RoomManager.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe.manifest
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.application
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.pdb
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.Assign.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.Wards.resources
