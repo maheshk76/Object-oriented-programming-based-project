@@ -55,7 +55,6 @@ namespace Hospital
 
         private void button8_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             u.Logout();
             Login_Form f1 = new Login_Form(0);

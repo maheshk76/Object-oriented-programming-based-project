@@ -32,5 +32,9 @@ namespace Hospital.WardManagerComponents
             label4.Text =(Convert.ToInt32(dt.Compute("SUM(TotalRooms)", string.Empty))-Convert.ToInt32(label5.Text)).ToString();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Wards_Load(sender, e);
+        }
     }
 }

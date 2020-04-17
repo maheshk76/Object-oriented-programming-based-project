@@ -78,6 +78,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminComponents\Hire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminComponents\Hire.Designer.cs">
+      <DependentUpon>Hire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AdminFunctions.cs" />
     <Compile Include="Classes\ChemistFunctions.cs" />
     <Compile Include="Classes\ManagerFunctions.cs" />
     <Compile Include="Classes\WardManagerFunctions.cs" />
@@ -92,6 +99,12 @@
     </Compile>
     <Compile Include="NurseComponents\Diet.Designer.cs">
       <DependentUpon>Diet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\Manager.cs">
       <SubType>Form</SubType>
@@ -245,11 +258,17 @@
     <Compile Include="WardManagerComponents\Wards.Designer.cs">
       <DependentUpon>Wards.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminComponents\Hire.resx">
+      <DependentUpon>Hire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerComponents\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NurseComponents\Diet.resx">
       <DependentUpon>Diet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>

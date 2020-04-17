@@ -63,8 +63,8 @@ namespace Hospital
                             wm.ShowDialog();
                             break;
                         case "Admin":
-                            //Admin a=new Admin();
-                            // a.ShowDialog();
+                            Admin a=new Admin();
+                             a.ShowDialog();
                             break;
                     }
            /* }

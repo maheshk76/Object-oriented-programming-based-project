@@ -58,3 +58,5 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.exe
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.pdb
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.Assign.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.Wards.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.Admin.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.AdminComponents.Hire.resources
