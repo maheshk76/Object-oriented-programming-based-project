@@ -102,7 +102,7 @@ namespace Hospital.UserForms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 61);
             this.button2.TabIndex = 7;
-            this.button2.Text = "  Requirements";
+            this.button2.Text = "  Assign";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -174,7 +174,6 @@ namespace Hospital.UserForms
             // panel
             // 
             this.panel.AutoScroll = true;
-
             this.panel.Controls.Add(this.assign);
             this.panel.Controls.Add(this.duserdetails);
             this.panel.Controls.Add(this.wards);
@@ -184,6 +183,14 @@ namespace Hospital.UserForms
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 6;
+            // 
+            // assign
+            // 
+            this.assign.Location = new System.Drawing.Point(79, 0);
+            this.assign.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.assign.Name = "assign";
+            this.assign.Size = new System.Drawing.Size(1131, 635);
+            this.assign.TabIndex = 3;
             // 
             // duserdetails
             // 
@@ -200,14 +207,6 @@ namespace Hospital.UserForms
             this.wards.Name = "wards";
             this.wards.Size = new System.Drawing.Size(1131, 635);
             this.wards.TabIndex = 2;
-            // 
-            // assign
-            // 
-            this.assign.Location = new System.Drawing.Point(79, 0);
-            this.assign.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.assign.Name = "assign";
-            this.assign.Size = new System.Drawing.Size(1131, 635);
-            this.assign.TabIndex = 3;
             // 
             // button8
             // 

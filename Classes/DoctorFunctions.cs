@@ -56,11 +56,9 @@ namespace Hospital
                 int query = Convert.ToInt32(Query);
                 dt = new DataTable();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from PatientDiagnosis where PatientId=@query";
+                cmd.CommandText = "select * from PatientDiagnosis where PatientId="+query;
                 con.Open();
-                cmd.Parameters.AddWithValue("@query", query);
                 dt.Load(cmd.ExecuteReader());
-                cmd.Parameters.RemoveAt("@query");
                 if (dt.Rows.Count == 0)
                 {
                     MessageBox.Show("No data found", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -95,9 +93,9 @@ namespace Hospital
                 if (flg)
                 {
                     if (ser.Length.Equals(0))
-                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where Approved_or_not='false' and DoctorId=@did";
+                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint,Approved_or_not from Appointsments where Approved_or_not='false' and Cancelled='false' and DoctorId=" + did;
                     else
-                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint from Appointsments where (PatientId like @ser+'%' or PName like @ser+'%') and DoctorId=@did";
+                        cmd.CommandText = "select PatientId,PName,Date_of_Appoint,Approved_or_not,Cancelled from Appointsments where (PatientId like @ser+'%' or PName like @ser+'%') and DoctorId=" + did;
                 }
                 //flg=false for Receptionist to get all appointments
                 else
@@ -106,13 +104,12 @@ namespace Hospital
                 con.Open();
                 cmd.Parameters.AddWithValue("@Approved_or_not", false);
                 cmd.Parameters.AddWithValue("@ser", ser);
-                cmd.Parameters.AddWithValue("@did", did);
                 dt.Load(cmd.ExecuteReader());
                 dt.Columns[1].ColumnName = "Patient Name";
                 dt.Columns[2].ColumnName = "Date of Appointment";
+                if(flg) dt.Columns[3].ColumnName = "Approved";
                 con.Close();
                 cmd.Parameters.RemoveAt("@Approved_or_not");
-                cmd.Parameters.RemoveAt("@did");
                 cmd.Parameters.RemoveAt("@ser");
                 dt = ReverseRowsInDataTable(dt);
                 return dt;
@@ -138,7 +135,7 @@ namespace Hospital
                 con.Open();
                 //PData=true->Patient Details,PData=false->Presc details
                 if (PData)
-                    cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
+                cmd.CommandText = "select * from Patient_Record WHERE Id like @searchString+'%' or PName like @searchString+'%' or PAddress like @searchString+'%' or PContact like @searchString+'%'";
                 else
                     cmd.CommandText = "select * from Patient_Presc where PId=@searchString";
 
@@ -161,6 +158,7 @@ namespace Hospital
                     dt.Columns[9].ColumnName = "Addmission Date";
                     dt.Columns[10].ColumnName = "Discharge Date";
                 }
+                
                 return dt;
             }
             catch (Exception ex)

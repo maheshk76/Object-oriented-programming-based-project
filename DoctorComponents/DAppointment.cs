@@ -12,11 +12,13 @@ namespace Hospital
     public partial class DAppointment : UserControl
     {
         DoctorFunctions df = new DoctorFunctions();
+        Patient_Management pm = new Patient_Management();
         public DAppointment()
         {
             InitializeComponent();
             //load all appointments
             DataTable dt = df.GetAllAppointments("",true);
+            pm.UpdateAppointData();
             ToolTip toolTip1 =new ToolTip();
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(label1,"Showing appointments which are not approved");
@@ -24,7 +26,8 @@ namespace Hospital
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[0].Width = 100;
-            dataGridView1.Columns[2].Width = 180;
+            dataGridView1.Columns[1].Width = 380;
+            
         }
         private void TextBox_Changed(object sender, EventArgs e)
         {

@@ -25,7 +25,10 @@ namespace Hospital.WardManagerComponents
         }
         private void Assign_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = wf.GetRooms();
 
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,17 +37,13 @@ namespace Hospital.WardManagerComponents
                 MessageBox.Show("Enter in valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
                 wf.AssignRoom(Convert.ToInt32(PId.Text), comboBox1.Text,Convert.ToInt32(comboBox2.Text));
-           
+            comboBox1_SelectedIndexChanged(sender, e);
+            Assign_Load(sender, e);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox2.DataSource=wf.ShowAvailableRooms(comboBox1.Text);
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -131,6 +131,33 @@ namespace Hospital
                     con.Close();
             }
         }
+        public void UpdateAppointData()
+        {
+            DateTime date = DateTime.Now.Date;
+            List<DateTime> l = new List<DateTime>();
+            cmd.Connection = con;
+            cmd.CommandText = "select * from Appointsments";
+            con.Open();
+            SqlDataReader r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                if (date.Subtract(Convert.ToDateTime(r["Date_of_Appoint"])).TotalDays == 0)
+                    continue;
+                else
+                    l.Add(Convert.ToDateTime(r["Date_of_Appoint"]));
+                    
+            }con.Close();
+            foreach (DateTime x in l)
+            {
+                cmd.CommandText = "update Appointsments set Cancelled='true' where Date_of_Appoint=@x and Approved_or_not='false'";
+                con.Open();
+                cmd.Parameters.AddWithValue("@x",x);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.RemoveAt("@x");
+                con.Close();
+            }
+
+        }
         public void AddtoAppointments(string PID,string pname,string dname)
         {
             int flg =0;
@@ -151,7 +178,7 @@ namespace Hospital
                 if (!(flg.Equals(2)))
                 {
                     int did = Convert.ToInt32(GetDoctorList(dname)[0]);
-                    cmd.CommandText = "insert into Appointsments(PatientId,PName,Doctor_Assigned,DoctorId,Approved_or_not,Date_of_Appoint) Values(@pid,@pname,@dname,@did,'false',@appointdate)";
+                    cmd.CommandText = "insert into Appointsments(PatientId,PName,Doctor_Assigned,DoctorId,Approved_or_not,Date_of_Appoint,Cancelled) Values(@pid,@pname,@dname,@did,'false',@appointdate,'false')";
                     con.Open();
                     cmd.Parameters.AddWithValue("@pid", pid);
                     cmd.Parameters.AddWithValue("@did", did);
@@ -189,7 +216,8 @@ namespace Hospital
                     con.Close();
             }
         }
-        public int RegisterNewPatient(string pname,string gname,string paddress,int page,string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
+        public int RegisterNewPatient(string pname,string gname,string paddress,int page,
+            string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
         {
             DateTime adddate = DateTime.Now.Date;
             try
@@ -245,6 +273,13 @@ namespace Hospital
                     con.Close();
             }
         }
+        public void ClaimRoom(int Pid)
+        {
+            cmd.CommandText = "update Rooms set Assigned='false' where PatientId=" + Pid;
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public void DischargePatient(string PID)
         {
             try 
@@ -252,12 +287,13 @@ namespace Hospital
                 int Pid = Convert.ToInt32(PID);
                 DateTime disdate = DateTime.Now.Date;
                 cmd.Connection = con;
-                cmd.CommandText = "update Patient_Record set DisDate=@disdate where Id=@Pid";
+                cmd.CommandText = "update Patient_Record set DisDate=@disdate and RoomNo='null' where Id=@Pid";
                 con.Open();
                 cmd.Parameters.AddWithValue("@disdate",disdate);
                 cmd.Parameters.AddWithValue("@Pid",Pid);
                 cmd.ExecuteNonQuery();
                 con.Close();
+                ClaimRoom(Pid);
                 cmd.Parameters.RemoveAt("@disdate");
                 cmd.Parameters.RemoveAt("@Pid");
                 MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

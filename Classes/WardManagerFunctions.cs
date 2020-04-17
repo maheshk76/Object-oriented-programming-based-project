@@ -11,39 +11,78 @@ namespace Hospital.Classes
 {
     class WardManagerFunctions:MakeConnection
     {
+        public DataTable GetRooms()
+        {
+            DataTable dt = new DataTable();
+            cmd.Connection = con;
+            cmd.CommandText = "select * from Rooms";
+            con.Open();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            dt.Columns.Remove("Id");
+            dt.Columns[5].ColumnName = "Assigned On";
+            return dt;
+        }
+        public void UpdateToPatientRecord(int PatientId,int roomno)
+        {
+            cmd.CommandText = "update Patient_Record set RoomNo=@roomno where Id=@PatientId";
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public void AssignRoom(int PatientId,string Roomtype,int roomno)
         {
-            cmd.Connection = con;
-            DateTime date = DateTime.Now.Date;
-            cmd.CommandText = "select * from Rooms where PatientId=@PatientId";
-            con.Open();
-            cmd.Parameters.AddWithValue("@PatientId", PatientId);
-            SqlDataReader r = cmd.ExecuteReader();
-            bool flg = false ;
-            while (r.Read())
+            try
             {
-                if (Convert.ToBoolean(r["Assigned"]).Equals(true))
-                    flg = true;
+                cmd.Connection = con;
+                DateTime date = DateTime.Now.Date;
+                int wardno = 1;
+                if (roomno > 10)
+                    wardno = 2;
+                if ((from DataRow dr in GetRooms().Rows
+                     where Convert.ToInt32(dr["PatientId"]) == PatientId
+                     select Convert.ToBoolean(dr["Assigned"])).FirstOrDefault())
+                    MessageBox.Show("Already assigned a room", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    cmd.CommandText = "insert into Rooms(RoomNo,RoomType,WardNo,Assigned,PatientId,Date_of_Assigned)" +
+                        " Values(@roomno,@RoomType,@wardno,'true',@PatientId,@date)";
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@PatientId", PatientId);
+                    cmd.Parameters.AddWithValue("@roomno", roomno);
+                    cmd.Parameters.AddWithValue("@Roomtype", Roomtype);
+                    cmd.Parameters.AddWithValue("@wardno", wardno);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    UpdateToPatientRecord(PatientId,roomno);
+                    MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            con.Close();
-            if (flg)
-                MessageBox.Show("Already assigned a room", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+            catch(Exception ex)
             {
-                cmd.CommandText = "insert into Rooms(RoomNo,RoomType,WardNo,Assigned,PatientId,Date_of_Assigned)" +
-                    " Values(@roomno,@RoomType,'1','true',@PatientId,@date)";
-                con.Open();
-                cmd.Parameters.AddWithValue("@roomno", roomno);
-                cmd.Parameters.AddWithValue("@Roomtype", Roomtype);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                cmd.Parameters.RemoveAt("@roomno");
-                cmd.Parameters.RemoveAt("@RoomType");
-                cmd.Parameters.RemoveAt("@date");
-                MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine(ex.Message.ToString());
+                string etype = ex.GetType().ToString();
+                if (etype.Equals("System.Data.SqlClient.SqlException"))
+                    MessageBox.Show("Patient data not available", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Something went wrong,Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cmd.Parameters.RemoveAt("@PatientId");
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                if(cmd.Parameters.Contains("@roomno"))
+                    cmd.Parameters.RemoveAt("@roomno");
+                if (cmd.Parameters.Contains("@RoomType"))
+                    cmd.Parameters.RemoveAt("@RoomType");
+                if (cmd.Parameters.Contains("@wardno"))
+                    cmd.Parameters.RemoveAt("@wardno");
+                if (cmd.Parameters.Contains("@date"))
+                    cmd.Parameters.RemoveAt("@date");
+                if (cmd.Parameters.Contains("@PatientId"))
+                    cmd.Parameters.RemoveAt("@PatientId");
+            }
         }
         public List<int> ShowAvailableRooms(string sel)
         {
