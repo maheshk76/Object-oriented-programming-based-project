@@ -12,7 +12,7 @@ namespace Hospital.Classes
     class ChemistFunctions:MakeConnection
     {
         DataTable dt;
-        public DataTable GetAllStock(bool med)
+        public DataTable GetStock(bool med)
         {
             dt = new DataTable();
             cmd.Connection=con;

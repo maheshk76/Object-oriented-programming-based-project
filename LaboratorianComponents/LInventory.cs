@@ -18,7 +18,7 @@ namespace Hospital
         public LInventory()
         {
             InitializeComponent();
-            dataGridView1.DataSource=lf.GetAllEquip();
+            dataGridView1.DataSource=cf.GetStock(false);
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 

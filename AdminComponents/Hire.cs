@@ -76,7 +76,11 @@ namespace Hospital.AdminComponents
             if (textBox2.Text == "")
                 MessageBox.Show("Enter valid data", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                af.Dismiss(Convert.ToInt32(textBox2.Text));
+            {
+                DialogResult k=MessageBox.Show("Are you sure want to delete?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                if (k == DialogResult.OK)
+                    af.Dismiss(Convert.ToInt32(textBox2.Text));
+            }
         }
     }
 }

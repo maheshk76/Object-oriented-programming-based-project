@@ -63,7 +63,16 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotLiquid, Version=2.0.325.0, Culture=neutral, PublicKeyToken=82e46016ecf9f07c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotLiquid.2.0.325\lib\net45\DotLiquid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -78,6 +87,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminComponents\Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminComponents\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminComponents\Hire.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +273,9 @@
     <Compile Include="WardManagerComponents\Wards.Designer.cs">
       <DependentUpon>Wards.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminComponents\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminComponents\Hire.resx">
       <DependentUpon>Hire.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +371,7 @@
       <DependentUpon>Wards.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Hospital_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

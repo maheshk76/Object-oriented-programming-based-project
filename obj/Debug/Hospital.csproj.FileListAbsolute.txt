@@ -60,3 +60,8 @@ D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerC
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.WardManagerComponents.Wards.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.UserForms.Admin.resources
 D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.AdminComponents.Hire.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.AdminComponents.Account.resources
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\DotLiquid.dll
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\DotLiquid.xml
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\bin\Debug\it\DotLiquid.resources.dll
+D:\DOCS_SEM6\OOSE\OOSE_PROJECT\Hospital\Hospital\obj\Debug\Hospital.csproj.CopyComplete

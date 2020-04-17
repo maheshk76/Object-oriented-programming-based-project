@@ -8,7 +8,16 @@ using System.Windows.Forms;
 using System.Data;
 namespace Hospital
 {
-    class DoctorFunctions : MakeConnection
+    interface IDoctor
+    {
+        DataTable ReverseRowsInDataTable(DataTable table);
+        void AddTestDetails(string x, string y);
+        DataTable GetPatientReport(string query);
+        DataTable GetAllAppointments(string query, bool flag);
+        DataTable GetPatient(string query, bool flag);
+        void MakePrescription(string PatientId, string medicine);
+    }
+    class DoctorFunctions : MakeConnection,IDoctor
     {
         DataTable dt;
         public DataTable ReverseRowsInDataTable(DataTable inputTable)

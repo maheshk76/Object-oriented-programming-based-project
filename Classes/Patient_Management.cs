@@ -6,7 +6,20 @@ using System.Linq;
 using System.Windows.Forms;
 namespace Hospital
 {
-    class Patient_Management:MakeConnection
+    interface IPatient
+    {
+        DataTable GetPatientDiagnosis(string searchQ);
+        DataSet GetPatientTreatment(string x);
+        DataTable GetBills(string query, out bool stat, bool flag);
+        List<string> GetDoctorList(string DoctorName);
+        void UpdateAppointData();
+        void AddtoAppointments(string PID, string pname, string dname);
+        int RegisterNewPatient(string pname, string gname, string paddress, int page,
+            string PEmail, string pcontact, string pgender, DateTime bdate, string doctor_assinged);
+        void ClaimRoom(int x);
+        void DischargePatient(string x);
+    }
+    class Patient_Management:MakeConnection,IPatient
     {
         readonly DoctorFunctions df = new DoctorFunctions();
         public DataTable GetPatientDiagnosis(string searchQ)
@@ -59,7 +72,7 @@ namespace Hospital
                     cmd.Parameters.RemoveAt("@searchQ");
             }
         }
-        public DataTable GetBills(string query,out bool stat)
+        public DataTable GetBills(string query,out bool stat,bool flg)
         {
             stat = false;
             try
@@ -67,7 +80,9 @@ namespace Hospital
                 DataTable dt = new DataTable();
                 cmd.Connection = con;
                 con.Open();
-                cmd.CommandText = "select * from Patient_Bills where PId=@query";
+                if (flg)
+                    cmd.CommandText = "select * from Patient_Bills where PId=@query";
+                else cmd.CommandText = "select * from Patient_Bills";
                 cmd.Parameters.AddWithValue("@query", query);
                 SqlDataReader r = cmd.ExecuteReader();
                 dt.Load(r);

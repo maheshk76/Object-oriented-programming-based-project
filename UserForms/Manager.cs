@@ -61,12 +61,6 @@ namespace Hospital
             f1.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            SidePanel.Top = button5.Top;
-            attandance.BringToFront();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             SidePanel.Top = button2.Top;

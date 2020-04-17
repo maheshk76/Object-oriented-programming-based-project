@@ -17,7 +17,7 @@ namespace Hospital
         public CMedicine()
         {
             InitializeComponent();
-            DataTable dt = cf.GetAllStock(true);
+            DataTable dt = cf.GetStock(true);
             if (dt != null)
             {
                 dt.Columns.Remove("Id");

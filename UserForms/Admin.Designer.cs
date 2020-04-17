@@ -45,6 +45,7 @@ namespace Hospital.UserForms
             this.hire = new Hospital.AdminComponents.Hire();
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
+            this.account = new Hospital.AdminComponents.Account();
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -198,6 +199,7 @@ namespace Hospital.UserForms
             this.panel.Controls.Add(this.hire);
             this.panel.Controls.Add(this.allusers);
             this.panel.Controls.Add(this.duserdetails);
+            this.panel.Controls.Add(this.account);
             this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel.Location = new System.Drawing.Point(292, 153);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
@@ -227,6 +229,13 @@ namespace Hospital.UserForms
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1131, 635);
             this.duserdetails.TabIndex = 1;
+            // 
+            // account
+            // 
+            this.account.Location = new System.Drawing.Point(79, 0);
+            this.account.Name = "account";
+            this.account.Size = new System.Drawing.Size(1131, 635);
+            this.account.TabIndex = 2;
             // 
             // button8
             // 
@@ -300,5 +309,6 @@ namespace Hospital.UserForms
         private Hire hire;
         private AllUsers allusers;
         private UserControl1 duserdetails;
+        private Account account;
     }
 }

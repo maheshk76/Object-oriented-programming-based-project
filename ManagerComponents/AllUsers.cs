@@ -17,7 +17,7 @@ namespace Hospital.ManagerComponents
         public AllUsers()
         {
             InitializeComponent();
-            SearchResultGridView.DataSource = mf.GetAllUsers("");
+            SearchResultGridView.DataSource = mf.GetAllUsers();
             for (int i = 0; i < SearchResultGridView.Columns.Count; i++)
                 SearchResultGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

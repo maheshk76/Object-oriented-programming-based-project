@@ -29,7 +29,7 @@ namespace Hospital
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            DataTable dt = pm.GetBills(textBox2.Text, out bool stat);
+            DataTable dt = pm.GetBills(textBox2.Text, out bool stat,true);
             if (dt != null)
             {
                 if (stat)

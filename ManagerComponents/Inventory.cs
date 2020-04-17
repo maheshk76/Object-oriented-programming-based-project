@@ -22,7 +22,7 @@ namespace Hospital.ManagerComponents
         }
         public void Refres(bool t)
         {
-            dataGridView1.DataSource = cf.GetAllStock(t);
+            dataGridView1.DataSource = cf.GetStock(t);
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

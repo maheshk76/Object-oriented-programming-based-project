@@ -9,20 +9,14 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    class LaboratorianFunctions:MakeConnection
+    interface ILaboratorian
+    {
+        int MakeTestResults(string first, string sec);
+    }
+    class LaboratorianFunctions:MakeConnection,ILaboratorian
     {
         DataTable dt = new DataTable();
         DoctorFunctions df = new DoctorFunctions();
-        public DataTable GetAllEquip()
-        {
-            dt = new DataTable();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from Equipments_Stock";
-            con.Open();
-            dt.Load(cmd.ExecuteReader());
-            con.Close();
-            return dt;
-        }
         public int MakeTestResults(string PatientID,string TestResult)
         {
             try

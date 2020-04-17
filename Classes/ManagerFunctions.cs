@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotLiquid.Tags;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,7 +10,16 @@ using System.Windows.Forms;
 
 namespace Hospital.Classes
 {
-    class ManagerFunctions:MakeConnection
+    interface IManager
+    {
+        void UpdateStockRequests(string value);
+        int CheckExistenceOfStock(string Val, bool flg);
+        void AddStocks(string Val, bool flg, int quan);
+        DataTable GetAllRequests(bool flg, bool new_req);
+        DataTable GetAllUsers(string searchValue);
+        DataTable GetAttandance(string searchVal, bool flg);
+    }
+    class ManagerFunctions:MakeConnection,IManager
     {
         DataTable dt;
         DoctorFunctions df = new DoctorFunctions();
@@ -108,21 +118,22 @@ namespace Hospital.Classes
             dt = df.ReverseRowsInDataTable(dt);
             return dt;
         }
-        bool isNum(string s)
+        public DataTable GetAllUsers()
         {
-            for (int i = 0; i < s.Length; i++)
-                if (char.IsDigit(s[i]) == false)
-                    return false;
-            return true;
+            dt = new DataTable();
+            cmd.Connection = con;
+            cmd.CommandText = "select * from Users";
+            con.Open();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
         }
+        //overloading
         public DataTable GetAllUsers(string searchValue)
         {
             dt = new DataTable();
             cmd.Connection = con;
-            if (searchValue.Length.Equals(0))
-                cmd.CommandText = "select * from Users";
-            else
-                cmd.CommandText = "select * from Users where Id like @searchValue+'%' or Name like @searchValue+'%'";
+            cmd.CommandText = "select * from Users where Id like @searchValue+'%' or Name like @searchValue+'%'";
             con.Open();
             cmd.Parameters.AddWithValue("@searchValue", searchValue);
             dt.Load(cmd.ExecuteReader());

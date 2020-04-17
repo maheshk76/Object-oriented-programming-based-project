@@ -38,16 +38,15 @@ namespace Hospital
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.allusers = new Hospital.ManagerComponents.AllUsers();
             this.duserdetails = new Hospital.UserControl1();
             this.attandance = new Hospital.ManagerComponents.AttandanceManager();
             this.inven = new Hospital.ManagerComponents.Inventory();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +64,6 @@ namespace Hospital
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -73,14 +71,16 @@ namespace Hospital
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
+            this.panel1.TabIndex = 2;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(257, 436);
+            this.radioButton1.Location = new System.Drawing.Point(254, 369);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(17, 16);
+            this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -92,6 +92,7 @@ namespace Hospital
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // button2
@@ -102,7 +103,7 @@ namespace Hospital
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = global::Hospital.Properties.Resources.button5_Image;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(14, 411);
+            this.button2.Location = new System.Drawing.Point(11, 344);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 61);
@@ -122,6 +123,7 @@ namespace Hospital
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
+            this.label1.TabIndex = 6;
             this.label1.Text = "Username";
             // 
             // pictureBox1
@@ -144,6 +146,7 @@ namespace Hospital
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(12, 61);
+            this.SidePanel.TabIndex = 8;
             // 
             // button7
             // 
@@ -163,25 +166,6 @@ namespace Hospital
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Image = global::Hospital.Properties.Resources.button3_Image;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 345);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(260, 61);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "  Accounting";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -233,6 +217,38 @@ namespace Hospital
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
+            this.panel.TabIndex = 0;
+            // 
+            // allusers
+            // 
+            this.allusers.Location = new System.Drawing.Point(79, 0);
+            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.allusers.Name = "allusers";
+            this.allusers.Size = new System.Drawing.Size(1131, 635);
+            this.allusers.TabIndex = 0;
+            // 
+            // duserdetails
+            // 
+            this.duserdetails.Location = new System.Drawing.Point(79, 0);
+            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
+            this.duserdetails.Name = "duserdetails";
+            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
+            this.duserdetails.TabIndex = 1;
+            // 
+            // attandance
+            // 
+            this.attandance.Location = new System.Drawing.Point(79, 0);
+            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.attandance.Name = "attandance";
+            this.attandance.Size = new System.Drawing.Size(1131, 635);
+            this.attandance.TabIndex = 2;
+            // 
+            // inven
+            // 
+            this.inven.Location = new System.Drawing.Point(79, 0);
+            this.inven.Name = "inven";
+            this.inven.Size = new System.Drawing.Size(1131, 635);
+            this.inven.TabIndex = 3;
             // 
             // button8
             // 
@@ -263,33 +279,7 @@ namespace Hospital
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
-            // 
-            // allusers
-            // 
-            this.allusers.Location = new System.Drawing.Point(79, 0);
-            this.allusers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.allusers.Name = "allusers";
-            this.allusers.Size = new System.Drawing.Size(1131, 635);
-            // 
-            // duserdetails
-            // 
-            this.duserdetails.Location = new System.Drawing.Point(79, 0);
-            this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
-            this.duserdetails.Name = "duserdetails";
-            this.duserdetails.Size = new System.Drawing.Size(1131, 635);
-            // 
-            // attandance
-            // 
-            this.attandance.Location = new System.Drawing.Point(79, 0);
-            this.attandance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.attandance.Name = "attandance";
-            this.attandance.Size = new System.Drawing.Size(1131, 635);
-            // 
-            // inven
-            // 
-            this.inven.Location = new System.Drawing.Point(79, 0);
-            this.inven.Name = "inven";
-            this.inven.Size = new System.Drawing.Size(1131, 635);
+            this.panel2.TabIndex = 1;
             // 
             // Manager
             // 
@@ -320,7 +310,6 @@ namespace Hospital
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private AllUsers allusers;

@@ -9,9 +9,15 @@ using System.Windows.Forms;
 
 namespace Hospital.Classes
 {
-    class AdminFunctions:MakeConnection
+    interface IAdmin
     {
-        public int HireUser(string name, string pass, string email,
+          int HireUser(string a, string b, string c,
+            string contact, string addr, string gender, string qual, string exp, int sal, string role);
+            void Dismiss(int x);
+    }
+    class AdminFunctions:MakeConnection,IAdmin
+    {
+         public  int HireUser(string name, string pass, string email,
             string contact, string addr, string gender, string qual, string exp, int sal, string role)
         {
             try

@@ -14,14 +14,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Hospital.exe.manifest" size="3457">
+    <dependentAssembly dependencyType="install" codebase="Hospital.exe.manifest" size="4819">
       <assemblyIdentity name="Hospital.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o/dMoqc8etyhIIGr2hAjP22Gxexu3mFeGDdaDjoWVbo=</dsig:DigestValue>
+        <dsig:DigestValue>lEWiDI5r3jBEO3cz6Wi59/wqWx7TxRE55vtc5Nmu83w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -43,7 +43,8 @@ namespace Hospital.UserForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            SidePanel.Top = button5.Top;
+            account.BringToFront();
         }
 
         private void button8_Click(object sender, EventArgs e)

@@ -42,14 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital.exe" size="472496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DotLiquid.dll" size="109568">
+      <assemblyIdentity name="DotLiquid" version="2.0.325.0" publicKeyToken="82E46016ECF9F07C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YOZWX8kHRvw58E+iidgq0K8jnDK8pA9w1FoAsmVGA/k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\DotLiquid.resources.dll" size="9728">
+      <assemblyIdentity name="DotLiquid.resources" version="2.0.325.0" publicKeyToken="82E46016ECF9F07C" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>VY7VWz3KR5De9WVlQC2MlPPm96Kf/V6ZHrERUJYJDzQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital.exe" size="474032">
       <assemblyIdentity name="Hospital" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wltGFdM2Se1Fe6/LmdqZCe50vvcvY5ggY+WcWhoiKjs=</dsig:DigestValue>
+        <dsig:DigestValue>ETvDjTfBw4e1/t3j8h3DTSE3Qq9fbyIRUVdWNQzRDtY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

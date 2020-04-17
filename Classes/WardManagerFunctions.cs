@@ -84,6 +84,7 @@ namespace Hospital.Classes
                     cmd.Parameters.RemoveAt("@PatientId");
             }
         }
+        //creates list of available rooms
         public List<int> ShowAvailableRooms(string sel)
         {
             List<int> l = new List<int>();
