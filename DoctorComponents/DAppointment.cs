@@ -18,6 +18,7 @@ namespace Hospital
             InitializeComponent();
             pm.UpdateAppointData();
             dateTimePicker1.Hide();
+           
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(label1, "Showing appointments for today which are not approved");
@@ -53,10 +54,12 @@ namespace Hospital
             if (checkBox1.Checked)
             {
                 dateTimePicker1.Show();
+                label1.Hide();
                 searchTextbox.Hide();
             }
             else
             {
+                label1.Show();
                 searchTextbox.Show();
                 dateTimePicker1.Hide();
             }
@@ -66,6 +69,11 @@ namespace Hospital
         {
             searchTextbox.Text = "";
             Refres();
+        }
+
+        private void DAppointment_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

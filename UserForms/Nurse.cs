@@ -21,7 +21,8 @@ namespace Hospital.UserForms
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text =SessionClass.SessionName;
+
+            label1.Text = "        " + SessionClass.SessionId.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

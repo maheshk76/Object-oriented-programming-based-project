@@ -42,6 +42,7 @@
             this.label1.Location = new System.Drawing.Point(-5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
+            this.label1.TabIndex = 3;
             this.label1.Text = "Patient ID";
             // 
             // textBox2
@@ -74,6 +75,7 @@
             this.label2.Location = new System.Drawing.Point(-5, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
+            this.label2.TabIndex = 4;
             this.label2.Text = "Add Test(s)";
             // 
             // richTextBox1
@@ -85,6 +87,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(925, 248);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            this.richTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_TextChanged);
             // 
             // Dtest
             // 

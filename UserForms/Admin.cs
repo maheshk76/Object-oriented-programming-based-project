@@ -16,6 +16,13 @@ namespace Hospital.UserForms
         public Admin()
         {
             InitializeComponent();
+            if (SessionClass.SessionId == 0)
+            {
+                Login_Form f1 = new Login_Form(0);
+                f1.ShowDialog();
+            }
+
+            label1.Text = "        " + SessionClass.SessionId.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)

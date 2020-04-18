@@ -26,7 +26,8 @@ namespace Hospital
                 Login_Form f1 = new Login_Form(0);
                 f1.ShowDialog();
             }
-            label1.Text = SessionClass.SessionName;
+
+            label1.Text = "        " + SessionClass.SessionId.ToString();
         }
         public void Refres()
         {

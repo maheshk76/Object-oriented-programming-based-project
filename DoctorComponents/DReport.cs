@@ -30,15 +30,16 @@ namespace Hospital
             else
             {
                 DataTable dt = df.GetPatientReport(PID);
-
                 dataGridView1.DataSource = dt;
+
+                dt.Columns.Remove("Id");
+                dt.Columns.Remove("Disease");
                 for (int i = 0; i < dataGridView1.Columns.Count; i++)
                     dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 if (dt != null)
                 {
-                    dataGridView1.Columns[1].Width = 80;
-                    dataGridView1.Columns[2].Width = 80;
-                    dataGridView1.Columns[5].Width = 200;
+                    dataGridView1.Columns[0].Width = 80;
+                    dataGridView1.Columns[3].Width = 130;
                 }
             }
         }

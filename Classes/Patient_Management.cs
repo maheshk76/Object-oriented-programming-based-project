@@ -17,6 +17,7 @@ namespace Hospital
         int RegisterNewPatient(string pname, string gname, string paddress, int page,
             string PEmail, string pcontact, string pgender, DateTime bdate, string doctor_assinged);
         void ClaimRoom(int x);
+        void UpdatePayment(int x);
         void DischargePatient(string x);
     }
     class Patient_Management:MakeConnection,IPatient
@@ -177,8 +178,8 @@ namespace Hospital
         {
             int flg =0;
             DateTime appointdate = DateTime.Now.Date;
-            try
-            {
+           // try
+            //{
                 cmd.Connection = con;
                 int pid = Convert.ToInt32(PID);
                 DataTable x=df.GetAllAppointments(PID, false);
@@ -213,7 +214,7 @@ namespace Hospital
                 else if (flg.Equals(1))
                     MessageBox.Show("New Appointment added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-            }
+           /* }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString());
@@ -229,14 +230,14 @@ namespace Hospital
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
-            }
+            }*/
         }
         public int RegisterNewPatient(string pname,string gname,string paddress,int page,
             string PEmail,string pcontact, string pgender,DateTime bdate,string doctor_assinged)
         {
             DateTime adddate = DateTime.Now.Date;
-            try
-            {
+           // try
+            //{
                 cmd.Connection = con;
                 cmd.CommandText = "insert into Patient_Record(PName,GuardianName,PAddress,PAge,PEmail,PContact,PGender,AddDate,Birthdate) Values(@pname,@gname,@paddress,@page,@PEmail,@pcontact,@pgender,@adddate,@bdate)";
                 con.Open();
@@ -270,14 +271,14 @@ namespace Hospital
                 //Add to aapointment table
                 AddtoAppointments(Patient_Id.ToString(), pname, doctor_assinged);
                 con.Open();
-                cmd.Parameters.AddWithValue("@Pat", Patient_Id);
-                cmd.CommandText = "insert into Patient_Bills(PId,Total,Medicines_Bill,Rent_Bill,Other_Fees) Values(@Patient_Id,0,0,0)";
+                cmd.Parameters.AddWithValue("@Patient_Id", Patient_Id);
+                cmd.CommandText = "insert into Patient_Bills(PId,Total,Medicines_Bill,Rent_Bill,Other_Fees,Payment_Status) Values(@Patient_Id,0,0,0,0,'false')";
                 cmd.ExecuteNonQuery();
                 
                 con.Close();
-                cmd.Parameters.RemoveAt("@Pat");
+                cmd.Parameters.RemoveAt("@Patient_Id");
                return Patient_Id;
-            }
+           /* }
             catch (Exception)
             {
                 return -99;
@@ -286,7 +287,7 @@ namespace Hospital
             {
                 if (con.State == ConnectionState.Open)
                     con.Close();
-            }
+            }*/
         }
         public void ClaimRoom(int Pid)
         {
@@ -295,20 +296,28 @@ namespace Hospital
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public void UpdatePayment(int Pid)
+        {
+            cmd.CommandText = "update Patient_Bills set Payment_Status='true' where PId="+Pid;
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public void DischargePatient(string PID)
         {
-            try 
-            { 
+           try 
+           { 
                 int Pid = Convert.ToInt32(PID);
                 DateTime disdate = DateTime.Now.Date;
                 cmd.Connection = con;
-                cmd.CommandText = "update Patient_Record set DisDate=@disdate and RoomNo='null' where Id=@Pid";
+                cmd.CommandText = "update Patient_Record set DisDate=@disdate,RoomNO='0' where Id=@Pid";
                 con.Open();
                 cmd.Parameters.AddWithValue("@disdate",disdate);
                 cmd.Parameters.AddWithValue("@Pid",Pid);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 ClaimRoom(Pid);
+                UpdatePayment(Pid);
                 cmd.Parameters.RemoveAt("@disdate");
                 cmd.Parameters.RemoveAt("@Pid");
                 MessageBox.Show("Success", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

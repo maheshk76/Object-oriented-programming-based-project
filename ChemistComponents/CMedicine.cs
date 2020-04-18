@@ -17,6 +17,15 @@ namespace Hospital
         public CMedicine()
         {
             InitializeComponent();
+            Refres();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cf.RequestStock(textBox2.Text, Convert.ToInt32(numericUpDown1.Value),true);
+        }
+        public void Refres()
+        {
             DataTable dt = cf.GetStock(true);
             if (dt != null)
             {
@@ -26,10 +35,9 @@ namespace Hospital
                     dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            cf.RequestStock(textBox2.Text, Convert.ToInt32(numericUpDown1.Value),true);
+            Refres();
         }
     }
 }

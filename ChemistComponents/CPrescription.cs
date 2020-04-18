@@ -49,7 +49,7 @@ namespace Hospital
         {
             string pid = PId.Text;
             string med_name = comboBox1.Text;
-            int quan = Convert.ToInt32(comboBox2.Text);
+            string quan = comboBox2.Text;
             DataTable dt=cf.AddToList(pid,med_name,quan);
             if (dt != null)
             {
@@ -62,6 +62,7 @@ namespace Hospital
             dataGridView2.DataSource = dt;
             for (int i = 0; i < dataGridView2.Columns.Count; i++)
                 dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+           
         }
     }
 }

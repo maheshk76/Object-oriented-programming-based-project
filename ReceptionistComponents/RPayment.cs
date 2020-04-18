@@ -29,18 +29,17 @@ namespace Hospital
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
             DataTable dt = pm.GetBills(textBox2.Text, out bool stat,true);
             if (dt != null)
             {
                 if (stat)
                 {
                     label2.Text = "Paid";
-                    button2.Enabled = true;
                 }
                 else
                 {
                     label2.Text = "Pending";
-                    button2.Enabled = false;
                 }
                 dt.Columns.Remove("Id");
                 dataGridView1.DataSource = dt;
@@ -60,9 +59,11 @@ namespace Hospital
                 }
                 catch(Exception)
                 {
-                    button2.Enabled = false;
+                    button2.Enabled = true;
                 }
             }
+            if (textBox2.Text.Length.Equals(0))
+                button2.Enabled = true;
         }
     }
 }

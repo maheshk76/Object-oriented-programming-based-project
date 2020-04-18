@@ -76,7 +76,7 @@ namespace Hospital.Classes
             con.Close();
             MakeBill(pid, quan*prc,2);
             con.Open();
-            cmd.CommandText = "update Medicine_Stock set Quantity=@stock";
+            cmd.CommandText = "update Medicine_Stock set Quantity=@stock where Name=@med";
             cmd.Parameters.AddWithValue("@stock", stock);
             cmd.ExecuteNonQuery();
             cmd.Parameters.RemoveAt("@stock");
@@ -84,10 +84,11 @@ namespace Hospital.Classes
             con.Close();
             return true;
         }
-        public DataTable AddToList(string pid,string med,int quan)
+        public DataTable AddToList(string pid,string med,string Quan)
         {
             try
             {
+                int quan = Convert.ToInt32(Quan);
                 dt = new DataTable();
                 DateTime date = DateTime.Now.Date;
                 cmd.Connection = con;

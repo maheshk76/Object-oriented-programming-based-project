@@ -30,21 +30,19 @@ namespace Hospital.UserForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nurse));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.duserdetails = new Hospital.UserControl1();
-
             this.diet = new Hospital.NurseComponents.Diet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,9 +51,8 @@ namespace Hospital.UserForms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button1);
@@ -65,6 +62,21 @@ namespace Hospital.UserForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
             this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(12, 742);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(148, 31);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "        Username";
             // 
             // button2
             // 
@@ -84,29 +96,6 @@ namespace Hospital.UserForms
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Hospital.Properties.Resources.pictureBox2_Image;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 740);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 742);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
             // 
             // pictureBox1
             // 
@@ -160,14 +149,6 @@ namespace Hospital.UserForms
             this.panel.Size = new System.Drawing.Size(1248, 642);
             this.panel.TabIndex = 0;
             // 
-            // diet
-            // 
-            this.diet.Location = new System.Drawing.Point(79, 0);
-            this.diet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.diet.Name = "diet";
-            this.diet.Size = new System.Drawing.Size(1131, 635);
-            this.diet.TabIndex = 0;
-            // 
             // duserdetails
             // 
             this.duserdetails.Location = new System.Drawing.Point(79, 0);
@@ -175,6 +156,14 @@ namespace Hospital.UserForms
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1131, 635);
             this.duserdetails.TabIndex = 0;
+            // 
+            // diet
+            // 
+            this.diet.Location = new System.Drawing.Point(79, 0);
+            this.diet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.diet.Name = "diet";
+            this.diet.Size = new System.Drawing.Size(1131, 635);
+            this.diet.TabIndex = 0;
             // 
             // panel2
             // 
@@ -222,7 +211,6 @@ namespace Hospital.UserForms
             this.Text = "Nurse";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -233,16 +221,15 @@ namespace Hospital.UserForms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private UserControl1 duserdetails;
         private Diet diet;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

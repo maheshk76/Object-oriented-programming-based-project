@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,10 +56,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button7);
@@ -73,6 +70,22 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 795);
+            this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(12, 742);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(148, 31);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "        Username";
             // 
             // radioButton1
             // 
@@ -81,6 +94,7 @@
             this.radioButton1.Location = new System.Drawing.Point(255, 170);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(17, 16);
+            this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -103,26 +117,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 742);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.Text = "Username";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 738);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 29);
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -131,6 +125,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(291, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
@@ -142,6 +137,7 @@
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(12, 61);
+            this.SidePanel.TabIndex = 9;
             // 
             // button7
             // 
@@ -225,6 +221,7 @@
             this.duserdetails.Margin = new System.Windows.Forms.Padding(2);
             this.duserdetails.Name = "duserdetails";
             this.duserdetails.Size = new System.Drawing.Size(1058, 635);
+            this.duserdetails.TabIndex = 3;
             // 
             // dPrescription
             // 
@@ -233,6 +230,7 @@
             this.dPrescription.Margin = new System.Windows.Forms.Padding(2);
             this.dPrescription.Name = "dPrescription";
             this.dPrescription.Size = new System.Drawing.Size(1058, 635);
+            this.dPrescription.TabIndex = 4;
             // 
             // dreport
             // 
@@ -241,6 +239,7 @@
             this.dreport.Margin = new System.Windows.Forms.Padding(2);
             this.dreport.Name = "dreport";
             this.dreport.Size = new System.Drawing.Size(1058, 635);
+            this.dreport.TabIndex = 2;
             // 
             // panel
             // 
@@ -255,6 +254,7 @@
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1248, 642);
+            this.panel.TabIndex = 0;
             // 
             // dtest1
             // 
@@ -262,6 +262,7 @@
             this.dtest1.Margin = new System.Windows.Forms.Padding(2);
             this.dtest1.Name = "dtest1";
             this.dtest1.Size = new System.Drawing.Size(1058, 635);
+            this.dtest1.TabIndex = 0;
             // 
             // dAppointment
             // 
@@ -269,6 +270,7 @@
             this.dAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.dAppointment.Name = "dAppointment";
             this.dAppointment.Size = new System.Drawing.Size(1058, 635);
+            this.dAppointment.TabIndex = 1;
             // 
             // button8
             // 
@@ -299,6 +301,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 98);
+            this.panel2.TabIndex = 1;
             // 
             // Doctor
             // 
@@ -315,7 +318,6 @@
             this.Text = "Doctor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -326,8 +328,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button7;
@@ -344,5 +344,6 @@
         private System.Windows.Forms.Button button2;
         private Dtest dtest1;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label1;
     }
 }

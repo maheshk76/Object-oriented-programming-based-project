@@ -94,6 +94,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 38;
+
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dataGridView1.Location = new System.Drawing.Point(0, 298);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
