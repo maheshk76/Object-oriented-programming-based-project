@@ -122,9 +122,10 @@ namespace Hospital.Classes
         {
             dt = new DataTable();
             cmd.Connection = con;
-            cmd.CommandText = "select * from Users";
+            cmd.CommandText = "select * from Users where not Role='Admin'";
             con.Open();
             dt.Load(cmd.ExecuteReader());
+            dt.Columns.Remove("Password");
             con.Close();
             return dt;
         }
@@ -133,10 +134,11 @@ namespace Hospital.Classes
         {
             dt = new DataTable();
             cmd.Connection = con;
-            cmd.CommandText = "select * from Users where Id like @searchValue+'%' or Name like @searchValue+'%'";
+            cmd.CommandText = "select * from Users where (Id like @searchValue+'%' or Name like @searchValue+'%') and not Role='Admin'";
             con.Open();
             cmd.Parameters.AddWithValue("@searchValue", searchValue);
             dt.Load(cmd.ExecuteReader());
+            dt.Columns.Remove("Password");
             cmd.Parameters.RemoveAt("@searchValue");
             con.Close();
             return dt;

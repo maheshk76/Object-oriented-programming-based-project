@@ -91,6 +91,33 @@ namespace Hospital
                     con.Close();
             }
         }
+        public DataTable GetAllAppointments(DateTime date)
+        {
+            try
+            {
+                dt = new DataTable();
+                cmd.Connection = con;
+                int did = SessionClass.SessionId;
+                cmd.CommandText= "select PatientId,PName,Date_of_Appoint,Approved_or_not,Cancelled from " +
+                    "Appointsments where Date_of_Appoint=@date and DoctorId=" + did;
+                cmd.Parameters.AddWithValue("@date", date);
+                con.Open();
+                dt.Load(cmd.ExecuteReader());
+
+                dt.Columns[1].ColumnName = "Patient Name";
+                dt.Columns[2].ColumnName = "Date of Appointment";
+                dt.Columns[3].ColumnName = "Approved";
+                cmd.Parameters.RemoveAt("@date");
+                con.Close();
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                MessageBox.Show("Something went wrong,Please try again later", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
         public DataTable GetAllAppointments(string ser,bool flg)
         {
             try

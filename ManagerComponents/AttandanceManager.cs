@@ -33,7 +33,6 @@ namespace Hospital.ManagerComponents
                 dt = mf.GetAttandance(textBox1.Text, true);
             if (dt != null)
             {
-                dt.Columns.Remove("Department");
                 label6.Text = dt.Rows.Count.ToString();
             }
             SearchResultGridView.DataSource = dt;

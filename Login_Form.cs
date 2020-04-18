@@ -10,6 +10,7 @@ namespace Hospital
         {
             InitializeComponent(); 
             SessionClass.SessionId =id;
+            label5.Text = "© Fortis Hospital " + DateTime.Now.Year;
         }
        
         private void button2_Click(object sender, EventArgs e)
